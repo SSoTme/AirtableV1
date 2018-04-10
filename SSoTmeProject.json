@@ -1,0 +1,2045 @@
+{
+  "HiddenPaths": [],
+  "ExpandedPaths": [],
+  "ShowHidden": false,
+  "ShowAllFiles": false,
+  "CurrentPath": null,
+  "SaveDisabled": false,
+  "SSoTmeProjectId": "109a3ca6-4391-4d84-9edc-68585ce5b4eb",
+  "Name": "MSSassyMQSeed",
+  "RootPath": "C:\\Seeds\\ssotme-ms-airtable-ionic-sassymq-seed",
+  "ProjectSettings": [
+    {
+      "ProjectSettingId": "52725804-951c-430e-b764-8bac7f70cc43",
+      "Name": "project-name",
+      "Value": "MSSassyMQAirtableSeed"
+    }
+  ],
+  "ProjectTranspilers": [
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "XmlXsltTransform",
+        "DisplayName": "Xml Xslt Transform",
+        "Description": "Given an Xml and Xslt file, will process and \"split\" a resulting fileset.",
+        "CreatedOn": "2017-08-30T15:45:09.907",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-pwRUdyqwEq8fPN8gkK7ADg",
+        "LowerName": "xmlxslttransform",
+        "UpperName": "XMLXSLTTRANSFORM",
+        "LowerHyphenName": "xml-xslt-transform",
+        "ReadMeMD": "The tool processes the first text file it finds (which is presumed to be in xml format), with the first Xslt file provided, and includes any parameters that are passed to ssotme as well.\r\n\r\nThe output is expected to be a FileSet Xml blob with the results of the transform.",
+        "InputDescriptionMD": "At least 1 input Xml file, An Xslt file to use for the Transform operation and any additional parameters that the Xslt file uses for it's transpiling functionality.  These could be options, values, namespaces, etc.",
+        "OutputDescriptionMD": "A fileset with the result of the Xslt transform, usually including at least 1 or more files.  The example command might produce an HTML Document that describes (in english) the contents of the Xml file.  Essentially a \"report\" about the xml file. ",
+        "ExampleMD": "ssotme -install xml-xslt-transform -i MyData.xml -i CreateDocs.xslt",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "952e47eb-3448-4627-8dc4-93dab494c957",
+        "Category": "type-conversion",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "7e941388-752b-4b0f-9631-939b790be10f",
+            "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+            "Name": "v1",
+            "CreatedOn": "2017-08-30T15:45:10.653",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "xml-xslt-transform",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "xml-xslt-transform -i ..\\ODXML\\DataSchema.odxml -i CreateDefaultFiles.xslt",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "2f7a57cc-f4bb-4af7-8850-83d62d9f21a7",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            },
+            {
+              "OriginalRelativePath": "/CustomTools/CreateDefaultFiles.xslt",
+              "RelativePath": "CreateDefaultFiles.xslt"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\ODXML\\DataSchema.odxml",
+          "CreateDefaultFiles.xslt"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "7d324821-fef5-4c2b-a4c2-e2173b4632e6",
+      "Name": "XmlXsltTransform",
+      "RelativePath": "/CustomTools",
+      "CommandLine": "xml-xslt-transform -i ..\\ODXML\\DataSchema.odxml -i CreateDefaultFiles.xslt"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "ccea0ffb-6635-4929-bb72-a54ed716d27c",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToSqlServerCreateDb",
+        "DisplayName": "Odxml To Sql Server Create Db",
+        "Description": "OdxmlToSqlServerCreateDb",
+        "CreatedOn": "2017-06-05T18:08:36",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
+        "LowerName": "odxmltosqlservercreatedb",
+        "UpperName": "ODXMLTOSQLSERVERCREATEDB",
+        "LowerHyphenName": "odxml-to-sql-server-create-db",
+        "ReadMeMD": "Adds any missing tables and relationships in a SQL Server database based on an ODXML Schema description.",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "1136a8fc-7ced-47c2-b08d-1ff447a82b01",
+        "Category": "sql-server",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "726b9dd3-03ce-48f7-9de2-b4eb284d97b0",
+            "TranspilerId": "ccea0ffb-6635-4929-bb72-a54ed716d27c",
+            "Name": "v1",
+            "CreatedOn": "2017-06-05T18:08:46.617",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-sql-server-createdb",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-sql-server-createdb -i ..\\ODXML\\DataSchema.odxml -o UpdateSchema.sql",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "c4154f19-daae-4cef-9434-9e821a153889",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": "UpdateSchema.sql",
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "ce1207c3-72fb-444c-b579-5a7cfd3ebac7",
+      "Name": "OdxmlToSqlServerCreateDb",
+      "RelativePath": "/SqlServer",
+      "CommandLine": "odxml42/odxml-to-sql-server-createdb -i ..\\ODXML\\DataSchema.odxml -o UpdateSchema.sql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "595b7fe7-7f64-44c2-b48c-d096d997211f",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToCSharpPOCOs",
+        "DisplayName": "Odxml To C Sharp P O C Os",
+        "Description": "Odxml To CSharp POCOs",
+        "CreatedOn": "2017-09-07T17:35:30.24",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-ClFrnG6AMwloJkLnUQ2d3Q",
+        "LowerName": "odxmltocsharppocos",
+        "UpperName": "ODXMLTOCSHARPPOCOS",
+        "LowerHyphenName": "odxml-to-c-sharp-p-o-c-os",
+        "ReadMeMD": "param name=\"include-list-prefix\" select=\"true\"\r\nWill include the fieldname of the referenced object before lists so that if a child object has multiple references to an object, the collections on the parent will be distinguished by the name of the child properties.\r\n\r\nparam name=include-sdm-expand=false\r\nparam name=include-load-methods=true\r\n\r\nparam name=\"include-inheritance\" select=\"true\"\r\nIf a relationship exists on the primary key fo the object, it will be infered to \"descend\" from the refrenced object.\r\n\r\nparam name=\"pluralize-json-references\" select=\"true\"\r\nDetermines if the \"original name\" should be pluraized in the Json serialization header.\r\n\r\nparam name=sdm--namespace = 'using KP.ODXML7.SqlDataManager.{project-name}.SqlDataManagement;'\r\n\r\n\r\nparam name=extensions-namespace = 'CoreLibrary.Extensions'\r\n\r\nparam name=serialize-to-original-names=\"'false\"  \r\nInidicates if the json formatting should use original names\r\n\r\nparam name=\"csproj-filename\" = ''\r\nparam name=\"output-csproj-filename\" = ''\r\nparam name=\"relative-path\" = ''\r\n",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "47f5fc9f-0c22-4f73-8d18-0544a7f05d7b",
+        "Category": "dot-net",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "a52a5130-bd3c-4974-8def-374cd52a4592",
+            "TranspilerId": "595b7fe7-7f64-44c2-b48c-d096d997211f",
+            "Name": "v1",
+            "CreatedOn": "2017-09-07T17:35:33.567",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-csharp-pocos",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml -i ..\\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\\\ -p include-sdm-expand=true",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "9e7d6714-e6cc-4fb2-a334-f4a3bd9c957e",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            },
+            {
+              "OriginalRelativePath": "/CoreLibrary/CoreLibrary.csproj",
+              "RelativePath": "CoreLibrary.csproj"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\ODXML\\DataSchema.odxml",
+          "..\\CoreLibrary.csproj"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "output-csproj-filename=../CoreLibrary.csproj",
+          "relative-path=DataClasses\\",
+          "include-sdm-expand=true",
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "6a143376-da3b-4283-9295-43cb4c0c49f1",
+      "Name": "OdxmlToCSharpPOCOs",
+      "RelativePath": "/CoreLibrary/DataClasses",
+      "CommandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml -i ..\\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\\\ -p include-sdm-expand=true"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "988b0e35-bbdb-4a41-8d41-07a4a7871236",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "AppStatesCsvToAppStatesXml",
+        "DisplayName": "App States Csv To App States Xml",
+        "Description": "Converts an AppStates Csv file into an AppStates Xml file with states nested using ParentState as the key",
+        "CreatedOn": "2017-11-24T20:07:18.92",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-GVZ_HImQD5JJY1PcHlNrxA",
+        "LowerName": "appstatescsvtoappstatesxml",
+        "UpperName": "APPSTATESCSVTOAPPSTATESXML",
+        "LowerHyphenName": "app-states-csv-to-app-states-xml",
+        "ReadMeMD": "Converts states into a nested xml structure which can consistently used by other tools.",
+        "InputDescriptionMD": "These columns are supported:\r\n",
+        "OutputDescriptionMD": "This will create a renames csv file if one was not provided - and return an AppStates.xml file which can be shared by multiple app clients.",
+        "ExampleMD": "ssotme -install app-states-csv-to-app-states-xml -i AppStates.csv",
+        "InputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
+        "OutputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "82b54683-6eaa-42ce-a396-7cbeccc33636",
+            "TranspilerId": "988b0e35-bbdb-4a41-8d41-07a4a7871236",
+            "Name": "v1",
+            "CreatedOn": "2017-11-24T20:07:20.203",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "app-states-csv-to-app-states-xml",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "app-states-csv-to-app-states-xml -i .\\AppStates.csv  -i ..\\ODXML\\DataSchema.odxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "b5e40841-ac4e-44b0-b787-5b1174c4e963",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "AppStates.csv"
+            },
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          ".\\AppStates.csv",
+          "..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "3bd76ce1-4eed-4042-8a03-514eedd1e4f6",
+      "Name": "AppStatesCsvToAppStatesXml",
+      "RelativePath": "/SSoT",
+      "CommandLine": "app-states-csv-to-app-states-xml -i .\\AppStates.csv  -i ..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "2b909e1b-4a72-4594-9628-32484d710f52",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "AppStatesXmlToAppStatesDocs",
+        "DisplayName": "App States Xml To App States Docs",
+        "Description": "Turn a nested App States Xml file into helpful app state documentation",
+        "CreatedOn": "2017-11-24T20:37:59.973",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-GVZ_HImQD5JJY1PcHlNrxA",
+        "LowerName": "appstatesxmltoappstatesdocs",
+        "UpperName": "APPSTATESXMLTOAPPSTATESDOCS",
+        "LowerHyphenName": "app-states-xml-to-app-states-docs",
+        "ReadMeMD": "This documentation describes the application states in a more helpful human format.",
+        "ExampleMD": "ssotme -install app-states-xml-to-app-states-docs -i AppStates.xml",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "575f6964-a2fa-4d03-8183-0ef7eb0bca2f",
+            "TranspilerId": "2b909e1b-4a72-4594-9628-32484d710f52",
+            "Name": "v1",
+            "CreatedOn": "2017-11-24T20:38:01.477",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "app-states-xml-to-app-states-docs",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "app-states-xml-to-app-states-docs -i ..\\..\\SSoT\\AppStates.xml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "6e4bcb0e-01a0-499b-ac43-16a7b1cdff01",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "AppStates.xml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\SSoT\\AppStates.xml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "9733804e-96c9-49cf-a362-3f1ad57a1d70",
+      "Name": "AppStatesXmlToAppStatesDocs",
+      "RelativePath": "/docs/appStates",
+      "CommandLine": "app-states-xml-to-app-states-docs -i ..\\..\\SSoT\\AppStates.xml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "825a2488-59ff-467e-8935-e124f3f7cd06",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "IonicStatesFromAppStatesXml",
+        "DisplayName": "Ionic States From App States Xml",
+        "Description": "Create Ionic 2 states from App States xml file.",
+        "CreatedOn": "2017-11-24T23:56:53.627",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-W7TA-6mvNf8JQIqtxHcwAg",
+        "LowerName": "ionicstatesfromappstatesxml",
+        "UpperName": "IONICSTATESFROMAPPSTATESXML",
+        "LowerHyphenName": "ionic-states-from-app-states-xml",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "f8391567-b3d9-4e34-8a45-3d6bd9da4b9b",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "ff498733-153e-4754-ac64-43ee58496f24",
+            "TranspilerId": "825a2488-59ff-467e-8935-e124f3f7cd06",
+            "Name": "v1",
+            "CreatedOn": "2017-11-24T23:56:54.96",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "ionic-states-from-app-states-xml",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "ionic-states-from-app-states-xml -i ..\\..\\SSoT\\AppStates.xml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "a13b6eee-077d-418a-b968-8cf93cc238cc",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "AppStates.xml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\SSoT\\AppStates.xml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "c63763f1-3137-4465-8877-63fc5393b292",
+      "Name": "IonicStatesFromAppStatesXml",
+      "RelativePath": "/ionic2-ts-sidemenu1/src",
+      "CommandLine": "ionic-states-from-app-states-xml -i ..\\..\\SSoT\\AppStates.xml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "91081c58-9a04-4646-8ffb-d5ca789916d2",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToCSharpSqlDataManager",
+        "DisplayName": "Odxml To C Sharp Sql Data Manager",
+        "Description": "Odxml To CSharp Sql Data Manager",
+        "CreatedOn": "2017-09-27T19:08:25.863",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-ClFrnG6AMwloJkLnUQ2d3Q",
+        "LowerName": "odxmltocsharpsqldatamanager",
+        "UpperName": "ODXMLTOCSHARPSQLDATAMANAGER",
+        "LowerHyphenName": "odxml-to-c-sharp-sql-data-manager",
+        "ReadMeMD": "Creates a Data Access Layerfor (DAL) SqlServer in CSharp which can natively read, write and update the file.",
+        "InputDescriptionMD": " - base-namespace (string)\r\n    default: 'KP.ODXML7.SqlDataManager'\r\n\r\n - project-nam (string)\r\n    default: 'DAL'\r\n\r\n - schema-name (string)\r\n    default: 'dbo'\r\n\r\nNo Default Values:\r\n\r\n - data-namespace (string)\r\n - extensions-namespace (string)\r\n - suffix (string)\r\n",
+        "OutputDescriptionMD": "Otuputs a CSharp library which can read/write/udpate the objects described by the input odxml file",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "47f5fc9f-0c22-4f73-8d18-0544a7f05d7b",
+        "Category": "dot-net",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "74255a51-7a73-4865-aa6f-e380bc22f50c",
+            "TranspilerId": "91081c58-9a04-4646-8ffb-d5ca789916d2",
+            "Name": "v1",
+            "CreatedOn": "2017-09-27T19:08:26.973",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-csharp-sql-data-manager",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-csharp-sql-data-manager -i ..\\..\\ODXML\\DataSchema.odxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "86e0e02e-9f7c-42c3-a0d4-e21e2805084f",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "12618fae-4b16-4f6c-bc17-8799e034a897",
+      "Name": "OdxmlToCSharpSqlDataManager",
+      "RelativePath": "/CoreLibrary/SqlDataAccessLayer",
+      "CommandLine": "odxml42/odxml-to-csharp-sql-data-manager -i ..\\..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "ee1dc0b2-dc87-4e0f-bcb1-ade46b09de41",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToPostmanJson",
+        "DisplayName": "Odxml To Postman Json",
+        "Description": "Odxml To Postman Json",
+        "CreatedOn": "2017-11-27T02:50:26.217",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
+        "LowerName": "odxmltopostmanjson",
+        "UpperName": "ODXMLTOPOSTMANJSON",
+        "LowerHyphenName": "odxml-to-postman-json",
+        "ReadMeMD": "Creates a REST Api Requests in a format ready to imported into Postman.",
+        "InputDescriptionMD": "param name=\"project-name\" select=\"'REST Collection'\"  \r\nparam name=\"api-uri\" select=\"'http://localhost:64110/api/'\"\r\n",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "e827499f-f215-4b35-8dae-6bd423a75e4c",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "2f392ff2-3095-4932-8793-b518eeedf41e",
+            "TranspilerId": "ee1dc0b2-dc87-4e0f-bcb1-ade46b09de41",
+            "Name": "v1",
+            "CreatedOn": "2017-11-27T02:50:47.877",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-postman-json",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p api-uri=http://localhost:64110/api",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "623456ba-74a1-4557-9af9-cfdcd601bc3a",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "api-uri=http://localhost:64110/api",
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "fc24e1c5-23bf-437c-bb9c-99ad3250971f",
+      "Name": "OdxmlToPostmanJson",
+      "RelativePath": "/PostMan",
+      "CommandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p api-uri=http://localhost:64110/api"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "be08e747-c0b8-4e69-bed3-d64db1a9406c",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToMVCRESTAPI",
+        "DisplayName": "Odxml To M V C R E S T A P I",
+        "Description": "Odxml To MVC REST API",
+        "CreatedOn": "2017-11-27T03:18:05.62",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
+        "LowerName": "odxmltomvcrestapi",
+        "UpperName": "ODXMLTOMVCRESTAPI",
+        "LowerHyphenName": "odxml-to-m-v-c-r-e-s-t-a-p-i",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "47f5fc9f-0c22-4f73-8d18-0544a7f05d7b",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "f71f1171-6d76-42ed-8ef5-4a533a3f8034",
+            "TranspilerId": "be08e747-c0b8-4e69-bed3-d64db1a9406c",
+            "Name": "v1",
+            "CreatedOn": "2017-11-27T03:18:21.433",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-mvc-rest-api",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-mvc-rest-api -i ..\\..\\..\\ODXML\\DataSchema.odxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "d360e80a-3c3a-4ffd-b810-c0f049492469",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "29d86f86-3119-4fd7-8893-5514bdc33250",
+      "Name": "OdxmlToMVCRESTAPI",
+      "RelativePath": "/MVCRestApi/Controllers/api",
+      "CommandLine": "odxml42/odxml-to-mvc-rest-api -i ..\\..\\..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToNodeJSDocs",
+        "DisplayName": "Odxml To Node J S Docs",
+        "Description": "Creates easy to read/navigate html documentation for an Odxml Schema.",
+        "CreatedOn": "2017-08-29T21:18:01.293",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
+        "LowerName": "odxmltonodejsdocs",
+        "UpperName": "ODXMLTONODEJSDOCS",
+        "LowerHyphenName": "odxml-to-node-j-s-docs",
+        "ReadMeMD": "Examines the schema defined by an Odxml file and creates an interactive DataModel explorer for exploring the structure of the data model defined. \r\n\r\nCreates both a single page version of the docs, as well as a Node.JS website that can be started on demand to explore the data model more interactively.",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "Category": "documentation",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "26af4ad8-fb5d-4027-8e4b-2260c62f3f24",
+            "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
+            "Name": "v1",
+            "CreatedOn": "2017-08-29T21:18:03.463",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-nodejs-docs",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "868fcaef-2cf1-4efb-9cf1-772e19ddcf36",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960",
+      "Name": "OdxmlToNodeJSDocs",
+      "RelativePath": "/Docs",
+      "CommandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "fa2179e5-d902-47e6-bab0-3d8c137b4c66",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToAngularRestAPI",
+        "DisplayName": "Odxml To Angular Rest A P I",
+        "Description": "Creates an Angular 2+ (TypeScript) service with basic crud operations from the provided ODXML file",
+        "CreatedOn": "2017-12-18T06:19:36.463",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-gYmBv0rMPN2fYILP4FzLww",
+        "LowerName": "odxmltoangularrestapi",
+        "UpperName": "ODXMLTOANGULARRESTAPI",
+        "LowerHyphenName": "odxml-to-angular-rest-a-p-i",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "f8391567-b3d9-4e34-8a45-3d6bd9da4b9b",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "e773315d-4c5f-4659-b0d4-9c24b5fbe5bb",
+            "TranspilerId": "fa2179e5-d902-47e6-bab0-3d8c137b4c66",
+            "Name": "v1",
+            "CreatedOn": "2017-12-18T06:19:41.403",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-angular-rest-api",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-angular-rest-api  -i ..\\..\\..\\ODXML\\DataSchema.odxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "fcf1643f-9b6a-4d33-b1ca-77a626115dad",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "593a6196-803c-49d6-9732-b2ef074bdeb8",
+      "Name": "XmlXsltTransform",
+      "RelativePath": "/ionic2-ts-sidemenu1/src/providers",
+      "CommandLine": "odxml42/odxml-to-angular-rest-api  -i ..\\..\\..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "cbd4068e-573f-48f4-bce8-e1fe6383ce1d",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "XlsxToCSVs",
+        "DisplayName": "Xlsx To C S Vs",
+        "Description": "Converts an Xllsx file into one (or more) CSV files for each tab.",
+        "CreatedOn": "2017-10-06T16:52:02.81",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-touzimry1eoVw-xvGKxwrA",
+        "LowerName": "xlsxtocsvs",
+        "UpperName": "XLSXTOCSVS",
+        "LowerHyphenName": "xlsx-to-c-s-vs",
+        "ReadMeMD": "One CSV file is created for each \"tab\" in the spreadsheet.",
+        "InputFileTypeId": "39d3bcd1-d89f-4361-a3f7-7d5c295132cd",
+        "OutputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
+        "Category": "type-conversion",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "f313995e-9f38-4b36-856c-df8f73dd38bc",
+            "TranspilerId": "cbd4068e-573f-48f4-bce8-e1fe6383ce1d",
+            "Name": "v1",
+            "CreatedOn": "2017-10-06T16:52:11.6",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "xlsx-to-csvs",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "xlsx-to-csvs -i ..\\..\\SSoT\\ProjectLexicon.xlsx -p overwrite=true",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "18dedafb-8afe-408f-8e49-654ebda73a3f",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": "/SSoT/ProjectLexicon.xlsx",
+              "RelativePath": "ProjectLexicon.xlsx"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\SSoT\\ProjectLexicon.xlsx"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "overwrite=true",
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "f2ae4577-9e04-4f10-b80d-7d61b4f33739",
+      "Name": "XlsxToCSVs",
+      "RelativePath": "/SassyMQ/LexiconCSVs",
+      "CommandLine": "xlsx-to-csvs -i ..\\..\\SSoT\\ProjectLexicon.xlsx -p overwrite=true"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "6aed1b2a-37ca-40dc-b344-5f35df178d84",
+        "Name": "CsvToSmql",
+        "DisplayName": "Csv To Smql",
+        "Description": "Converts a local CSV file into an SMQL file.",
+        "CreatedOn": "2017-09-15T22:12:36.46",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-BRj-C9iG4wpr1EWuUGYXlQ",
+        "LowerName": "csvtosmql",
+        "UpperName": "CSVTOSMQL",
+        "LowerHyphenName": "csv-to-smql",
+        "InputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
+        "OutputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "Category": "sassymq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "56b1ff1a-88a4-45de-92e7-026a8ffa4321",
+            "TranspilerId": "6aed1b2a-37ca-40dc-b344-5f35df178d84",
+            "Name": "v1",
+            "CreatedOn": "2017-09-15T22:12:42.74",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "csv-to-smql",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "971f28f3-aa6f-4e57-b224-51349a3bd640",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SassyMQLexicon.csv"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          ".\\LexiconCSVs\\SassyMQLexicon.csv"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "sassymq",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "817c7574-d643-44d5-8fa1-9f6a786631b7",
+      "Name": "CsvToSmql",
+      "RelativePath": "/SassyMQ",
+      "CommandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
+        "Name": "SmqlToDocs",
+        "DisplayName": "Smql To Docs",
+        "Description": "Converts an Smql file into documentation.",
+        "CreatedOn": "2017-09-16T22:24:50.93",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-SO2KYSw3nYNV1LPUOAPf8w",
+        "LowerName": "smqltodocs",
+        "UpperName": "SMQLTODOCS",
+        "LowerHyphenName": "smql-to-docs",
+        "ExampleMD": "ssotme sassymq/SmqlToDocs -i .\\HelloWorld.smql",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "Category": "sassymq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "ea02027b-b8a4-4d73-ab46-c7d722c0cc38",
+            "TranspilerId": "69a746d2-c0b1-4467-a020-9dd12b8bc098",
+            "Name": "v1",
+            "CreatedOn": "2017-09-16T22:25:01.583",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "smql-to-docs",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "sassymq/smql-to-docs -i ..\\SassyMQLexicon.smql",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "072eba2c-21c0-459a-b47b-349f185499fb",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SassyMQLexicon.smql"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\SassyMQLexicon.smql"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "sassymq",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "3249face-0994-46fd-a189-6ea68850fd00",
+      "Name": "SmqlToDocs",
+      "RelativePath": "/SassyMQ/Docs",
+      "CommandLine": "sassymq/smql-to-docs -i ..\\SassyMQLexicon.smql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "87cacf89-e7f2-4a20-997d-8d9118488822",
+        "Name": "SmqlToTypeScriptRabbitMQ",
+        "DisplayName": "Smql To Type Script Rabbit M Q",
+        "Description": "Smql To TypeScript Rabbit MQ",
+        "CreatedOn": "2017-10-30T17:08:12.043",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-GIOqlF9-FQQJi12Dle6IxQ",
+        "LowerName": "smqltotypescriptrabbitmq",
+        "UpperName": "SMQLTOTYPESCRIPTRABBITMQ",
+        "LowerHyphenName": "smql-to-type-script-rabbit-m-q",
+        "ReadMeMD": ":param name=\"app-config-path\" select=\"'../../../app/app.config'\" \r\n:param name=\"app-state-path\" select=\"'../../../app/app.state'\" ",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "f8391567-b3d9-4e34-8a45-3d6bd9da4b9b",
+        "Category": "rabbitmq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "958bfa9d-ea1d-4782-bc7a-435324a1dad7",
+            "TranspilerId": "87cacf89-e7f2-4a20-997d-8d9118488822",
+            "Name": "v1",
+            "CreatedOn": "2017-10-30T17:08:14.043",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "smql-to-typescript",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "sassymq/smql-to-typescript -i ..\\..\\..\\..\\SassyMQ\\SassyMQLexicon.smql -p app-config-path=../../app/app.config  -p app-state-path=../../app/app.state",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "a028f15a-6998-471b-8063-ef3f01790cfe",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SassyMQLexicon.smql"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\..\\..\\SassyMQ\\SassyMQLexicon.smql"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "sassymq",
+        "parameters": [
+          "app-config-path=../../app/app.config",
+          "app-state-path=../../app/app.state",
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "9d5a8dd9-2c83-493d-90f1-57c1d0d58ebe",
+      "Name": "SmqlToTypeScriptRabbitMQ",
+      "RelativePath": "/ionic2-ts-sidemenu1/src/providers/sassymq",
+      "CommandLine": "sassymq/smql-to-typescript -i ..\\..\\..\\..\\SassyMQ\\SassyMQLexicon.smql -p app-config-path=../../app/app.config  -p app-state-path=../../app/app.state"
+    },
+    {
+      "MatchedTranspiler": null,
+      "CLIHandler": {
+        "inputFileContents": "",
+        "transpiler": "",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "-checkresults",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "9a377ced-6809-45fe-9451-dddde28e86c7",
+          "FileSetFiles": []
+        },
+        "HasRemainingArguments": false,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": true,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "1ef41254-d656-47f5-bf7d-688fa97fb8b1",
+      "Name": "LocalCommand",
+      "RelativePath": "/DSPXml",
+      "CommandLine": "-checkresults"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "bbeadea3-75c7-449a-9aaa-22e2b29c2ed7",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "SPXmlToDetailedSPXml",
+        "DisplayName": "S P Xml To Detailed S P Xml",
+        "Description": "Converts a SSoTmeProject.xml file into a Detailed SPXml file.",
+        "CreatedOn": "2017-10-14T22:26:12.277",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-jWBa32Jd3OAy32tcP7I0iA",
+        "LowerName": "spxmltodetailedspxml",
+        "UpperName": "SPXMLTODETAILEDSPXML",
+        "LowerHyphenName": "s-p-xml-to-detailed-s-p-xml",
+        "ReadMeMD": "Essentially - this gathers META DATA about the files involved in each of the transpile operations (input & output), and combines it all together into a single file.  Subsequent tools can then create (for example) documentation of this process.  This tool just gathers the information together.\r\n\r\nIt also includes the meta data about all of the files types (as a snapshot at the point in time that this tool is run) authoritatively from SSoT.me.\r\n\r\nThe command ssotme -createDocs automatically installs this tool, plus the tool which converts the DSPxml file into a more helpful Html document.",
+        "InputDescriptionMD": "A SSoTmeProject.json file - which is read locally by the Open Source SSoT.me CLI tools.  ",
+        "OutputDescriptionMD": "Based on this file, and by examining the .zfs files throughout the project, a picture of the build process is rebuilt (without any of the content of the input/output files) - and a single, unified picture of the project is developed - a Detailed SPXml file.",
+        "ExampleMD": "ssotme -createDocs",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "Category": "ssotme",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "28cf2294-48c9-41df-838a-08519b75d3c3",
+            "TranspilerId": "bbeadea3-75c7-449a-9aaa-22e2b29c2ed7",
+            "Name": "v1",
+            "CreatedOn": "2017-10-14T22:26:22.67",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "spxml-to-detailed-spxml",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "spxml-to-detailed-spxml -i .\\SSoTmeProject.spxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "6fbac95f-bab4-4030-a400-50a7022fb84c",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": "/DSPXml/SSoTmeProject.spxml",
+              "RelativePath": "SSoTmeProject.spxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          ".\\SSoTmeProject.spxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "58dca1ce-dd8f-42d0-b041-6914df54e819",
+      "Name": "SPXmlToDetailedSPXml",
+      "RelativePath": "/DSPXml",
+      "CommandLine": "spxml-to-detailed-spxml -i .\\SSoTmeProject.spxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "06876a87-a56c-4c75-a01f-377e97deed7a",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "DetailedSPXmlToHtmlDocs",
+        "DisplayName": "Detailed S P Xml To Html Docs",
+        "Description": "Detailed S P Xml To Html Docs",
+        "CreatedOn": "2017-10-14T22:05:54.85",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-oEpCrG1TUS34T1e-TSjftA",
+        "LowerName": "detailedspxmltohtmldocs",
+        "UpperName": "DETAILEDSPXMLTOHTMLDOCS",
+        "LowerHyphenName": "detailed-s-p-xml-to-html-docs",
+        "ReadMeMD": "This system tool turns a detailed SPXml file into detailed Html Documentation about how the SSoT.me project is organized. Specifically, how does the tech \"flow\" thorugh the project. ",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "Category": "ssotme",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "59b27e72-9f6d-4f13-b246-69afadb78106",
+            "TranspilerId": "06876a87-a56c-4c75-a01f-377e97deed7a",
+            "Name": "v1",
+            "CreatedOn": "2017-10-14T22:05:59.07",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "detailed-spxml-to-html",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "detailed-spxml-to-html -i .\\SSoTmeProject.dspxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "4c7cca44-4424-4443-9dce-a921eef9b4d7",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SSoTmeProject.dspxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          ".\\SSoTmeProject.dspxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "27bd8288-d51f-42ca-b580-c3a71279805c",
+      "Name": "DetailedSPXmlToHtmlDocs",
+      "RelativePath": "/DSPXml",
+      "CommandLine": "detailed-spxml-to-html -i .\\SSoTmeProject.dspxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "9b86e4ae-d540-4766-8ad6-fb3893290a4f",
+        "Name": "SmqlToRabbitMQConfig",
+        "DisplayName": "Smql To Rabbit M Q Config",
+        "Description": "Creates a script which will configure rabbit with the correct Exchanges, Queues, Routes, etc, given an Smql file.",
+        "CreatedOn": "2017-09-18T14:24:34.077",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-WxioEA3FsR1naAP64GFeiQ",
+        "LowerName": "smqltorabbitmqconfig",
+        "UpperName": "SMQLTORABBITMQCONFIG",
+        "LowerHyphenName": "smql-to-rabbit-m-q-config",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "c131c623-c204-4f34-b98f-d326bba5042a",
+        "Category": "rabbitmq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "e9603743-148c-43b9-82ba-761a32de6045",
+            "TranspilerId": "9b86e4ae-d540-4766-8ad6-fb3893290a4f",
+            "Name": "v1",
+            "CreatedOn": "2017-09-18T14:25:11.687",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "smql-to-rabbitmq-config",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "smql-to-rabbitmq-config -i ..\\SassyMQLexicon.smql",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "7feb38e7-0855-4d7a-a1a7-0ad16d2d9f30",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SassyMQLexicon.smql"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\SassyMQLexicon.smql"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "9a6d919d-04f9-48d1-9ee8-c651becc4332",
+      "Name": "SmqlToRabbitMQConfig",
+      "RelativePath": "/SassyMQ/Config",
+      "CommandLine": "smql-to-rabbitmq-config -i ..\\SassyMQLexicon.smql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "79d550e1-ce7f-4962-98c7-7e2856e226a3",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "ToUpperCase",
+        "DisplayName": "To Upper Case",
+        "Description": "Converts a file or string input into UPPERCASE letters.",
+        "CreatedOn": "2017-06-04T00:57:02.387",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-k31qK3x7A0nmMeeAKdWD_w",
+        "LowerName": "touppercase",
+        "UpperName": "TOUPPERCASE",
+        "LowerHyphenName": "to-upper-case",
+        "ReadMeMD": "Converts a string to upper case",
+        "InputDescriptionMD": "Text - either on the command line or something",
+        "OutputDescriptionMD": "THISISATEST",
+        "ExampleMD": "ssotme to-upper-case thisISaTEsT",
+        "InputFileTypeId": "6c58b9cb-e109-4273-a52b-c8a68f4009da",
+        "OutputFileTypeId": "6c58b9cb-e109-4273-a52b-c8a68f4009da",
+        "Category": "test",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "6c033292-92c6-4bcd-b208-8a77f08ebe92",
+            "TranspilerId": "79d550e1-ce7f-4962-98c7-7e2856e226a3",
+            "Name": "v1",
+            "CreatedOn": "2017-06-04T00:57:03.803",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": "",
+        "transpiler": "",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "-exec .\\UpdateSassyMQ.bat",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "68fbe4d2-27d6-4af7-913f-946e33a7a16e",
+          "FileSetFiles": []
+        },
+        "HasRemainingArguments": false,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": ".\\UpdateSassyMQ.bat",
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "ad5a7c2e-efea-4ee9-88c9-1469fcc390ec",
+      "Name": "ToUpperCase",
+      "RelativePath": "/SassyMQ/Config",
+      "CommandLine": "-exec .\\UpdateSassyMQ.bat",
+      "IsDisabled": true
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "cf9074b7-4448-474a-adb6-cfffc0911e6c",
+        "Name": "SmqlToCSharpRabbitMQ",
+        "DisplayName": "Smql To C Sharp Rabbit M Q",
+        "Description": "Smql To CSharp RabbitMQ",
+        "CreatedOn": "2017-09-15T22:13:19.003",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-NIl_3Mw9hu0J9yChmk7KNw",
+        "LowerName": "smqltocsharprabbitmq",
+        "UpperName": "SMQLTOCSHARPRABBITMQ",
+        "LowerHyphenName": "smql-to-c-sharp-rabbit-m-q",
+        "ReadMeMD": "Parameters:\r\n - acronym = \"/SMQLexicon/Acronym\" \r\n - payload-type = concat($acronym, 'Payload')\r\n - actor-base-type = concat($acronym, 'ActorBase')\r\n",
+        "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
+        "OutputFileTypeId": "47f5fc9f-0c22-4f73-8d18-0544a7f05d7b",
+        "Category": "rabbitmq",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "b189ce7b-4086-4575-b89d-aafcbe02bba9",
+            "TranspilerId": "cf9074b7-4448-474a-adb6-cfffc0911e6c",
+            "Name": "v1",
+            "CreatedOn": "2017-09-15T22:13:25.117",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "smql-to-csharp-rabbit",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "sassymq/smql-to-csharp-rabbit -i ..\\..\\SassyMQ\\SassyMQLexicon.smql",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "2c6599a2-db63-48d1-981e-0cf79bb26140",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "SassyMQLexicon.smql"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\SassyMQ\\SassyMQLexicon.smql"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "sassymq",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "2ca700b0-4016-4b0d-83f4-8c6d62897975",
+      "Name": "SmqlToCSharpRabbitMQ",
+      "RelativePath": "/CoreLibrary/SassyMQ",
+      "CommandLine": "sassymq/smql-to-csharp-rabbit -i ..\\..\\SassyMQ\\SassyMQLexicon.smql"
+    }
+  ]
+}
