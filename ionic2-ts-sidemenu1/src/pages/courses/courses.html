@@ -1,0 +1,47 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                Courses
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     Courses
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!courses || courses.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No Courses yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="courses && courses.length > 0">
+                        <button ion-item="" (click)="goToState(CourseState, course)" *ngFor="let course of courses">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ course.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewCourse()">
+                        <ion-icon name="add" item-left=""></ion-icon> New Course
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

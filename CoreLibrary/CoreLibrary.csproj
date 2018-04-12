@@ -49,6 +49,16 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Compile Include="DataClasses\Assignment.cs">
+    </Compile>
+    <Compile Include="DataClasses\Assignment.designer.cs">
+      <DependentUpon>Assignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses\Course.cs">
+    </Compile>
+    <Compile Include="DataClasses\Course.designer.cs">
+      <DependentUpon>Course.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\CoreExtensions.cs" />
@@ -59,6 +69,9 @@
     <Compile Include="SassyMQ\Derived\LexiconTerm.cs" />
     <Compile Include="SassyMQ\Derived\PayloadEventArgs.cs" />
     <Compile Include="SassyMQ\Derived\SMQActorBase.cs" />
+    <Compile Include="SassyMQ\HPActorBase.cs" />
+    <Compile Include="SassyMQ\HPExtensions.cs" />
+    <Compile Include="SassyMQ\HPPayload.cs" />
     <Compile Include="SassyMQ\LexiconEnum.cs" />
     <Compile Include="SassyMQ\LexiconTerms.cs" />
     <Compile Include="SassyMQ\LexiconTerms.designer.cs">

@@ -1,0 +1,174 @@
+
+{
+  "Ontology": {
+    "OntologyGroups": {
+      "OntologyGroup": {
+        "Name": "HomeworkPlus",
+        "ObjectDefs": {
+          "ObjectDef": [
+            {
+              "EntityId": "recQ919faQWlfXw7j",
+              "Name": "Assignment",
+              "AirtableName": "Assignments",
+              "DisplayName": "Assignment",
+              "createdTime": "2018-04-12T05:58:52Z",
+              "PropertyDefs": {
+                "PropertyDef": [
+                  {
+                    "IsPrimaryKey": "1",
+                    "Name": "AssignmentId",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "IsNullable": "0"
+                  },
+                  {
+                    "Name": "Course",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "Relationships": {
+                      "Relationship": {
+                        "ReferencedObjectDef": "Course",
+                        "ReferencedPropertyDef": "CourseId"
+                      }
+                    }
+                  },
+                  {
+                    "Name": "DueDate",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "xs:date",
+                    "Length": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "IsComplete",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "BOOLEAN",
+                    "Length": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Notes",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Name",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "createdTime",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "DATETIME",
+                    "Length": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  }
+                ]
+              }
+            },
+            {
+              "EntityId": "recbU48mkyos0TSJP",
+              "Name": "Course",
+              "AirtableName": "Courses",
+              "Notes": "An example of a \"thing.  Just add a sheet and a row",
+              "DisplayName": "Course",
+              "createdTime": "2018-04-12T05:00:58Z",
+              "PropertyDefs": {
+                "PropertyDef": [
+                  {
+                    "IsPrimaryKey": "1",
+                    "Name": "CourseId",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "IsNullable": "0"
+                  },
+                  {
+                    "Name": "Name",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Notes",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "When",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "createdTime",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "DATETIME",
+                    "Length": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  }
+                ],
+                "COLLECTION": {
+                  "Name": "Assignment",
+                  "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                  "DataType": "TEXT",
+                  "Length": "100",
+                  "IsNullable": "1",
+                  "IsPrimaryKey": "0",
+                  "IsAttribute": "0",
+                  "IsCollection": "1"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+                    
