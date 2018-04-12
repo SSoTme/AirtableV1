@@ -14,13 +14,17 @@ For a full project roadmap, including: [Roadmap Airtable Template](https://airta
 
 Or, for an empty starting project, use this: [Empty Airtable Template](https://airtable.com/shrGgWOuXXxhZls1c)
 
+### Other Start Templates:
+- [Simple Company Template](https://airtable.com/shr12ryYJilZGEZuj)
+- [Piano Service Template](https://airtable.com/shrUU5nLreXumAQHK)
+- [Simple Task Manager](https://airtable.com/shrLrXduwAKlsI3bS)
+
 ## Using this Seed:
 
-1. Clone this repo locally
+1. Fork and Clone this repo locally.
 
-2. Open one of the airtables above
-
-3. Click *copy base* in the top right corner to create a copy in your account
+2. Open one of the airtables above and Click *copy base* in the top right corner to create a 
+copy in your own Airrtable account
 
 4. Customize the Airtable, following the patterns established.
 
@@ -38,14 +42,17 @@ The name of the project will be inferred from the name of the folder.
  - *NOTE* - if the `Base ID` OR `API KEY` is wrong - it will be reported right away in the 
  init process as a 404 error on Airtable.
 
+ Also - if the `AirtableName` values for any enties included do not match a tab in your Airtable, 
+ the SSoT.me CLI will complain and tell you which entity does not match.
+
 8. Move into the `/ionic-ts-sidemenu/` folder and type `>prep-ionic.bat` to 
 start the ionic project downloading npm packages and building the mobile app.
 
-10. Run the `/SqlServer/CreateUpdateSchema.sql` to create (or update the schema for) a SQL Server Database.
+10. Run the `/SqlServer/UpdateSchema.sql` to create (or update the schema for) a SQL Server Database.
 
-7. Open the SLN file that will be in the root project
+7. Open the Visual Studio Solution (.sln) file that will be in the project root folder.
 
-9. In the visual studio project, open `/CoreLibrary/SassyMQ/` and include the 3 `.cs` 
+9. In visual studio open `/Windows/CoreLibrary/SassyMQ/` and include the 3 `.cs` 
 files which are not automatically included.
 
 9. In the visual studio project, open `/MVCRestAPI/Controllers/` and include the `api/*Controller.cs` 
