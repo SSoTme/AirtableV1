@@ -15,9 +15,9 @@ For a full project roadmap, including: [Roadmap Airtable Template](https://airta
 Or, for an empty starting project, use this: [Empty Airtable Template](https://airtable.com/shrGgWOuXXxhZls1c)
 
 ### Other Start Templates:
-[Simple Company Template](https://airtable.com/shr12ryYJilZGEZuj)
-[Piano Service Template](https://airtable.com/shrUU5nLreXumAQHK)
-[Simple Task Manager](https://airtable.com/shrLrXduwAKlsI3bS)
+- [Simple Company Template](https://airtable.com/shr12ryYJilZGEZuj)
+- [Piano Service Template](https://airtable.com/shrUU5nLreXumAQHK)
+- [Simple Task Manager](https://airtable.com/shrLrXduwAKlsI3bS)
 
 ## Using this Seed:
 
