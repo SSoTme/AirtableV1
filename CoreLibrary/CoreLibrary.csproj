@@ -85,7 +85,4 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets">
   </Import>
-  <PropertyGroup>
-    <PreBuildEvent>$(SolutionDir)build-ssotme.bat $(SolutionDir)</PreBuildEvent>
-  </PropertyGroup>
 </Project>

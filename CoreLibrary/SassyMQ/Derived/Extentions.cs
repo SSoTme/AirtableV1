@@ -70,12 +70,6 @@ namespace SassyMQ.Lib.RabbitMQ
             return files;
         }
 
-        public static bool IsLexiconTerm<T>(this StandardPayload<T> payload, LexiconTermEnum termKey)
-            where T : StandardPayload<T>, new()
-        {
-            LexiconTerm term = Lexicon.Terms[termKey];
-            return (payload.RoutingKey == term.RoutingKey);
-        }
     }
 }
 

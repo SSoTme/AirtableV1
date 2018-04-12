@@ -54,11 +54,11 @@
         "transpiler": "airtable-to-xml",
         "inputFileSetXml": "",
         "args": null,
-        "commandLine": "airtable/airtable-to-xml -p baseId=appWSrRAdjqTeawcM -p apiKey=keyVTPXpHrersaFEG",
+        "commandLine": "airtable/airtable-to-xml -p baseId={YOUR_BASE_ID} -p apiKey={YOUR_API_KEY}",
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "bb88d712-b47a-49cb-833c-107c790dd370",
+          "FileSetId": "0f6487f4-69a5-49b1-a66a-06997a66a131",
           "FileSetFiles": []
         },
         "HasRemainingArguments": true,
@@ -82,9 +82,9 @@
         "skipClean": false,
         "account": "airtable",
         "parameters": [
-          "baseId=appWSrRAdjqTeawcM",
-          "apiKey=keyVTPXpHrersaFEG",
-          "project-name=MSSassyMQSeed"
+          "baseId={YOUR_BASE_ID}",
+          "apiKey={YOUR_API_KEY}",
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -107,7 +107,7 @@
       "ProjectTranspilerId": "8d26e7b0-88ac-4839-8233-7f4605681a65",
       "Name": "AirtableToXml",
       "RelativePath": "/SSoT",
-      "CommandLine": "airtable/airtable-to-xml -p baseId=appWSrRAdjqTeawcM -p apiKey=keyVTPXpHrersaFEG"
+      "CommandLine": "airtable/airtable-to-xml -p baseId={YOUR_BASE_ID} -p apiKey={YOUR_API_KEY}"
     },
     {
       "MatchedTranspiler": {
@@ -149,7 +149,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "82ba5f81-9b85-4b26-afc1-369f94dd83c6",
+          "FileSetId": "0a3f3c99-d899-44df-b699-b360cdd29352",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -180,7 +180,7 @@
         "skipClean": false,
         "account": "airtable",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -247,7 +247,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "3424f681-e667-48c2-9494-4b422276ec73",
+          "FileSetId": "26407650-3e95-4582-87af-c39e7e85e280",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -278,7 +278,7 @@
         "skipClean": false,
         "account": "odxml42",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -344,7 +344,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "f4160541-c50e-4392-aba9-237a3b39909c",
+          "FileSetId": "58a24a70-05af-49db-b212-50099b299140",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -375,7 +375,7 @@
         "skipClean": false,
         "account": "odxml42",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -442,7 +442,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "e80cefb0-0ec1-45e7-91a9-242586da04b4",
+          "FileSetId": "03b8508c-55b1-4571-8242-ee3fad7a6a7a",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -482,7 +482,7 @@
           "relative-path=DataClasses\\",
           "include-sdm-expand=true",
           "specific-fk-field-name=true",
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -550,7 +550,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "1f34737c-6b58-4c7e-9b5b-c91b0c7bc570",
+          "FileSetId": "d7ad5fbb-9b7c-4fb0-8ae0-a36745871593",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -586,7 +586,7 @@
         "skipClean": false,
         "account": "",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -652,7 +652,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "59fb8dc4-3bd0-4386-8ba2-ef863e0723cc",
+          "FileSetId": "270d770b-766e-46f2-8ef4-dbb3b8e7cf47",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -683,7 +683,7 @@
         "skipClean": false,
         "account": "",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -749,7 +749,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "ca173635-5b33-47de-ae08-ed4c20d5c827",
+          "FileSetId": "f6fa48e2-0612-4e0d-95a5-4d1fa2be109d",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -787,7 +787,7 @@
         "parameters": [
           "starting-dots=../../",
           "include-api-ref=true",
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -851,7 +851,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "e50f83e7-c478-4cbf-8218-6d6d74d057cb",
+          "FileSetId": "8743e2d0-e852-4281-b34c-36aa19138901",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -864,7 +864,7 @@
         "SSoTmeProject": null,
         "ParseResult": 0,
         "OutputFileSet": {
-          "FileSetId": "fd66ec98-dcb4-4876-9230-a37c97a192f6",
+          "FileSetId": "d45294b3-05bd-493a-b9e8-19995d9d9848",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "ionic2-ts-sidemenu1/src/providers/rest-api-service.ts",
@@ -891,7 +891,7 @@
         "skipClean": false,
         "account": "odxml42",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -959,7 +959,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "0256595f-2b00-4ff1-9f99-ca98ab1ea9ad",
+          "FileSetId": "7ea85d1e-e080-4bfb-9b4a-e729a1f82dc5",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -990,7 +990,7 @@
         "skipClean": false,
         "account": "odxml42",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1056,7 +1056,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "d2719b2d-8434-4442-b7c9-539d4413100b",
+          "FileSetId": "b0417968-b3de-4dc1-a64d-09841e0c5b59",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1088,7 +1088,7 @@
         "account": "odxml42",
         "parameters": [
           "api-uri=http://localhost:64110/api",
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1152,7 +1152,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "64a8134f-d0c7-4065-9df3-15e4a0525637",
+          "FileSetId": "7454641f-96ed-414b-ae64-7e99ae249d54",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1183,7 +1183,7 @@
         "skipClean": false,
         "account": "odxml42",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1251,7 +1251,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "6e36f7d9-f2ad-47c3-acd3-66e39b5499fb",
+          "FileSetId": "3acb7395-a361-4056-a7b4-8f7e487b260b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/SSoT/ProjectLexicon.xlsx",
@@ -1283,7 +1283,7 @@
         "account": "",
         "parameters": [
           "overwrite=true",
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1348,7 +1348,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "aaf3cc28-b122-4c96-986b-bbaed5e4bfe1",
+          "FileSetId": "afbe9f6a-f996-4802-a0c7-585b9c4f792c",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1379,7 +1379,7 @@
         "skipClean": false,
         "account": "sassymq",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1445,7 +1445,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "3b84256f-9bb1-42d4-a0bf-b75f8e6a436b",
+          "FileSetId": "5dd12143-8c79-4cf0-84d3-24c67f48409b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1476,7 +1476,7 @@
         "skipClean": false,
         "account": "sassymq",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1543,7 +1543,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "b1e8e21d-242f-4b68-825c-76c9e50d43dc",
+          "FileSetId": "8b62c9a2-3417-40b9-bedc-c36eec04a481",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1576,7 +1576,7 @@
         "parameters": [
           "app-config-path=../../app/app.config",
           "app-state-path=../../app/app.state",
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1612,7 +1612,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "07f56b6f-45e0-4d44-922b-6b7ae2650f6b",
+          "FileSetId": "1aa282c0-926a-4cbb-b85f-e0e92e6600e9",
           "FileSetFiles": []
         },
         "HasRemainingArguments": false,
@@ -1636,7 +1636,7 @@
         "skipClean": false,
         "account": "",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1705,7 +1705,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "d4d04bea-b1dc-423f-945e-91dcee44ff2b",
+          "FileSetId": "ccf484df-43c5-48bf-b05b-ff5018708d00",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/DSPXml/SSoTmeProject.spxml",
@@ -1736,7 +1736,7 @@
         "skipClean": false,
         "account": "",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1802,7 +1802,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "35b61e56-09d9-4dfe-b5df-e8ea944554ab",
+          "FileSetId": "5d54c19c-ef2d-45fa-acd5-effdd52726d5",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1833,7 +1833,7 @@
         "skipClean": false,
         "account": "",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1898,7 +1898,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "99f260fa-0ef7-408e-b0a8-8943b48d8362",
+          "FileSetId": "d94e1b5d-bc6b-4ac7-98d2-8543b6cc96a5",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1929,7 +1929,7 @@
         "skipClean": false,
         "account": "",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -1998,7 +1998,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "ce5a5edb-6242-4e04-9f2c-d14a3fd6ffad",
+          "FileSetId": "12876ff7-128b-4985-af30-063188a379e2",
           "FileSetFiles": []
         },
         "HasRemainingArguments": false,
@@ -2022,7 +2022,7 @@
         "skipClean": false,
         "account": "",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -2089,7 +2089,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "61a0651f-1397-4518-9b44-5c94ce7d9dd8",
+          "FileSetId": "d89bb1aa-6da9-44be-998e-d871c8aba532",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -2120,7 +2120,7 @@
         "skipClean": false,
         "account": "sassymq",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
@@ -2190,7 +2190,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "f5ddbd56-5d75-4a50-856e-f979c02e8ba0",
+          "FileSetId": "d1ebc0fc-8e4e-4640-b1fd-4db09f65a1d0",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/CustomTools/CreateDefaultFiles.xslt",
@@ -2202,21 +2202,7 @@
         "ZFSFileSetFile": null,
         "SSoTmeProject": null,
         "ParseResult": 0,
-        "OutputFileSet": {
-          "FileSetId": "ff19eac1-9ba7-4696-a1d4-6c4c46d473a8",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": "CustomTools/../MVCRestApi/Web.config",
-              "RelativePath": "../MVCRestApi/Web.config",
-              "AlwaysOverwrite": true
-            },
-            {
-              "OriginalRelativePath": "CustomTools/../MSSassyMQSeed.sln",
-              "RelativePath": "../MSSassyMQSeed.sln",
-              "AlwaysOverwrite": true
-            }
-          ]
-        },
+        "OutputFileSet": null,
         "SuppressTranspile": false,
         "help": false,
         "init": false,
@@ -2235,7 +2221,7 @@
         "skipClean": false,
         "account": "",
         "parameters": [
-          "project-name=MSSassyMQSeed"
+          "project-name=MSSassyMQAirtableSeed"
         ],
         "listSettings": false,
         "addSetting": [],
