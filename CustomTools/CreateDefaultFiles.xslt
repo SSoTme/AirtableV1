@@ -18,38 +18,6 @@
             <FileSetFiles>
                 <FileSetFile>
                     <RelativePath>
-                        <xsl:text>../ConsoleApp1/App.config</xsl:text>
-                    </RelativePath>
-                    <OverwriteMode>Never</OverwriteMode>
-                    <xsl:element name="FileContents" xml:space="preserve">&lt;?xml version="1.0" encoding="utf-8" ?>
-&lt;configuration>
-    &lt;startup> 
-        &lt;supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
-    &lt;/startup>
-    &lt;connectionStrings>
-        &lt;clear />
-        &lt;add name="DefaultConnection" connectionString="Data Source=.;Initial Catalog=<xsl:value-of select="$project-name" />;Integrated Security=sspi" />
-    &lt;/connectionStrings>
-&lt;/configuration></xsl:element>
-                </FileSetFile>
-                <FileSetFile>
-                    <RelativePath>
-                        <xsl:text>../WinApp/App.config</xsl:text>
-                    </RelativePath>
-                    <OverwriteMode>Never</OverwriteMode>
-                    <xsl:element name="FileContents" xml:space="preserve">&lt;?xml version="1.0" encoding="utf-8" ?>
-&lt;configuration>
-    &lt;startup> 
-        &lt;supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
-    &lt;/startup>
-    &lt;connectionStrings>
-        &lt;clear />
-        &lt;add name="DefaultConnection" connectionString="Data Source=.;Initial Catalog=<xsl:value-of select="$project-name" />;Integrated Security=sspi" />
-    &lt;/connectionStrings>
-&lt;/configuration></xsl:element>
-                </FileSetFile>
-                <FileSetFile>
-                    <RelativePath>
                         <xsl:text>../MVCRestApi/Web.config</xsl:text>
                     </RelativePath>
                     <OverwriteMode>Never</OverwriteMode>
@@ -92,7 +60,7 @@
     &lt;/modules>
     &lt;httpProtocol>
         &lt;customHeaders>
-            &lt;add name="Access-Control-Allow-Origin" value="*" />
+            <!-- &lt;add name="Access-Control-Allow-Origin" value="*" /> -->
             &lt;add name="Access-Control-Allow-Headers" value="Content-Type" />
             &lt;add name="Access-Control-Allow-Methods" value="GET, POST, PUT, DELETE, OPTIONS" />
         &lt;/customHeaders>

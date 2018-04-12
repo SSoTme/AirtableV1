@@ -6,11 +6,11 @@
   "CurrentPath": null,
   "SaveDisabled": false,
   "SSoTmeProjectId": "109a3ca6-4391-4d84-9edc-68585ce5b4eb",
-  "Name": "MSSassyMQSeed",
+  "Name": "MSSassyMQAirtableSeed",
   "RootPath": "C:\\Seeds\\ssotme-ms-airtable-ionic-sassymq-seed",
   "ProjectSettings": [
     {
-      "ProjectSettingId": "52725804-951c-430e-b764-8bac7f70cc43",
+      "ProjectSettingId": "a31ee79b-a5e4-4914-8f5c-c0bbf7316d6c",
       "Name": "project-name",
       "Value": "MSSassyMQAirtableSeed"
     }
@@ -18,33 +18,121 @@
   "ProjectTranspilers": [
     {
       "MatchedTranspiler": {
-        "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
-        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
-        "Name": "XmlXsltTransform",
-        "DisplayName": "Xml Xslt Transform",
-        "Description": "Given an Xml and Xslt file, will process and \"split\" a resulting fileset.",
-        "CreatedOn": "2017-08-30T15:45:09.907",
+        "TranspilerId": "19d8142a-2f4d-46ac-9de6-77441f233192",
+        "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
+        "Name": "AirtableToXml",
+        "DisplayName": "Airtable To Xml",
+        "Description": "Extracts the contents of an airtable base as a single Xml file.",
+        "CreatedOn": "2018-04-07T21:28:06.273",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-pwRUdyqwEq8fPN8gkK7ADg",
-        "LowerName": "xmlxslttransform",
-        "UpperName": "XMLXSLTTRANSFORM",
-        "LowerHyphenName": "xml-xslt-transform",
-        "ReadMeMD": "The tool processes the first text file it finds (which is presumed to be in xml format), with the first Xslt file provided, and includes any parameters that are passed to ssotme as well.\r\n\r\nThe output is expected to be a FileSet Xml blob with the results of the transform.",
-        "InputDescriptionMD": "At least 1 input Xml file, An Xslt file to use for the Transform operation and any additional parameters that the Xslt file uses for it's transpiling functionality.  These could be options, values, namespaces, etc.",
-        "OutputDescriptionMD": "A fileset with the result of the Xslt transform, usually including at least 1 or more files.  The example command might produce an HTML Document that describes (in english) the contents of the Xml file.  Essentially a \"report\" about the xml file. ",
-        "ExampleMD": "ssotme -install xml-xslt-transform -i MyData.xml -i CreateDocs.xslt",
-        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
-        "OutputFileTypeId": "952e47eb-3448-4627-8dc4-93dab494c957",
-        "Category": "type-conversion",
-        "IsRecommended": true,
+        "CurrentRoutingKey": "amq.gen-IRUHFp3DWm_1ZMkImWGFKw",
+        "LowerName": "airtabletoxml",
+        "UpperName": "AIRTABLETOXML",
+        "LowerHyphenName": "airtable-to-xml",
+        "InputDescriptionMD": "-p baseId={the base id} -p apiKey={your api key}",
+        "OutputDescriptionMD": "Airtable.xml",
+        "ExampleMD": "",
+        "InputFileTypeId": "2748dae4-2e34-44b1-a268-554f2b1c3330",
+        "OutputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
         "TranspileRequests": [],
         "TranspilerInstances": [],
         "TranspilerVersions": [
           {
-            "TranspilerVersionId": "7e941388-752b-4b0f-9631-939b790be10f",
-            "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+            "TranspilerVersionId": "7f5dec02-6a37-4a68-9f32-ba0b5c79b495",
+            "TranspilerId": "19d8142a-2f4d-46ac-9de6-77441f233192",
             "Name": "v1",
-            "CreatedOn": "2017-08-30T15:45:10.653",
+            "CreatedOn": "2018-04-07T21:28:32.023",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": "",
+        "transpiler": "airtable-to-xml",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "airtable/airtable-to-xml -p baseId=appWSrRAdjqTeawcM -p apiKey=keyVTPXpHrersaFEG",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "bb88d712-b47a-49cb-833c-107c790dd370",
+          "FileSetFiles": []
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "airtable",
+        "parameters": [
+          "baseId=appWSrRAdjqTeawcM",
+          "apiKey=keyVTPXpHrersaFEG",
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "8d26e7b0-88ac-4839-8233-7f4605681a65",
+      "Name": "AirtableToXml",
+      "RelativePath": "/SSoT",
+      "CommandLine": "airtable/airtable-to-xml -p baseId=appWSrRAdjqTeawcM -p apiKey=keyVTPXpHrersaFEG"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "115c5d82-5cb8-4765-80df-32468b589fd5",
+        "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
+        "Name": "AirtableXmlToOdxml",
+        "DisplayName": "Airtable Xml To Odxml",
+        "Description": "Airtable Xml To Odxml",
+        "CreatedOn": "2018-04-08T14:09:08.08",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-0r_GnGkP4rfJJCR_tBTcMw",
+        "LowerName": "airtablexmltoodxml",
+        "UpperName": "AIRTABLEXMLTOODXML",
+        "LowerHyphenName": "airtable-xml-to-odxml",
+        "ReadMeMD": "$include-system-entities = 'false'\r\n$project-name = 'dbo'",
+        "InputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
+        "OutputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "c9eeec93-8f40-472c-8828-d92830e5d9c0",
+            "TranspilerId": "115c5d82-5cb8-4765-80df-32468b589fd5",
+            "Name": "v1",
+            "CreatedOn": "2018-04-08T14:09:47.173",
             "IsActive": true,
             "TranspilerFileTypeId_TranspilerInputHints": [],
             "TranspilerInstances": [],
@@ -54,22 +142,18 @@
       },
       "CLIHandler": {
         "inputFileContents": null,
-        "transpiler": "xml-xslt-transform",
+        "transpiler": "airtable-xml-to-odxml",
         "inputFileSetXml": "",
         "args": null,
-        "commandLine": "xml-xslt-transform -i ..\\ODXML\\DataSchema.odxml -i CreateDefaultFiles.xslt",
+        "commandLine": "airtable/airtable-xml-to-odxml -i ..\\SSoT\\Airtable.xml -o DataSchema.odxml",
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "2f7a57cc-f4bb-4af7-8850-83d62d9f21a7",
+          "FileSetId": "82ba5f81-9b85-4b26-afc1-369f94dd83c6",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            },
-            {
-              "OriginalRelativePath": "/CustomTools/CreateDefaultFiles.xslt",
-              "RelativePath": "CreateDefaultFiles.xslt"
+              "RelativePath": "Airtable.xml"
             }
           ]
         },
@@ -88,14 +172,13 @@
         "describe": false,
         "descibeAll": false,
         "input": [
-          "..\\ODXML\\DataSchema.odxml",
-          "CreateDefaultFiles.xslt"
+          "..\\SSoT\\Airtable.xml"
         ],
-        "output": null,
+        "output": "DataSchema.odxml",
         "clean": false,
         "cleanAll": false,
         "skipClean": false,
-        "account": "",
+        "account": "airtable",
         "parameters": [
           "project-name=MSSassyMQSeed"
         ],
@@ -117,10 +200,108 @@
         "projectName": null,
         "transpilerGroup": null
       },
-      "ProjectTranspilerId": "7d324821-fef5-4c2b-a4c2-e2173b4632e6",
-      "Name": "XmlXsltTransform",
-      "RelativePath": "/CustomTools",
-      "CommandLine": "xml-xslt-transform -i ..\\ODXML\\DataSchema.odxml -i CreateDefaultFiles.xslt"
+      "ProjectTranspilerId": "ae41d6af-9829-4ff5-9109-6bfd0551a051",
+      "Name": "AirtableXmlToOdxml",
+      "RelativePath": "/ODXML",
+      "CommandLine": "airtable/airtable-xml-to-odxml -i ..\\SSoT\\Airtable.xml -o DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToNodeJSDocs",
+        "DisplayName": "Odxml To Node J S Docs",
+        "Description": "Creates easy to read/navigate html documentation for an Odxml Schema.",
+        "CreatedOn": "2017-08-29T21:18:01.293",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
+        "LowerName": "odxmltonodejsdocs",
+        "UpperName": "ODXMLTONODEJSDOCS",
+        "LowerHyphenName": "odxml-to-node-j-s-docs",
+        "ReadMeMD": "Examines the schema defined by an Odxml file and creates an interactive DataModel explorer for exploring the structure of the data model defined. \r\n\r\nCreates both a single page version of the docs, as well as a Node.JS website that can be started on demand to explore the data model more interactively.",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
+        "Category": "documentation",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "26af4ad8-fb5d-4027-8e4b-2260c62f3f24",
+            "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
+            "Name": "v1",
+            "CreatedOn": "2017-08-29T21:18:03.463",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-nodejs-docs",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "3424f681-e667-48c2-9494-4b422276ec73",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": null,
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960",
+      "Name": "OdxmlToNodeJSDocs",
+      "RelativePath": "/Docs",
+      "CommandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml"
     },
     {
       "MatchedTranspiler": {
@@ -163,7 +344,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "c4154f19-daae-4cef-9434-9e821a153889",
+          "FileSetId": "f4160541-c50e-4392-aba9-237a3b39909c",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -257,11 +438,11 @@
         "transpiler": "odxml-to-csharp-pocos",
         "inputFileSetXml": "",
         "args": null,
-        "commandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml -i ..\\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\\\ -p include-sdm-expand=true",
+        "commandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml -i ..\\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\\\ -p include-sdm-expand=true -p specific-fk-field-name=true",
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "9e7d6714-e6cc-4fb2-a334-f4a3bd9c957e",
+          "FileSetId": "e80cefb0-0ec1-45e7-91a9-242586da04b4",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -300,6 +481,7 @@
           "output-csproj-filename=../CoreLibrary.csproj",
           "relative-path=DataClasses\\",
           "include-sdm-expand=true",
+          "specific-fk-field-name=true",
           "project-name=MSSassyMQSeed"
         ],
         "listSettings": false,
@@ -323,7 +505,7 @@
       "ProjectTranspilerId": "6a143376-da3b-4283-9295-43cb4c0c49f1",
       "Name": "OdxmlToCSharpPOCOs",
       "RelativePath": "/CoreLibrary/DataClasses",
-      "CommandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml -i ..\\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\\\ -p include-sdm-expand=true"
+      "CommandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml -i ..\\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\\\ -p include-sdm-expand=true -p specific-fk-field-name=true"
     },
     {
       "MatchedTranspiler": {
@@ -334,12 +516,12 @@
         "Description": "Converts an AppStates Csv file into an AppStates Xml file with states nested using ParentState as the key",
         "CreatedOn": "2017-11-24T20:07:18.92",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-GVZ_HImQD5JJY1PcHlNrxA",
+        "CurrentRoutingKey": "amq.gen-PmjxhGiNGe1apQHoQWyREQ",
         "LowerName": "appstatescsvtoappstatesxml",
         "UpperName": "APPSTATESCSVTOAPPSTATESXML",
         "LowerHyphenName": "app-states-csv-to-app-states-xml",
         "ReadMeMD": "Converts states into a nested xml structure which can consistently used by other tools.",
-        "InputDescriptionMD": "These columns are supported:\r\n",
+        "InputDescriptionMD": "These columns are supported:\r\n - Name\r\n - Description\r\n - ParentState\r\n - IsAppState\r\n - IsAbstract\r\n - DisplayName\r\n - IsCollection\r\n\r\n -p \"max-depth=5\" \r\n - EntityName\r\n - ImageName\r\n - Bmml",
         "OutputDescriptionMD": "This will create a renames csv file if one was not provided - and return an AppStates.xml file which can be shared by multiple app clients.",
         "ExampleMD": "ssotme -install app-states-csv-to-app-states-xml -i AppStates.csv",
         "InputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
@@ -368,7 +550,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "b5e40841-ac4e-44b0-b787-5b1174c4e963",
+          "FileSetId": "1f34737c-6b58-4c7e-9b5b-c91b0c7bc570",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -438,7 +620,7 @@
         "Description": "Turn a nested App States Xml file into helpful app state documentation",
         "CreatedOn": "2017-11-24T20:37:59.973",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-GVZ_HImQD5JJY1PcHlNrxA",
+        "CurrentRoutingKey": "amq.gen-bGJODe3zzDtLNfgAFrisvQ",
         "LowerName": "appstatesxmltoappstatesdocs",
         "UpperName": "APPSTATESXMLTOAPPSTATESDOCS",
         "LowerHyphenName": "app-states-xml-to-app-states-docs",
@@ -470,7 +652,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "6e4bcb0e-01a0-499b-ac43-16a7b1cdff01",
+          "FileSetId": "59fb8dc4-3bd0-4386-8ba2-ef863e0723cc",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -529,16 +711,18 @@
     {
       "MatchedTranspiler": {
         "TranspilerId": "825a2488-59ff-467e-8935-e124f3f7cd06",
-        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "AccountHolderId": "973bd869-455d-4e30-b80e-b03ef7d3051f",
         "Name": "IonicStatesFromAppStatesXml",
         "DisplayName": "Ionic States From App States Xml",
         "Description": "Create Ionic 2 states from App States xml file.",
         "CreatedOn": "2017-11-24T23:56:53.627",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-W7TA-6mvNf8JQIqtxHcwAg",
+        "CurrentRoutingKey": "amq.gen-ZoWazqI8mN_ZWe0bIIV09g",
         "LowerName": "ionicstatesfromappstatesxml",
         "UpperName": "IONICSTATESFROMAPPSTATESXML",
         "LowerHyphenName": "ionic-states-from-app-states-xml",
+        "ReadMeMD": "npm dependencies (add to packages.json/dependencies list).\r\n\r\n    \"@stomp/ng2-stompjs\": \"^0.6.2\",\r\n    \"angular2-uuid\": \"^1.1.1\",\r\n\r\neach actor also needs to be registered in the app.modules.ts file as well.\r\n\r\nLibraries need to be registered in the app.modules.ts.  Typescript docs included in the regular docs.",
+        "InputDescriptionMD": "-p \"include-api-ref=true\" - to include references to ../.../providers/rest-api-service - and a public apiSvc: RestAPIService declaration in the constructor.\r\n\r\n-i IonicCreator.icpdx to provide more data about the initial states of the apps.\r\n\r\n-p \"starting-dots=../\"\r\n\r\n-i DataSchema.odxml - in order to provide more context for the underlying data model. (not required - but frequently helpful).\r\n\r\nIf an ODXML file is not provided, then the naming internally must be VERY consistent.",
         "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
         "OutputFileTypeId": "f8391567-b3d9-4e34-8a45-3d6bd9da4b9b",
         "TranspileRequests": [],
@@ -561,15 +745,19 @@
         "transpiler": "ionic-states-from-app-states-xml",
         "inputFileSetXml": "",
         "args": null,
-        "commandLine": "ionic-states-from-app-states-xml -i ..\\..\\SSoT\\AppStates.xml",
+        "commandLine": "ionic-states-from-app-states-xml -i ..\\..\\SSoT\\AppStates.xml -p starting-dots=../../ -p \"include-api-ref=true\" -i ..\\..\\ODXML\\DataSchema.odxml",
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "a13b6eee-077d-418a-b968-8cf93cc238cc",
+          "FileSetId": "ca173635-5b33-47de-ae08-ed4c20d5c827",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
               "RelativePath": "AppStates.xml"
+            },
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
             }
           ]
         },
@@ -588,7 +776,8 @@
         "describe": false,
         "descibeAll": false,
         "input": [
-          "..\\..\\SSoT\\AppStates.xml"
+          "..\\..\\SSoT\\AppStates.xml",
+          "..\\..\\ODXML\\DataSchema.odxml"
         ],
         "output": null,
         "clean": false,
@@ -596,6 +785,8 @@
         "skipClean": false,
         "account": "",
         "parameters": [
+          "starting-dots=../../",
+          "include-api-ref=true",
           "project-name=MSSassyMQSeed"
         ],
         "listSettings": false,
@@ -619,7 +810,111 @@
       "ProjectTranspilerId": "c63763f1-3137-4465-8877-63fc5393b292",
       "Name": "IonicStatesFromAppStatesXml",
       "RelativePath": "/ionic2-ts-sidemenu1/src",
-      "CommandLine": "ionic-states-from-app-states-xml -i ..\\..\\SSoT\\AppStates.xml"
+      "CommandLine": "ionic-states-from-app-states-xml -i ..\\..\\SSoT\\AppStates.xml -p starting-dots=../../ -p \"include-api-ref=true\" -i ..\\..\\ODXML\\DataSchema.odxml"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "fa2179e5-d902-47e6-bab0-3d8c137b4c66",
+        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
+        "Name": "OdxmlToAngularRestAPI",
+        "DisplayName": "Odxml To Angular Rest A P I",
+        "Description": "Creates an Angular 2+ (TypeScript) service with basic crud operations from the provided ODXML file",
+        "CreatedOn": "2017-12-18T06:19:36.463",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-gYmBv0rMPN2fYILP4FzLww",
+        "LowerName": "odxmltoangularrestapi",
+        "UpperName": "ODXMLTOANGULARRESTAPI",
+        "LowerHyphenName": "odxml-to-angular-rest-a-p-i",
+        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
+        "OutputFileTypeId": "f8391567-b3d9-4e34-8a45-3d6bd9da4b9b",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "e773315d-4c5f-4659-b0d4-9c24b5fbe5bb",
+            "TranspilerId": "fa2179e5-d902-47e6-bab0-3d8c137b4c66",
+            "Name": "v1",
+            "CreatedOn": "2017-12-18T06:19:41.403",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "odxml-to-angular-rest-api",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "odxml42/odxml-to-angular-rest-api  -i ..\\..\\..\\ODXML\\DataSchema.odxml",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "e50f83e7-c478-4cbf-8218-6d6d74d057cb",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": null,
+              "RelativePath": "DataSchema.odxml"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": {
+          "FileSetId": "fd66ec98-dcb4-4876-9230-a37c97a192f6",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": "ionic2-ts-sidemenu1/src/providers/rest-api-service.ts",
+              "RelativePath": "rest-api-service.ts",
+              "AlwaysOverwrite": true
+            }
+          ]
+        },
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          "..\\..\\..\\ODXML\\DataSchema.odxml"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "odxml42",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "593a6196-803c-49d6-9732-b2ef074bdeb8",
+      "Name": "XmlXsltTransform",
+      "RelativePath": "/ionic2-ts-sidemenu1/src/providers",
+      "CommandLine": "odxml42/odxml-to-angular-rest-api  -i ..\\..\\..\\ODXML\\DataSchema.odxml"
     },
     {
       "MatchedTranspiler": {
@@ -664,7 +959,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "86e0e02e-9f7c-42c3-a0d4-e21e2805084f",
+          "FileSetId": "0256595f-2b00-4ff1-9f99-ca98ab1ea9ad",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -761,7 +1056,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "623456ba-74a1-4557-9af9-cfdcd601bc3a",
+          "FileSetId": "d2719b2d-8434-4442-b7c9-539d4413100b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -857,7 +1152,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "d360e80a-3c3a-4ffd-b810-c0f049492469",
+          "FileSetId": "64a8134f-d0c7-4065-9df3-15e4a0525637",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -915,199 +1210,6 @@
     },
     {
       "MatchedTranspiler": {
-        "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
-        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
-        "Name": "OdxmlToNodeJSDocs",
-        "DisplayName": "Odxml To Node J S Docs",
-        "Description": "Creates easy to read/navigate html documentation for an Odxml Schema.",
-        "CreatedOn": "2017-08-29T21:18:01.293",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-038mgzT3ATTpDx-Ekoww0w",
-        "LowerName": "odxmltonodejsdocs",
-        "UpperName": "ODXMLTONODEJSDOCS",
-        "LowerHyphenName": "odxml-to-node-j-s-docs",
-        "ReadMeMD": "Examines the schema defined by an Odxml file and creates an interactive DataModel explorer for exploring the structure of the data model defined. \r\n\r\nCreates both a single page version of the docs, as well as a Node.JS website that can be started on demand to explore the data model more interactively.",
-        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
-        "OutputFileTypeId": "d8fc84b7-442d-4c7a-92a0-eefc11391934",
-        "Category": "documentation",
-        "IsRecommended": true,
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "26af4ad8-fb5d-4027-8e4b-2260c62f3f24",
-            "TranspilerId": "8defe7a3-89cf-4989-b679-d9226519f622",
-            "Name": "v1",
-            "CreatedOn": "2017-08-29T21:18:03.463",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-nodejs-docs",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "868fcaef-2cf1-4efb-9cf1-772e19ddcf36",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "project-name=MSSassyMQSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960",
-      "Name": "OdxmlToNodeJSDocs",
-      "RelativePath": "/Docs",
-      "CommandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml"
-    },
-    {
-      "MatchedTranspiler": {
-        "TranspilerId": "fa2179e5-d902-47e6-bab0-3d8c137b4c66",
-        "AccountHolderId": "9aeb4f89-3c90-4972-927c-7deebfbb9de4",
-        "Name": "OdxmlToAngularRestAPI",
-        "DisplayName": "Odxml To Angular Rest A P I",
-        "Description": "Creates an Angular 2+ (TypeScript) service with basic crud operations from the provided ODXML file",
-        "CreatedOn": "2017-12-18T06:19:36.463",
-        "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-gYmBv0rMPN2fYILP4FzLww",
-        "LowerName": "odxmltoangularrestapi",
-        "UpperName": "ODXMLTOANGULARRESTAPI",
-        "LowerHyphenName": "odxml-to-angular-rest-a-p-i",
-        "InputFileTypeId": "33de424c-cfe0-498e-ae70-44da375a8fb2",
-        "OutputFileTypeId": "f8391567-b3d9-4e34-8a45-3d6bd9da4b9b",
-        "TranspileRequests": [],
-        "TranspilerInstances": [],
-        "TranspilerVersions": [
-          {
-            "TranspilerVersionId": "e773315d-4c5f-4659-b0d4-9c24b5fbe5bb",
-            "TranspilerId": "fa2179e5-d902-47e6-bab0-3d8c137b4c66",
-            "Name": "v1",
-            "CreatedOn": "2017-12-18T06:19:41.403",
-            "IsActive": true,
-            "TranspilerFileTypeId_TranspilerInputHints": [],
-            "TranspilerInstances": [],
-            "ReplacedByTranspilerVersionId_TranspilerVersions": []
-          }
-        ]
-      },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-angular-rest-api",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-angular-rest-api  -i ..\\..\\..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "fcf1643f-9b6a-4d33-b1ca-77a626115dad",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "project-name=MSSassyMQSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
-      "ProjectTranspilerId": "593a6196-803c-49d6-9732-b2ef074bdeb8",
-      "Name": "XmlXsltTransform",
-      "RelativePath": "/ionic2-ts-sidemenu1/src/providers",
-      "CommandLine": "odxml42/odxml-to-angular-rest-api  -i ..\\..\\..\\ODXML\\DataSchema.odxml"
-    },
-    {
-      "MatchedTranspiler": {
         "TranspilerId": "cbd4068e-573f-48f4-bce8-e1fe6383ce1d",
         "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
         "Name": "XlsxToCSVs",
@@ -1115,11 +1217,12 @@
         "Description": "Converts an Xllsx file into one (or more) CSV files for each tab.",
         "CreatedOn": "2017-10-06T16:52:02.81",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-touzimry1eoVw-xvGKxwrA",
+        "CurrentRoutingKey": "amq.gen-8TtEDAfioYVWKYvAj7MBtA",
         "LowerName": "xlsxtocsvs",
         "UpperName": "XLSXTOCSVS",
         "LowerHyphenName": "xlsx-to-c-s-vs",
         "ReadMeMD": "One CSV file is created for each \"tab\" in the spreadsheet.",
+        "InputDescriptionMD": "-p overwrite=false\r\n\r\nwill cause it to write the csvs once, but then never overwrite them.",
         "InputFileTypeId": "39d3bcd1-d89f-4361-a3f7-7d5c295132cd",
         "OutputFileTypeId": "2b02094e-3b80-4a07-8db2-0c2f38d44328",
         "Category": "type-conversion",
@@ -1148,7 +1251,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "18dedafb-8afe-408f-8e49-654ebda73a3f",
+          "FileSetId": "6e36f7d9-f2ad-47c3-acd3-66e39b5499fb",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/SSoT/ProjectLexicon.xlsx",
@@ -1213,7 +1316,7 @@
         "Description": "Converts a local CSV file into an SMQL file.",
         "CreatedOn": "2017-09-15T22:12:36.46",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-BRj-C9iG4wpr1EWuUGYXlQ",
+        "CurrentRoutingKey": "amq.gen-0dlmenmzFCebAz5mrtILxw",
         "LowerName": "csvtosmql",
         "UpperName": "CSVTOSMQL",
         "LowerHyphenName": "csv-to-smql",
@@ -1245,7 +1348,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "971f28f3-aa6f-4e57-b224-51349a3bd640",
+          "FileSetId": "aaf3cc28-b122-4c96-986b-bbaed5e4bfe1",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1342,7 +1445,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "072eba2c-21c0-459a-b47b-349f185499fb",
+          "FileSetId": "3b84256f-9bb1-42d4-a0bf-b75f8e6a436b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1406,11 +1509,12 @@
         "Description": "Smql To TypeScript Rabbit MQ",
         "CreatedOn": "2017-10-30T17:08:12.043",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-GIOqlF9-FQQJi12Dle6IxQ",
+        "CurrentRoutingKey": "amq.gen-SCYoOWSpJJKzXQro0BcGtg",
         "LowerName": "smqltotypescriptrabbitmq",
         "UpperName": "SMQLTOTYPESCRIPTRABBITMQ",
         "LowerHyphenName": "smql-to-type-script-rabbit-m-q",
-        "ReadMeMD": ":param name=\"app-config-path\" select=\"'../../../app/app.config'\" \r\n:param name=\"app-state-path\" select=\"'../../../app/app.state'\" ",
+        "ReadMeMD": "$ npm install @stomp/ng2-stompjs --save\r\n$ npm install angular2-uuid --save\r\n\r\n-p \"app-config-path=../../../app/app.config\" -p \"app-state-path=../../../app/app.state\"",
+        "ExampleMD": "ssotme -install smql-to-typescript-rabbitmq -i lexicon.smql  -p \"app-config-path=../../../app/app.config\" -p \"app-state-path=../../../app/app.state\"",
         "InputFileTypeId": "87c1c579-ea4f-47db-a064-f26f9ca1d91e",
         "OutputFileTypeId": "f8391567-b3d9-4e34-8a45-3d6bd9da4b9b",
         "Category": "rabbitmq",
@@ -1439,7 +1543,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "a028f15a-6998-471b-8063-ef3f01790cfe",
+          "FileSetId": "b1e8e21d-242f-4b68-825c-76c9e50d43dc",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1508,7 +1612,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "9a377ced-6809-45fe-9451-dddde28e86c7",
+          "FileSetId": "07f56b6f-45e0-4d44-922b-6b7ae2650f6b",
           "FileSetFiles": []
         },
         "HasRemainingArguments": false,
@@ -1601,7 +1705,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "6fbac95f-bab4-4030-a400-50a7022fb84c",
+          "FileSetId": "d4d04bea-b1dc-423f-945e-91dcee44ff2b",
           "FileSetFiles": [
             {
               "OriginalRelativePath": "/DSPXml/SSoTmeProject.spxml",
@@ -1698,7 +1802,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "4c7cca44-4424-4443-9dce-a921eef9b4d7",
+          "FileSetId": "35b61e56-09d9-4dfe-b5df-e8ea944554ab",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1794,7 +1898,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "7feb38e7-0855-4d7a-a1a7-0ad16d2d9f30",
+          "FileSetId": "99f260fa-0ef7-408e-b0a8-8943b48d8362",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -1894,7 +1998,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "68fbe4d2-27d6-4af7-913f-946e33a7a16e",
+          "FileSetId": "ce5a5edb-6242-4e04-9f2c-d14a3fd6ffad",
           "FileSetFiles": []
         },
         "HasRemainingArguments": false,
@@ -1952,7 +2056,7 @@
         "Description": "Smql To CSharp RabbitMQ",
         "CreatedOn": "2017-09-15T22:13:19.003",
         "IsActive": true,
-        "CurrentRoutingKey": "amq.gen-NIl_3Mw9hu0J9yChmk7KNw",
+        "CurrentRoutingKey": "amq.gen-0dlmenmzFCebAz5mrtILxw",
         "LowerName": "smqltocsharprabbitmq",
         "UpperName": "SMQLTOCSHARPRABBITMQ",
         "LowerHyphenName": "smql-to-c-sharp-rabbit-m-q",
@@ -1985,7 +2089,7 @@
         "AccountHolder": null,
         "CoordinatorProxy": null,
         "FileSet": {
-          "FileSetId": "2c6599a2-db63-48d1-981e-0cf79bb26140",
+          "FileSetId": "61a0651f-1397-4518-9b44-5c94ce7d9dd8",
           "FileSetFiles": [
             {
               "OriginalRelativePath": null,
@@ -2040,6 +2144,121 @@
       "Name": "SmqlToCSharpRabbitMQ",
       "RelativePath": "/CoreLibrary/SassyMQ",
       "CommandLine": "sassymq/smql-to-csharp-rabbit -i ..\\..\\SassyMQ\\SassyMQLexicon.smql"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+        "AccountHolderId": "1e876e4f-d63b-4698-bd68-3bc27876e41e",
+        "Name": "XmlXsltTransform",
+        "DisplayName": "Xml Xslt Transform",
+        "Description": "Given an Xml and Xslt file, will process and \"split\" a resulting fileset.",
+        "CreatedOn": "2017-08-30T15:45:09.907",
+        "IsActive": true,
+        "CurrentRoutingKey": "amq.gen-pwRUdyqwEq8fPN8gkK7ADg",
+        "LowerName": "xmlxslttransform",
+        "UpperName": "XMLXSLTTRANSFORM",
+        "LowerHyphenName": "xml-xslt-transform",
+        "ReadMeMD": "The tool processes the first text file it finds (which is presumed to be in xml format), with the first Xslt file provided, and includes any parameters that are passed to ssotme as well.\r\n\r\nThe output is expected to be a FileSet Xml blob with the results of the transform.",
+        "InputDescriptionMD": "At least 1 input Xml file, An Xslt file to use for the Transform operation and any additional parameters that the Xslt file uses for it's transpiling functionality.  These could be options, values, namespaces, etc.",
+        "OutputDescriptionMD": "A fileset with the result of the Xslt transform, usually including at least 1 or more files.  The example command might produce an HTML Document that describes (in english) the contents of the Xml file.  Essentially a \"report\" about the xml file. ",
+        "ExampleMD": "ssotme -install xml-xslt-transform -i MyData.xml -i CreateDocs.xslt",
+        "InputFileTypeId": "f1b92a2a-3f83-4000-9b37-57f920e14419",
+        "OutputFileTypeId": "952e47eb-3448-4627-8dc4-93dab494c957",
+        "Category": "type-conversion",
+        "IsRecommended": true,
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "7e941388-752b-4b0f-9631-939b790be10f",
+            "TranspilerId": "4b713f03-1d9f-42f2-b02f-e3cdbd237bb3",
+            "Name": "v1",
+            "CreatedOn": "2017-08-30T15:45:10.653",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": {
+        "inputFileContents": null,
+        "transpiler": "xml-xslt-transform",
+        "inputFileSetXml": "",
+        "args": null,
+        "commandLine": "xml-xslt-transform -i .\\CreateDefaultFiles.xslt",
+        "AccountHolder": null,
+        "CoordinatorProxy": null,
+        "FileSet": {
+          "FileSetId": "f5ddbd56-5d75-4a50-856e-f979c02e8ba0",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": "/CustomTools/CreateDefaultFiles.xslt",
+              "RelativePath": "CreateDefaultFiles.xslt"
+            }
+          ]
+        },
+        "HasRemainingArguments": true,
+        "ZFSFileSetFile": null,
+        "SSoTmeProject": null,
+        "ParseResult": 0,
+        "OutputFileSet": {
+          "FileSetId": "ff19eac1-9ba7-4696-a1d4-6c4c46d473a8",
+          "FileSetFiles": [
+            {
+              "OriginalRelativePath": "CustomTools/../MVCRestApi/Web.config",
+              "RelativePath": "../MVCRestApi/Web.config",
+              "AlwaysOverwrite": true
+            },
+            {
+              "OriginalRelativePath": "CustomTools/../MSSassyMQSeed.sln",
+              "RelativePath": "../MSSassyMQSeed.sln",
+              "AlwaysOverwrite": true
+            }
+          ]
+        },
+        "SuppressTranspile": false,
+        "help": false,
+        "init": false,
+        "install": false,
+        "uninstall": false,
+        "build": false,
+        "buildAll": false,
+        "describe": false,
+        "descibeAll": false,
+        "input": [
+          ".\\CreateDefaultFiles.xslt"
+        ],
+        "output": null,
+        "clean": false,
+        "cleanAll": false,
+        "skipClean": false,
+        "account": "",
+        "parameters": [
+          "project-name=MSSassyMQSeed"
+        ],
+        "listSettings": false,
+        "addSetting": [],
+        "removeSetting": [],
+        "keyFile": null,
+        "emailAddress": null,
+        "secret": null,
+        "addTranspiler": null,
+        "deleteTranspiler": null,
+        "waitTimeout": 30000,
+        "runAs": null,
+        "preserveZFS": false,
+        "checkResults": false,
+        "createDocs": false,
+        "execute": null,
+        "includeDisabled": false,
+        "projectName": null,
+        "transpilerGroup": null
+      },
+      "ProjectTranspilerId": "1a2b18ff-c654-4752-9a20-4d05cebb4687",
+      "Name": "XmlXsltTransform",
+      "RelativePath": "/CustomTools",
+      "CommandLine": "xml-xslt-transform -i .\\CreateDefaultFiles.xslt"
     }
   ]
 }
