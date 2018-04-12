@@ -1,0 +1,50 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                <ion-col text-left="">
+                                                    {{ this.parent.course.Name }}
+                                                </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
+                                                    - Assignments</ion-col>
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     Assignments
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!assignments || assignments.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No Assignments yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="assignments && assignments.length > 0">
+                        <button ion-item="" (click)="goToState(AssignmentState, assignment)" *ngFor="let assignment of assignments">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ assignment.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewAssignment()">
+                        <ion-icon name="add" item-left=""></ion-icon> New Assignment
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

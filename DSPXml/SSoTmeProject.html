@@ -1,0 +1,674 @@
+<html><head><title>HomeworkPlus Project Summary</title><link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /><style>
+body {
+    padding: 1em;
+}
+
+.ssotme-root {
+    color: #EE2222;
+}
+
+.relative-path {
+    font-style: italics;
+    color: #2222EE;
+}
+
+.command-line {
+    text-indent: 5em;
+}
+
+.project-transpiler-link-box {
+    max-width: 70em;
+    font-size: 1.2em; 
+    font-weight; bold; 
+    padding: 0.25em;
+    border: solid #EEEEEE 1px;
+    margin: 0.25em;
+    margin-bottom: 0.8s5em;
+}
+
+.pre {
+    font-family: monospace;
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+}
+        </style></head><body><h1>HomeworkPlus Project Summary</h1><h2>Build Plan</h2><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SSoT/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">airtable/airtable-to-xml -p baseId=apphuEmzI2zKqmCb0 -p apiKey=keyAsKv7g3bNC484u</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/ODXML/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">airtable/airtable-xml-to-odxml -i ..\SSoT\Airtable.xml -o DataSchema.odxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/Docs/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">odxml42/odxml-to-nodejs-docs -i ..\ODXML\DataSchema.odxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SqlServer/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">odxml42/odxml-to-sql-server-createdb -i ..\ODXML\DataSchema.odxml -o UpdateSchema.sql</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/CoreLibrary/DataClasses/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">odxml42/odxml-to-csharp-pocos -i ..\..\ODXML\DataSchema.odxml -i ..\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\ -p include-sdm-expand=true -p specific-fk-field-name=true</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SSoT/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">app-states-csv-to-app-states-xml -i .\AppStates.csv  -i ..\ODXML\DataSchema.odxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/docs/appStates/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">app-states-xml-to-app-states-docs -i ..\..\SSoT\AppStates.xml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/ionic2-ts-sidemenu1/src/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">ionic-states-from-app-states-xml -i ..\..\SSoT\AppStates.xml -p starting-dots=../../ -p "include-api-ref=true" -i ..\..\ODXML\DataSchema.odxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/ionic2-ts-sidemenu1/src/providers/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">odxml42/odxml-to-angular-rest-api  -i ..\..\..\ODXML\DataSchema.odxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/CoreLibrary/SqlDataAccessLayer/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">odxml42/odxml-to-csharp-sql-data-manager -i ..\..\ODXML\DataSchema.odxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/PostMan/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">odxml42/odxml-to-postman-json -i ..\ODXML\DataSchema.odxml -p api-uri=http://localhost:64110/api</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/MVCRestApi/Controllers/api/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">odxml42/odxml-to-mvc-rest-api -i ..\..\..\ODXML\DataSchema.odxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SassyMQ/LexiconCSVs/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">xlsx-to-csvs -i ..\..\SSoT\ProjectLexicon.xlsx -p overwrite=true</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SassyMQ/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">sassymq/csv-to-smql -i .\LexiconCSVs\SassyMQLexicon.csv</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SassyMQ/Docs/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">sassymq/smql-to-docs -i ..\SassyMQLexicon.smql</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/ionic2-ts-sidemenu1/src/providers/sassymq/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">sassymq/smql-to-typescript -i ..\..\..\..\SassyMQ\SassyMQLexicon.smql -p app-config-path=../../app/app.config  -p app-state-path=../../app/app.state</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/DSPXml/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">-checkresults</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/DSPXml/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">spxml-to-detailed-spxml -i .\SSoTmeProject.spxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/DSPXml/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">detailed-spxml-to-html -i .\SSoTmeProject.dspxml</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SassyMQ/Config/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">smql-to-rabbitmq-config -i ..\SassyMQLexicon.smql</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SassyMQ/Config/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">-exec .\UpdateSassyMQ.bat</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/CoreLibrary/SassyMQ/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">sassymq/smql-to-csharp-rabbit -i ..\..\SassyMQ\SassyMQLexicon.smql</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/CustomTools/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">xml-xslt-transform -i .\CreateDefaultFiles.xslt</div></div><h2>Input Files</h2><div><h3>Airtable.xml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;"></div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div></div><h3>Airtable Xml To Odxml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ODXML</span><br />/> <b>ssotme </b> <a href="#ae41d6af-9829-4ff5-9109-6bfd0551a051" >airtable-xml-to-odxml</a> -i " /SSoT/Airtable.xml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /Xsd.odxml</div><div>
+                                /DataSchema.odxml</div><div>
+                                /AirtableSummary.txt</div></div></div></div></div></div></div><div><h3>DataSchema.odxml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
+            </div></div><h3>Odxml To Node J S Docs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/Docs</span><br />/> <b>ssotme </b> <a href="#37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960" >odxml-to-node-j-s-docs</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /app.js</div><div>
+                                /Index.html</div><div>
+                                /SinglePageDocs.html</div>
+                        .../ (+2 more)
+                    </div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/sql.png"  />
+            </div></div><h3>Odxml To Sql Server Create Db</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SqlServer</span><br />/> <b>ssotme </b> <a href="#ce1207c3-72fb-444c-b579-5a7cfd3ebac7" >odxml-to-sql-server-create-db</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /UpdateSchema.sql</div></div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
+            </div></div><h3>Odxml To C Sharp P O C Os</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CoreLibrary/DataClasses</span><br />/> <b>ssotme </b> <a href="#6a143376-da3b-4283-9295-43cb4c0c49f1" >odxml-to-c-sharp-p-o-c-os</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /Assignment.designer.cs</div><div>
+                                /Assignment.cs</div><div>
+                                /Course.designer.cs</div>
+                        .../ (+1 more)
+                    </div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/typescript.png"  />
+            </div></div><h3>Odxml To Angular Rest A P I</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ionic2-ts-sidemenu1/src/providers</span><br />/> <b>ssotme </b> <a href="#593a6196-803c-49d6-9732-b2ef074bdeb8" >odxml-to-angular-rest-a-p-i</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /rest-api-service.ts</div></div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
+            </div></div><h3>Odxml To C Sharp Sql Data Manager</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CoreLibrary/SqlDataAccessLayer</span><br />/> <b>ssotme </b> <a href="#12618fae-4b16-4f6c-bc17-8799e034a897" >odxml-to-c-sharp-sql-data-manager</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SqlDataManager.cs</div></div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/json.png"  />
+            </div></div><h3>Odxml To Postman Json</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/PostMan</span><br />/> <b>ssotme </b> <a href="#fc24e1c5-23bf-437c-bb9c-99ad3250971f" >odxml-to-postman-json</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /PostmanCollection.json</div></div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
+            </div></div><h3>Odxml To M V C R E S T A P I</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/MVCRestApi/Controllers/api</span><br />/> <b>ssotme </b> <a href="#29d86f86-3119-4fd7-8893-5514bdc33250" >odxml-to-m-v-c-r-e-s-t-a-p-i</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /AssignmentsController.cs</div><div>
+                                /AssignmentsController.designer.cs</div><div>
+                                /CoursesController.cs</div>
+                        .../ (+1 more)
+                    </div></div></div></div></div></div><div><h3>AppStates.csv</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csv.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div></div><h3>App States Csv To App States Xml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SSoT</span><br />/> <b>ssotme </b> <a href="#3bd76ce1-4eed-4042-8a03-514eedd1e4f6" >app-states-csv-to-app-states-xml</a> -i " /SSoT/AppStates.csv, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /AppStates.default.csv</div><div>
+                                /AppStates.xml</div></div></div></div></div></div></div><div><h3>AppStates.xml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
+            </div></div><h3>App States Xml To App States Docs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/docs/appStates</span><br />/> <b>ssotme </b> <a href="#9733804e-96c9-49cf-a362-3f1ad57a1d70" >app-states-xml-to-app-states-docs</a> -i " /SSoT/AppStates.xml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /AppStates.html</div></div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/typescript.png"  />
+            </div></div><h3>Ionic States From App States Xml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ionic2-ts-sidemenu1/src</span><br />/> <b>ssotme </b> <a href="#c63763f1-3137-4465-8877-63fc5393b292" >ionic-states-from-app-states-xml</a> -i " /SSoT/AppStates.xml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /AppStateSummary.txt</div><div>
+                                /app/app.modules-base.ts</div><div>
+                                /pages/home/home.html</div>
+                        .../ (+49 more)
+                    </div></div></div></div></div></div><div><h3>ProjectLexicon.xlsx</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xlsx.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csv.png"  />
+            </div></div><h3>Xlsx To C S Vs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ/LexiconCSVs</span><br />/> <b>ssotme </b> <a href="#f2ae4577-9e04-4f10-b80d-7d61b4f33739" >xlsx-to-c-s-vs</a> -i " /SSoT/ProjectLexicon.xlsx, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SassyMQLexicon.csv</div></div></div></div></div></div></div><div><h3>SassyMQLexicon.csv</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csv.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div></div><h3>Csv To Smql</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ</span><br />/> <b>ssotme </b> <a href="#817c7574-d643-44d5-8fa1-9f6a786631b7" >csv-to-smql</a> -i " /SassyMQ/LexiconCSVs/SassyMQLexicon.csv, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SassyMQLexicon.smql</div></div></div></div></div></div></div><div><h3>SassyMQLexicon.smql</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
+            </div></div><h3>Smql To Docs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ/Docs</span><br />/> <b>ssotme </b> <a href="#3249face-0994-46fd-a189-6ea68850fd00" >smql-to-docs</a> -i " /SassyMQ/SassyMQLexicon.smql, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SassyIndex.html</div><div>
+                                /ReadMe.html</div><div>
+                                /CSharp.html</div>
+                        .../ (+8 more)
+                    </div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/typescript.png"  />
+            </div></div><h3>Smql To Type Script Rabbit M Q</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ionic2-ts-sidemenu1/src/providers/sassymq</span><br />/> <b>ssotme </b> <a href="#9d5a8dd9-2c83-493d-90f1-57c1d0d58ebe" >smql-to-type-script-rabbit-m-q</a> -i " /SassyMQ/SassyMQLexicon.smql, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /smq.endpoints.ts</div><div>
+                                /smqStompService.ts</div><div>
+                                /smqActorBase.ts</div>
+                        .../ (+7 more)
+                    </div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/shellscript.png"  />
+            </div></div><h3>Smql To Rabbit M Q Config</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ/Config</span><br />/> <b>ssotme </b> <a href="#9a6d919d-04f9-48d1-9ee8-c651becc4332" >smql-to-rabbit-m-q-config</a> -i " /SassyMQ/SassyMQLexicon.smql, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /HP_DefaultConfig.bat</div><div>
+                                /configureBroker.bat</div><div>
+                                /_configureRMQVirtualHost.bat</div>
+                        .../ (+3 more)
+                    </div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
+            </div></div><h3>Smql To C Sharp Rabbit M Q</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CoreLibrary/SassyMQ</span><br />/> <b>ssotme </b> <a href="#2ca700b0-4016-4b0d-83f4-8c6d62897975" >smql-to-c-sharp-rabbit-m-q</a> -i " /SassyMQ/SassyMQLexicon.smql, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /LexiconEnum.cs</div><div>
+                                /LexiconTerms.designer.cs</div><div>
+                                /LexiconTerms.cs</div>
+                        .../ (+14 more)
+                    </div></div></div></div></div></div><div><h3>SSoTmeProject.spxml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div></div><h3>S P Xml To Detailed S P Xml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/DSPXml</span><br />/> <b>ssotme </b> <a href="#58dca1ce-dd8f-42d0-b041-6914df54e819" >s-p-xml-to-detailed-s-p-xml</a> -i " /DSPXml/SSoTmeProject.spxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SSoTmeProject.dspxml</div></div></div></div></div></div></div><div><h3>SSoTmeProject.dspxml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
+            </div></div><h3>Detailed S P Xml To Html Docs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/DSPXml</span><br />/> <b>ssotme </b> <a href="#27bd8288-d51f-42ca-b580-c3a71279805c" >detailed-s-p-xml-to-html-docs</a> -i " /DSPXml/SSoTmeProject.dspxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /FileTypeImages/-to-.png</div><div>
+                                /FileTypeImages/black.png</div><div>
+                                /FileTypeImages/blue-gear.png</div>
+                        .../ (+65 more)
+                    </div></div></div></div></div></div><div><h3>CreateDefaultFiles.xslt</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/fileset.png"  />
+            </div></div><h3>Xml Xslt Transform</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CustomTools</span><br />/> <b>ssotme </b> <a href="#1a2b18ff-c654-4752-9a20-4d05cebb4687" >xml-xslt-transform</a> -i " /CustomTools/CreateDefaultFiles.xslt, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /../MVCRestApi/Web.config</div><div>
+                                /../HomeworkPlus.sln</div></div></div></div></div></div></div><hr /><H3>All Transpilers</H3>
+        
+        <hr id="8d26e7b0-88ac-4839-8233-7f4605681a65 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;"></div><div class="pull-left" style="height: 3em; width: 3em;"></div></div><h3>Airtable To Xml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SSoT</span><br />/> <b>ssotme </b> <a href="#8d26e7b0-88ac-4839-8233-7f4605681a65" >airtable-to-xml</a> -i " /SSoT, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /Airtable.xml</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Extracts the contents of an airtable base as a single Xml file.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">airtable/airtable-to-xml -p baseId=apphuEmzI2zKqmCb0 -p apiKey=keyAsKv7g3bNC484u</span></div><div style="margin-left: 1em; padding: 0.5em;">baseId=apphuEmzI2zKqmCb0 ----->
+                </div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> SSoT/Airtable.xml</div></div>
+        <hr id="ae41d6af-9829-4ff5-9109-6bfd0551a051 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;"></div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div></div><h3>Airtable Xml To Odxml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ODXML</span><br />/> <b>ssotme </b> <a href="#ae41d6af-9829-4ff5-9109-6bfd0551a051" >airtable-xml-to-odxml</a> -i " /SSoT/Airtable.xml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /Xsd.odxml</div><div>
+                                /DataSchema.odxml</div><div>
+                                /AirtableSummary.txt</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Airtable Xml To Odxml</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">airtable/airtable-xml-to-odxml -i ..\SSoT\Airtable.xml -o DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SSoT/Airtable.xml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> ODXML/Xsd.odxml</div><div>
+                    -> ODXML/DataSchema.odxml</div><div>
+                    -> ODXML/AirtableSummary.txt</div></div>
+        <hr id="37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
+            </div></div><h3>Odxml To Node J S Docs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/Docs</span><br />/> <b>ssotme </b> <a href="#37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960" >odxml-to-node-j-s-docs</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /app.js</div><div>
+                                /Index.html</div><div>
+                                /SinglePageDocs.html</div>
+                        .../ (+2 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Creates easy to read/navigate html documentation for an Odxml Schema.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-nodejs-docs -i ..\ODXML\DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> Docs/app.js</div><div>
+                    -> Docs/Index.html</div><div>
+                    -> Docs/SinglePageDocs.html</div><div>
+                    -> Docs/StartServer.sh</div><div>
+                    -> Docs/DataSchema.json</div></div>
+        <hr id="ce1207c3-72fb-444c-b579-5a7cfd3ebac7 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/sql.png"  />
+            </div></div><h3>Odxml To Sql Server Create Db</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SqlServer</span><br />/> <b>ssotme </b> <a href="#ce1207c3-72fb-444c-b579-5a7cfd3ebac7" >odxml-to-sql-server-create-db</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /UpdateSchema.sql</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">OdxmlToSqlServerCreateDb</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-sql-server-createdb -i ..\ODXML\DataSchema.odxml -o UpdateSchema.sql</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> SqlServer/UpdateSchema.sql</div></div>
+        <hr id="6a143376-da3b-4283-9295-43cb4c0c49f1 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
+            </div></div><h3>Odxml To C Sharp P O C Os</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CoreLibrary/DataClasses</span><br />/> <b>ssotme </b> <a href="#6a143376-da3b-4283-9295-43cb4c0c49f1" >odxml-to-c-sharp-p-o-c-os</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /Assignment.designer.cs</div><div>
+                                /Assignment.cs</div><div>
+                                /Course.designer.cs</div>
+                        .../ (+1 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Odxml To CSharp POCOs</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-csharp-pocos -i ..\..\ODXML\DataSchema.odxml -i ..\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\ -p include-sdm-expand=true -p specific-fk-field-name=true</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
+                        </div><div>/CoreLibrary/CoreLibrary.csproj ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> CoreLibrary/DataClasses/Assignment.designer.cs</div><div>
+                    -> CoreLibrary/DataClasses/Assignment.cs</div><div>
+                    -> CoreLibrary/DataClasses/Course.designer.cs</div><div>
+                    -> CoreLibrary/DataClasses/Course.cs</div></div>
+        <hr id="3bd76ce1-4eed-4042-8a03-514eedd1e4f6 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csv.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div></div><h3>App States Csv To App States Xml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SSoT</span><br />/> <b>ssotme </b> <a href="#3bd76ce1-4eed-4042-8a03-514eedd1e4f6" >app-states-csv-to-app-states-xml</a> -i " /SSoT/AppStates.csv, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /AppStates.default.csv</div><div>
+                                /AppStates.xml</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Converts an AppStates Csv file into an AppStates Xml file with states nested using ParentState as the key</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">app-states-csv-to-app-states-xml -i .\AppStates.csv  -i ..\ODXML\DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SSoT/AppStates.csv ----->
+                        </div><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> SSoT/AppStates.default.csv</div><div>
+                    -> SSoT/AppStates.xml</div></div>
+        <hr id="9733804e-96c9-49cf-a362-3f1ad57a1d70 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
+            </div></div><h3>App States Xml To App States Docs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/docs/appStates</span><br />/> <b>ssotme </b> <a href="#9733804e-96c9-49cf-a362-3f1ad57a1d70" >app-states-xml-to-app-states-docs</a> -i " /SSoT/AppStates.xml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /AppStates.html</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Turn a nested App States Xml file into helpful app state documentation</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">app-states-xml-to-app-states-docs -i ..\..\SSoT\AppStates.xml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SSoT/AppStates.xml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> docs/appStates/AppStates.html</div></div>
+        <hr id="c63763f1-3137-4465-8877-63fc5393b292 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/typescript.png"  />
+            </div></div><h3>Ionic States From App States Xml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ionic2-ts-sidemenu1/src</span><br />/> <b>ssotme </b> <a href="#c63763f1-3137-4465-8877-63fc5393b292" >ionic-states-from-app-states-xml</a> -i " /SSoT/AppStates.xml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /AppStateSummary.txt</div><div>
+                                /app/app.modules-base.ts</div><div>
+                                /pages/home/home.html</div>
+                        .../ (+49 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Create Ionic 2 states from App States xml file.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">ionic-states-from-app-states-xml -i ..\..\SSoT\AppStates.xml -p starting-dots=../../ -p "include-api-ref=true" -i ..\..\ODXML\DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SSoT/AppStates.xml ----->
+                        </div><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> ionic2-ts-sidemenu1/src/AppStateSummary.txt</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/app.modules-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/home/home.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/home/home.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/home/home.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/home/home.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/courses.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/courses.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/courses.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/courses.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/course.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/course.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/course.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/course.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/assignments/assignments.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/assignments/assignments.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/assignments/assignments.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/assignments/assignments.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/assignments/assignment/assignment.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/assignments/assignment/assignment.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/assignments/assignment/assignment.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/courses/course/assignments/assignment/assignment.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/about/about.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/about/about.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/about/about.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/about/about.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/contact.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/contact.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/contact.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/contact.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/chat/chat.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/chat/chat.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/chat/chat.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/chat/chat.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/email/email.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/email/email.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/email/email.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/email/email.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/call/call.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/call/call.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/call/call.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/contact/call/call.scss</div></div>
+        <hr id="593a6196-803c-49d6-9732-b2ef074bdeb8 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/typescript.png"  />
+            </div></div><h3>Odxml To Angular Rest A P I</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ionic2-ts-sidemenu1/src/providers</span><br />/> <b>ssotme </b> <a href="#593a6196-803c-49d6-9732-b2ef074bdeb8" >odxml-to-angular-rest-a-p-i</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /rest-api-service.ts</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Creates an Angular 2+ (TypeScript) service with basic crud operations from the provided ODXML file</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-angular-rest-api  -i ..\..\..\ODXML\DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> ionic2-ts-sidemenu1/src/providers/rest-api-service.ts</div></div>
+        <hr id="12618fae-4b16-4f6c-bc17-8799e034a897 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
+            </div></div><h3>Odxml To C Sharp Sql Data Manager</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CoreLibrary/SqlDataAccessLayer</span><br />/> <b>ssotme </b> <a href="#12618fae-4b16-4f6c-bc17-8799e034a897" >odxml-to-c-sharp-sql-data-manager</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SqlDataManager.cs</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Odxml To CSharp Sql Data Manager</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-csharp-sql-data-manager -i ..\..\ODXML\DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> CoreLibrary/SqlDataAccessLayer/SqlDataManager.cs</div></div>
+        <hr id="fc24e1c5-23bf-437c-bb9c-99ad3250971f 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/json.png"  />
+            </div></div><h3>Odxml To Postman Json</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/PostMan</span><br />/> <b>ssotme </b> <a href="#fc24e1c5-23bf-437c-bb9c-99ad3250971f" >odxml-to-postman-json</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /PostmanCollection.json</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Odxml To Postman Json</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-postman-json -i ..\ODXML\DataSchema.odxml -p api-uri=http://localhost:64110/api</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> PostMan/PostmanCollection.json</div></div>
+        <hr id="29d86f86-3119-4fd7-8893-5514bdc33250 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
+            </div></div><h3>Odxml To M V C R E S T A P I</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/MVCRestApi/Controllers/api</span><br />/> <b>ssotme </b> <a href="#29d86f86-3119-4fd7-8893-5514bdc33250" >odxml-to-m-v-c-r-e-s-t-a-p-i</a> -i " /ODXML/DataSchema.odxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /AssignmentsController.cs</div><div>
+                                /AssignmentsController.designer.cs</div><div>
+                                /CoursesController.cs</div>
+                        .../ (+1 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Odxml To MVC REST API</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-mvc-rest-api -i ..\..\..\ODXML\DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> MVCRestApi/Controllers/api/AssignmentsController.cs</div><div>
+                    -> MVCRestApi/Controllers/api/AssignmentsController.designer.cs</div><div>
+                    -> MVCRestApi/Controllers/api/CoursesController.cs</div><div>
+                    -> MVCRestApi/Controllers/api/CoursesController.designer.cs</div></div>
+        <hr id="f2ae4577-9e04-4f10-b80d-7d61b4f33739 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xlsx.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csv.png"  />
+            </div></div><h3>Xlsx To C S Vs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ/LexiconCSVs</span><br />/> <b>ssotme </b> <a href="#f2ae4577-9e04-4f10-b80d-7d61b4f33739" >xlsx-to-c-s-vs</a> -i " /SSoT/ProjectLexicon.xlsx, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SassyMQLexicon.csv</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Converts an Xllsx file into one (or more) CSV files for each tab.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">xlsx-to-csvs -i ..\..\SSoT\ProjectLexicon.xlsx -p overwrite=true</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SSoT/ProjectLexicon.xlsx ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> SassyMQ/LexiconCSVs/SassyMQLexicon.csv</div></div>
+        <hr id="817c7574-d643-44d5-8fa1-9f6a786631b7 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csv.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div></div><h3>Csv To Smql</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ</span><br />/> <b>ssotme </b> <a href="#817c7574-d643-44d5-8fa1-9f6a786631b7" >csv-to-smql</a> -i " /SassyMQ/LexiconCSVs/SassyMQLexicon.csv, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SassyMQLexicon.smql</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Converts a local CSV file into an SMQL file.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">sassymq/csv-to-smql -i .\LexiconCSVs\SassyMQLexicon.csv</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SassyMQ/LexiconCSVs/SassyMQLexicon.csv ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> SassyMQ/SassyMQLexicon.smql</div></div>
+        <hr id="3249face-0994-46fd-a189-6ea68850fd00 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
+            </div></div><h3>Smql To Docs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ/Docs</span><br />/> <b>ssotme </b> <a href="#3249face-0994-46fd-a189-6ea68850fd00" >smql-to-docs</a> -i " /SassyMQ/SassyMQLexicon.smql, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SassyIndex.html</div><div>
+                                /ReadMe.html</div><div>
+                                /CSharp.html</div>
+                        .../ (+8 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Converts an Smql file into documentation.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">sassymq/smql-to-docs -i ..\SassyMQLexicon.smql</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SassyMQ/SassyMQLexicon.smql ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> SassyMQ/Docs/SassyIndex.html</div><div>
+                    -> SassyMQ/Docs/ReadMe.html</div><div>
+                    -> SassyMQ/Docs/CSharp.html</div><div>
+                    -> SassyMQ/Docs/TypeScript.html</div><div>
+                    -> SassyMQ/Docs/Lexicon.smql</div><div>
+                    -> SassyMQ/Docs/Images/queue.jpg</div><div>
+                    -> SassyMQ/Docs/Images/user.jpg</div><div>
+                    -> SassyMQ/Docs/Images/exchange.png</div><div>
+                    -> SassyMQ/Docs/Images/hear.png</div><div>
+                    -> SassyMQ/Docs/Images/megaphone.png</div><div>
+                    -> SassyMQ/Docs/Images/microphone.png</div></div>
+        <hr id="9d5a8dd9-2c83-493d-90f1-57c1d0d58ebe 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/typescript.png"  />
+            </div></div><h3>Smql To Type Script Rabbit M Q</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ionic2-ts-sidemenu1/src/providers/sassymq</span><br />/> <b>ssotme </b> <a href="#9d5a8dd9-2c83-493d-90f1-57c1d0d58ebe" >smql-to-type-script-rabbit-m-q</a> -i " /SassyMQ/SassyMQLexicon.smql, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /smq.endpoints.ts</div><div>
+                                /smqStompService.ts</div><div>
+                                /smqActorBase.ts</div>
+                        .../ (+7 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Smql To TypeScript Rabbit MQ</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">sassymq/smql-to-typescript -i ..\..\..\..\SassyMQ\SassyMQLexicon.smql -p app-config-path=../../app/app.config  -p app-state-path=../../app/app.state</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SassyMQ/SassyMQLexicon.smql ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/smq.endpoints.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/smqStompService.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/smqActorBase.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/hp/smqProgrammer.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/hp/smqProgrammer.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/smq.endpoints.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/smqStompService.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/smqActorBase.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/hp/smqWorld.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/providers/sassymq/hp/smqWorld.base.ts</div></div>
+        <hr id="1ef41254-d656-47f5-bf7d-688fa97fb8b1 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;"></div><div class="pull-left" style="height: 3em; width: 3em;"></div></div><h3></h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/DSPXml</span><br />/> <b>ssotme </b> <a href="#1ef41254-d656-47f5-bf7d-688fa97fb8b1" ></a> -i " /DSPXml, ..."
+                </div><div style="padding-left: 2em;"></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;"></div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">-checkresults</span></div><div style="margin-left: 1em; padding: 0.5em;">project-name=HomeworkPlus ----->
+                </div><div style="margin-left: 2em; padding: 0.5em;"></div>
+        <hr id="58dca1ce-dd8f-42d0-b041-6914df54e819 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div></div><h3>S P Xml To Detailed S P Xml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/DSPXml</span><br />/> <b>ssotme </b> <a href="#58dca1ce-dd8f-42d0-b041-6914df54e819" >s-p-xml-to-detailed-s-p-xml</a> -i " /DSPXml/SSoTmeProject.spxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /SSoTmeProject.dspxml</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Converts a SSoTmeProject.xml file into a Detailed SPXml file.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">spxml-to-detailed-spxml -i .\SSoTmeProject.spxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/DSPXml/SSoTmeProject.spxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> DSPXml/SSoTmeProject.dspxml</div></div>
+        <hr id="27bd8288-d51f-42ca-b580-c3a71279805c 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
+            </div></div><h3>Detailed S P Xml To Html Docs</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/DSPXml</span><br />/> <b>ssotme </b> <a href="#27bd8288-d51f-42ca-b580-c3a71279805c" >detailed-s-p-xml-to-html-docs</a> -i " /DSPXml/SSoTmeProject.dspxml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /FileTypeImages/-to-.png</div><div>
+                                /FileTypeImages/black.png</div><div>
+                                /FileTypeImages/blue-gear.png</div>
+                        .../ (+65 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Detailed S P Xml To Html Docs</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">detailed-spxml-to-html -i .\SSoTmeProject.dspxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/DSPXml/SSoTmeProject.dspxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> DSPXml/FileTypeImages/-to-.png</div><div>
+                    -> DSPXml/FileTypeImages/black.png</div><div>
+                    -> DSPXml/FileTypeImages/blue-gear.png</div><div>
+                    -> DSPXml/FileTypeImages/blue.png</div><div>
+                    -> DSPXml/FileTypeImages/brown.png</div><div>
+                    -> DSPXml/FileTypeImages/compare.png</div><div>
+                    -> DSPXml/FileTypeImages/configure.png</div><div>
+                    -> DSPXml/FileTypeImages/configure2.png</div><div>
+                    -> DSPXml/FileTypeImages/csharp.png</div><div>
+                    -> DSPXml/FileTypeImages/csv.png</div><div>
+                    -> DSPXml/FileTypeImages/cyan.png</div><div>
+                    -> DSPXml/FileTypeImages/db.png</div><div>
+                    -> DSPXml/FileTypeImages/dbml.png</div><div>
+                    -> DSPXml/FileTypeImages/directory.png</div><div>
+                    -> DSPXml/FileTypeImages/edit.png</div><div>
+                    -> DSPXml/FileTypeImages/ext-props-xml.png</div><div>
+                    -> DSPXml/FileTypeImages/gray.png</div><div>
+                    -> DSPXml/FileTypeImages/green-gear.png</div><div>
+                    -> DSPXml/FileTypeImages/green.png</div><div>
+                    -> DSPXml/FileTypeImages/gsheet.png</div><div>
+                    -> DSPXml/FileTypeImages/html.png</div><div>
+                    -> DSPXml/FileTypeImages/java.png</div><div>
+                    -> DSPXml/FileTypeImages/javascript.png</div><div>
+                    -> DSPXml/FileTypeImages/json.png</div><div>
+                    -> DSPXml/FileTypeImages/markdown.png</div><div>
+                    -> DSPXml/FileTypeImages/odxml.png</div><div>
+                    -> DSPXml/FileTypeImages/orange.png</div><div>
+                    -> DSPXml/FileTypeImages/parent-folder.png</div><div>
+                    -> DSPXml/FileTypeImages/php.png</div><div>
+                    -> DSPXml/FileTypeImages/plus.png</div><div>
+                    -> DSPXml/FileTypeImages/preview.png</div><div>
+                    -> DSPXml/FileTypeImages/purple-gear.png</div><div>
+                    -> DSPXml/FileTypeImages/python.png</div><div>
+                    -> DSPXml/FileTypeImages/red-gear.png</div><div>
+                    -> DSPXml/FileTypeImages/red.png</div><div>
+                    -> DSPXml/FileTypeImages/settings.png</div><div>
+                    -> DSPXml/FileTypeImages/shellscript.png</div><div>
+                    -> DSPXml/FileTypeImages/smql.png</div><div>
+                    -> DSPXml/FileTypeImages/source.png</div><div>
+                    -> DSPXml/FileTypeImages/sql-query.png</div><div>
+                    -> DSPXml/FileTypeImages/sql.png</div><div>
+                    -> DSPXml/FileTypeImages/sqlxml.png</div><div>
+                    -> DSPXml/FileTypeImages/swagger.png</div><div>
+                    -> DSPXml/FileTypeImages/txt.png</div><div>
+                    -> DSPXml/FileTypeImages/typescript.png</div><div>
+                    -> DSPXml/FileTypeImages/unknown.png</div><div>
+                    -> DSPXml/FileTypeImages/wcf.png</div><div>
+                    -> DSPXml/FileTypeImages/wsdl.png</div><div>
+                    -> DSPXml/FileTypeImages/xlsx.png</div><div>
+                    -> DSPXml/FileTypeImages/xml.png</div><div>
+                    -> DSPXml/FileTypeImages/xsd.png</div><div>
+                    -> DSPXml/FileTypeImages/xslt.png</div><div>
+                    -> DSPXml/FileTypeImages/yellow-gear.png</div><div>
+                    -> DSPXml/FileTypeImages/fileset.png</div><div>
+                    -> DSPXml/FileTypeImages/image.png</div><div>
+                    -> DSPXml/FileTypeImages/uri.png</div><div>
+                    -> DSPXml/FileTypeImages/mswin10.png</div><div>
+                    -> DSPXml/FileTypeImages/dotnetdll.png</div><div>
+                    -> DSPXml/FileTypeImages/androidapp.png</div><div>
+                    -> DSPXml/FileTypeImages/c.png</div><div>
+                    -> DSPXml/FileTypeImages/conapp.png</div><div>
+                    -> DSPXml/FileTypeImages/cpp.png</div><div>
+                    -> DSPXml/FileTypeImages/docx.png</div><div>
+                    -> DSPXml/FileTypeImages/zippedfileset.png</div><div>
+                    -> DSPXml/FileTypeImages/gdoc.png</div><div>
+                    -> DSPXml/FileTypeImages/iosapp.png</div><div>
+                    -> DSPXml/FileTypeImages/zip.png</div><div>
+                    -> DSPXml/SSoTmeProject.html</div></div>
+        <hr id="9a6d919d-04f9-48d1-9ee8-c651becc4332 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/shellscript.png"  />
+            </div></div><h3>Smql To Rabbit M Q Config</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ/Config</span><br />/> <b>ssotme </b> <a href="#9a6d919d-04f9-48d1-9ee8-c651becc4332" >smql-to-rabbit-m-q-config</a> -i " /SassyMQ/SassyMQLexicon.smql, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /HP_DefaultConfig.bat</div><div>
+                                /configureBroker.bat</div><div>
+                                /_configureRMQVirtualHost.bat</div>
+                        .../ (+3 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Creates a script which will configure rabbit with the correct Exchanges, Queues, Routes, etc, given an Smql file.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">smql-to-rabbitmq-config -i ..\SassyMQLexicon.smql</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SassyMQ/SassyMQLexicon.smql ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> SassyMQ/Config/HP_DefaultConfig.bat</div><div>
+                    -> SassyMQ/Config/configureBroker.bat</div><div>
+                    -> SassyMQ/Config/_configureRMQVirtualHost.bat</div><div>
+                    -> SassyMQ/Config/_configureRMQPermissions.bat</div><div>
+                    -> SassyMQ/Config/configureBroker.sh</div><div>
+                    -> SassyMQ/Config/_configureRMQVirtualHost.sh</div></div>
+        <hr id="ad5a7c2e-efea-4ee9-88c9-1469fcc390ec 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/txt.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/txt.png"  />
+            </div></div><h3>To Upper Case</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SassyMQ/Config</span><br />/> <b>ssotme </b> <a href="#ad5a7c2e-efea-4ee9-88c9-1469fcc390ec" >to-upper-case</a> -i " /SassyMQ/Config, ..."
+                </div><div style="padding-left: 2em;"></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Converts a file or string input into UPPERCASE letters.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">-exec .\UpdateSassyMQ.bat</span></div><div style="margin-left: 1em; padding: 0.5em;">project-name=HomeworkPlus ----->
+                </div><div style="margin-left: 2em; padding: 0.5em;"></div>
+        <hr id="2ca700b0-4016-4b0d-83f4-8c6d62897975 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/smql.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
+            </div></div><h3>Smql To C Sharp Rabbit M Q</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CoreLibrary/SassyMQ</span><br />/> <b>ssotme </b> <a href="#2ca700b0-4016-4b0d-83f4-8c6d62897975" >smql-to-c-sharp-rabbit-m-q</a> -i " /SassyMQ/SassyMQLexicon.smql, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /LexiconEnum.cs</div><div>
+                                /LexiconTerms.designer.cs</div><div>
+                                /LexiconTerms.cs</div>
+                        .../ (+14 more)
+                    </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Smql To CSharp RabbitMQ</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">sassymq/smql-to-csharp-rabbit -i ..\..\SassyMQ\SassyMQLexicon.smql</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SassyMQ/SassyMQLexicon.smql ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> CoreLibrary/SassyMQ/LexiconEnum.cs</div><div>
+                    -> CoreLibrary/SassyMQ/LexiconTerms.designer.cs</div><div>
+                    -> CoreLibrary/SassyMQ/LexiconTerms.cs</div><div>
+                    -> CoreLibrary/SassyMQ/StandardPayload.cs</div><div>
+                    -> CoreLibrary/SassyMQ/HPExtensions.cs</div><div>
+                    -> CoreLibrary/SassyMQ/HPActorBase.cs</div><div>
+                    -> CoreLibrary/SassyMQ/RMQActors/SMQProgrammer.designer.cs</div><div>
+                    -> CoreLibrary/SassyMQ/RMQActors/SMQProgrammer.cs</div><div>
+                    -> CoreLibrary/SassyMQ/RMQActors/SMQWorld.designer.cs</div><div>
+                    -> CoreLibrary/SassyMQ/RMQActors/SMQWorld.cs</div><div>
+                    -> CoreLibrary/SassyMQ/HPPayload.cs</div><div>
+                    -> CoreLibrary/SassyMQ/Derived/DMProxy.cs</div><div>
+                    -> CoreLibrary/SassyMQ/Derived/Extentions.cs</div><div>
+                    -> CoreLibrary/SassyMQ/Derived/InvokeEventArgs.cs</div><div>
+                    -> CoreLibrary/SassyMQ/Derived/LexiconTerm.cs</div><div>
+                    -> CoreLibrary/SassyMQ/Derived/PayloadEventArgs.cs</div><div>
+                    -> CoreLibrary/SassyMQ/Derived/SMQActorBase.cs</div></div>
+        <hr id="1a2b18ff-c654-4752-9a20-4d05cebb4687 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xml.png"  />
+            </div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/fileset.png"  />
+            </div></div><h3>Xml Xslt Transform</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CustomTools</span><br />/> <b>ssotme </b> <a href="#1a2b18ff-c654-4752-9a20-4d05cebb4687" >xml-xslt-transform</a> -i " /CustomTools/CreateDefaultFiles.xslt, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /../MVCRestApi/Web.config</div><div>
+                                /../HomeworkPlus.sln</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Given an Xml and Xslt file, will process and "split" a resulting fileset.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">xml-xslt-transform -i .\CreateDefaultFiles.xslt</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/CustomTools/CreateDefaultFiles.xslt ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> CustomTools/../MVCRestApi/Web.config</div><div>
+                    -> CustomTools/../HomeworkPlus.sln</div></div></body></html>

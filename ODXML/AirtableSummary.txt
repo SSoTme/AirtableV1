@@ -1,0 +1,35 @@
+
+Entities for HomeworkPlus:
+
+ - Assignment 
+ - Course 
+
+ System Entities  (NOT included in ODXML):
+
+ - Entity 
+
+ IDS:
+
+-rec30PSXYu9FSoaq0/Entities
+
+-recAa94D0BSycpbfa/Entities
+
+-recQ919faQWlfXw7j/Entities
+
+-recbU48mkyos0TSJP/Entities
+
+-rec0lIzmdEvmDwdDi/Assignments
+
+-recA2GyICIyQjFWGw/Assignments
+
+-recBisX4IFH3jiYlQ/Assignments
+
+-recIpR7aO40XjNE2u/Assignments
+
+-rec6qoAaEtwBKvYIP/Courses
+
+-recZnNuUXE7jxY3Wj/Courses
+
+-recf08BdvR6gE63M8/Courses
+
+

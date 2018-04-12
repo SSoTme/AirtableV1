@@ -1,0 +1,25 @@
+<Airtable><Entities><Entity>
+        <EntityId>rec30PSXYu9FSoaq0</EntityId>
+    <IsSystem>true</IsSystem><Name>Entity</Name><AirtableName>Entities</AirtableName><Notes>A "thing" defined in an Airtable.</Notes><DisplayName>Entity</DisplayName><createdTime>2018-04-12T05:00:58Z</createdTime></Entity><EXCLUDED>
+        <EntityId>recAa94D0BSycpbfa</EntityId>
+    <createdTime>2018-04-12T19:32:13Z</createdTime>^
+                </EXCLUDED><Entity>
+        <EntityId>recQ919faQWlfXw7j</EntityId>
+    <Name>Assignment</Name><AirtableName>Assignments</AirtableName><DisplayName>Assignment</DisplayName><createdTime>2018-04-12T05:58:52Z</createdTime></Entity><Entity>
+        <EntityId>recbU48mkyos0TSJP</EntityId>
+    <Name>Course</Name><AirtableName>Courses</AirtableName><Notes>An example of a "thing.  Just add a sheet and a row</Notes><DisplayName>Course</DisplayName><createdTime>2018-04-12T05:00:58Z</createdTime></Entity></Entities><Assignments><Assignment>
+        <AssignmentId>rec0lIzmdEvmDwdDi</AssignmentId>
+    <Name> - </Name><createdTime>2018-04-12T19:09:18Z</createdTime></Assignment><Assignment>
+        <AssignmentId>recA2GyICIyQjFWGw</AssignmentId>
+    <Course>recZnNuUXE7jxY3Wj</Course><Name>Art - </Name><createdTime>2018-04-12T19:07:42Z</createdTime></Assignment><Assignment>
+        <AssignmentId>recBisX4IFH3jiYlQ</AssignmentId>
+    <Course>rec6qoAaEtwBKvYIP</Course><DueDate>2018-04-13</DueDate><IsComplete>true</IsComplete><Notes>This is a longer description fo the project
+</Notes><Name>English - 2018-04-13T00:00:00.000Z</Name><createdTime>2018-04-12T19:07:42Z</createdTime></Assignment><Assignment>
+        <AssignmentId>recIpR7aO40XjNE2u</AssignmentId>
+    <Course>rec6qoAaEtwBKvYIP</Course><IsComplete>true</IsComplete><Name>English - </Name><createdTime>2018-04-12T19:07:42Z</createdTime></Assignment></Assignments><Courses><Course>
+        <CourseId>rec6qoAaEtwBKvYIP</CourseId>
+    <Assignment>recBisX4IFH3jiYlQ</Assignment><Assignment>recIpR7aO40XjNE2u</Assignment><Name>English</Name><Notes>More information can go in these notes.  Or add columns to the right.</Notes><When>Mon-Wed-Fri @ 5PM</When><createdTime>2018-04-12T16:21:09Z</createdTime></Course><Course>
+        <CourseId>recZnNuUXE7jxY3Wj</CourseId>
+    <Assignment>recA2GyICIyQjFWGw</Assignment><Name>Art</Name><When>Tue-Thu @ 11:30 AM</When><createdTime>2018-04-12T16:21:09Z</createdTime></Course><Course>
+        <CourseId>recf08BdvR6gE63M8</CourseId>
+    <Name>Gym</Name><When>Fridays at 3:00 PM</When><createdTime>2018-04-12T16:21:09Z</createdTime></Course></Courses></Airtable>

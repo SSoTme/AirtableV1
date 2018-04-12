@@ -1,0 +1,68 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                Contact
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header *ngIf="!editMode">
+                                        
+                </ion-card-header>
+                    
+
+                <p>
+                
+
+                
+                Your content for the Contact page goes here.
+                
+                </p>
+
+                
+                <ion-card-header>
+                    <hr />
+                </ion-card-header>
+                <ion-list>
+                    
+                        
+                        
+                        <button ion-item="" (click)="goToState(CallState, contact)">
+                            <ion-icon name="list" item-left=""></ion-icon>
+                            Call   
+                            
+                        </button>
+                    
+                        
+                        
+                        <button ion-item="" (click)="goToState(ChatState, contact)">
+                            <ion-icon name="list" item-left=""></ion-icon>
+                            Chat   
+                            
+                        </button>
+                    
+                        
+                        
+                        <button ion-item="" (click)="goToState(EmailState, contact)">
+                            <ion-icon name="list" item-left=""></ion-icon>
+                            Email   
+                            
+                        </button>
+                    
+                </ion-list>
+        
+
+            
+    </ion-card>
+
+</ion-content>

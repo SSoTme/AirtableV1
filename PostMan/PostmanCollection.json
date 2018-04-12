@@ -1,0 +1,174 @@
+{
+    "id": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+    "name": "HomeworkPlus",
+    "order" : [],
+    "folders": [
+            
+                    
+                    
+                    
+        {
+			"id": "0fb39b9d-1789-4b01-a274-3cf3da487782",
+			"name": "Assignments",
+			"folders_order": [],
+			"owner": "1060189",
+            "order" : [
+                "dff8374b-a80d-4894-8e1a-b7404dbabaf2",
+                "9b86a846-3269-4407-9014-b8a7d978dad6",
+                "c074f42a-4a4e-43c5-9614-7d0f1ac93186",
+                "2ed15522-9c03-4ed3-bcde-71408518e33d"
+            ],
+			"collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035"
+		},
+        
+                    
+                    
+                    
+        {
+			"id": "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+			"name": "Courses",
+			"folders_order": [],
+			"owner": "1060189",
+            "order" : [
+                "422263d3-744e-439f-bc90-ffe9993ecb3a",
+                "d01f4e64-965b-44cb-9da2-3c9536d4f668",
+                "9b1ef78b-5df3-4522-b41d-09a8d58022f2",
+                "e526fd7a-8b50-483c-98c3-5bc28109e8f2"
+            ],
+			"collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035"
+		}
+        
+
+	],
+    "requests": [
+    
+                    
+                    
+                    
+        {
+            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+            "id": "dff8374b-a80d-4894-8e1a-b7404dbabaf2",
+            "name": "Get Assignments",
+            "description": "",
+            "url": "http://localhost:64110/api/Assignments?expand=all",
+            "method": "GET",
+            "headers": "Content-Type: application/json\n",
+            "data": "",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "0fb39b9d-1789-4b01-a274-3cf3da487782",
+            "responses": [],
+            "version": 2
+        },
+        {
+            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+            "id": "9b86a846-3269-4407-9014-b8a7d978dad6",
+            "name": "Add Assignment",
+            "description": "",
+            "url": "http://localhost:64110/api/Assignments",
+            "method": "POST",
+            "headers": "Content-Type: application/json\n",
+            "data": "  {\n        \"Name\": \"New Assignment\",\n        \"Description\": \"\"\n    }",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "0fb39b9d-1789-4b01-a274-3cf3da487782",
+            "version": 2,
+            "time": 1511746503557
+        },
+        {
+            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+            "id": "c074f42a-4a4e-43c5-9614-7d0f1ac93186",
+            "name": "Update Assignment",
+            "description": "",
+            "url": "http://localhost:64110/api/Assignments",
+            "method": "PUT",
+            "headers": "Content-Type: application/json\n",
+            "data": "{\n    \"AssignmentId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed Assignment\",\n    \"Description\": \"changed description\"\n}",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "0fb39b9d-1789-4b01-a274-3cf3da487782",
+            "version": 2,
+            "time": 1511747864924
+        },
+        {
+            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+            "id": "2ed15522-9c03-4ed3-bcde-71408518e33d",
+            "name": "Delete Assignment",
+            "description": "",
+            "url": "http://localhost:64110/api/Assignments?assignmentId=00000000-0000-0000-0000-000000000000",
+            "method": "DELETE",
+            "headers": "",
+            "data": [], 
+            "dataMode": "params",
+            "timestamp": 0,
+            "folder" : "0fb39b9d-1789-4b01-a274-3cf3da487782",
+            "version": 2,
+            "time": 1511747257887
+        },
+        
+                    
+                    
+                    
+        {
+            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+            "id": "422263d3-744e-439f-bc90-ffe9993ecb3a",
+            "name": "Get Courses",
+            "description": "",
+            "url": "http://localhost:64110/api/Courses?expand=all",
+            "method": "GET",
+            "headers": "Content-Type: application/json\n",
+            "data": "",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+            "responses": [],
+            "version": 2
+        },
+        {
+            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+            "id": "d01f4e64-965b-44cb-9da2-3c9536d4f668",
+            "name": "Add Course",
+            "description": "",
+            "url": "http://localhost:64110/api/Courses",
+            "method": "POST",
+            "headers": "Content-Type: application/json\n",
+            "data": "  {\n        \"Name\": \"New Course\",\n        \"Description\": \"\"\n    }",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+            "version": 2,
+            "time": 1511746503557
+        },
+        {
+            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+            "id": "9b1ef78b-5df3-4522-b41d-09a8d58022f2",
+            "name": "Update Course",
+            "description": "",
+            "url": "http://localhost:64110/api/Courses",
+            "method": "PUT",
+            "headers": "Content-Type: application/json\n",
+            "data": "{\n    \"CourseId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed Course\",\n    \"Description\": \"changed description\"\n}",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+            "version": 2,
+            "time": 1511747864924
+        },
+        {
+            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+            "id": "e526fd7a-8b50-483c-98c3-5bc28109e8f2",
+            "name": "Delete Course",
+            "description": "",
+            "url": "http://localhost:64110/api/Courses?courseId=00000000-0000-0000-0000-000000000000",
+            "method": "DELETE",
+            "headers": "",
+            "data": [], 
+            "dataMode": "params",
+            "timestamp": 0,
+            "folder" : "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+            "version": 2,
+            "time": 1511747257887
+        }
+        
+    ]
+}

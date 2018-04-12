@@ -3,16 +3,16 @@
   "ExpandedPaths": [],
   "ShowHidden": false,
   "ShowAllFiles": false,
-  "CurrentPath": null,
+  "CurrentPath": "",
   "SaveDisabled": false,
   "SSoTmeProjectId": "109a3ca6-4391-4d84-9edc-68585ce5b4eb",
-  "Name": "MSSassyMQAirtableSeed",
-  "RootPath": "C:\\Seeds\\ssotme-ms-airtable-ionic-sassymq-seed",
+  "Name": "HomeworkPlus",
+  "RootPath": "C:\\Demo\\HomeworkPlus",
   "ProjectSettings": [
     {
-      "ProjectSettingId": "a31ee79b-a5e4-4914-8f5c-c0bbf7316d6c",
+      "ProjectSettingId": "be523bc0-0f67-4c32-9107-76eff038c44a",
       "Name": "project-name",
-      "Value": "MSSassyMQAirtableSeed"
+      "Value": "HomeworkPlus"
     }
   ],
   "ProjectTranspilers": [
@@ -49,65 +49,11 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": "",
-        "transpiler": "airtable-to-xml",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "airtable/airtable-to-xml -p baseId={YOUR_BASE_ID} -p apiKey={YOUR_API_KEY}",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "0f6487f4-69a5-49b1-a66a-06997a66a131",
-          "FileSetFiles": []
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "airtable",
-        "parameters": [
-          "baseId={YOUR_BASE_ID}",
-          "apiKey={YOUR_API_KEY}",
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "8d26e7b0-88ac-4839-8233-7f4605681a65",
       "Name": "AirtableToXml",
       "RelativePath": "/SSoT",
-      "CommandLine": "airtable/airtable-to-xml -p baseId={YOUR_BASE_ID} -p apiKey={YOUR_API_KEY}"
+      "CommandLine": "airtable/airtable-to-xml -p baseId=apphuEmzI2zKqmCb0 -p apiKey=keyAsKv7g3bNC484u"
     },
     {
       "MatchedTranspiler": {
@@ -140,66 +86,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "airtable-xml-to-odxml",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "airtable/airtable-xml-to-odxml -i ..\\SSoT\\Airtable.xml -o DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "0a3f3c99-d899-44df-b699-b360cdd29352",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "Airtable.xml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\SSoT\\Airtable.xml"
-        ],
-        "output": "DataSchema.odxml",
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "airtable",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "ae41d6af-9829-4ff5-9109-6bfd0551a051",
       "Name": "AirtableXmlToOdxml",
       "RelativePath": "/ODXML",
@@ -238,66 +125,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-nodejs-docs",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-nodejs-docs -i ..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "26407650-3e95-4582-87af-c39e7e85e280",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "37fbd3d2-b5e6-45a3-8c7a-b3823d0c7960",
       "Name": "OdxmlToNodeJSDocs",
       "RelativePath": "/Docs",
@@ -335,66 +163,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-sql-server-createdb",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-sql-server-createdb -i ..\\ODXML\\DataSchema.odxml -o UpdateSchema.sql",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "58a24a70-05af-49db-b212-50099b299140",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": "UpdateSchema.sql",
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "ce1207c3-72fb-444c-b579-5a7cfd3ebac7",
       "Name": "OdxmlToSqlServerCreateDb",
       "RelativePath": "/SqlServer",
@@ -433,75 +202,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-csharp-pocos",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-csharp-pocos -i ..\\..\\ODXML\\DataSchema.odxml -i ..\\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\\\ -p include-sdm-expand=true -p specific-fk-field-name=true",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "03b8508c-55b1-4571-8242-ee3fad7a6a7a",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            },
-            {
-              "OriginalRelativePath": "/CoreLibrary/CoreLibrary.csproj",
-              "RelativePath": "CoreLibrary.csproj"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\ODXML\\DataSchema.odxml",
-          "..\\CoreLibrary.csproj"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "output-csproj-filename=../CoreLibrary.csproj",
-          "relative-path=DataClasses\\",
-          "include-sdm-expand=true",
-          "specific-fk-field-name=true",
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "6a143376-da3b-4283-9295-43cb4c0c49f1",
       "Name": "OdxmlToCSharpPOCOs",
       "RelativePath": "/CoreLibrary/DataClasses",
@@ -541,71 +242,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "app-states-csv-to-app-states-xml",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "app-states-csv-to-app-states-xml -i .\\AppStates.csv  -i ..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "d7ad5fbb-9b7c-4fb0-8ae0-a36745871593",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "AppStates.csv"
-            },
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          ".\\AppStates.csv",
-          "..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "3bd76ce1-4eed-4042-8a03-514eedd1e4f6",
       "Name": "AppStatesCsvToAppStatesXml",
       "RelativePath": "/SSoT",
@@ -643,66 +280,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "app-states-xml-to-app-states-docs",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "app-states-xml-to-app-states-docs -i ..\\..\\SSoT\\AppStates.xml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "270d770b-766e-46f2-8ef4-dbb3b8e7cf47",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "AppStates.xml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\SSoT\\AppStates.xml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "9733804e-96c9-49cf-a362-3f1ad57a1d70",
       "Name": "AppStatesXmlToAppStatesDocs",
       "RelativePath": "/docs/appStates",
@@ -740,73 +318,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "ionic-states-from-app-states-xml",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "ionic-states-from-app-states-xml -i ..\\..\\SSoT\\AppStates.xml -p starting-dots=../../ -p \"include-api-ref=true\" -i ..\\..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "f6fa48e2-0612-4e0d-95a5-4d1fa2be109d",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "AppStates.xml"
-            },
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\SSoT\\AppStates.xml",
-          "..\\..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "starting-dots=../../",
-          "include-api-ref=true",
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "c63763f1-3137-4465-8877-63fc5393b292",
       "Name": "IonicStatesFromAppStatesXml",
       "RelativePath": "/ionic2-ts-sidemenu1/src",
@@ -842,75 +354,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-angular-rest-api",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-angular-rest-api  -i ..\\..\\..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "8743e2d0-e852-4281-b34c-36aa19138901",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": {
-          "FileSetId": "d45294b3-05bd-493a-b9e8-19995d9d9848",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": "ionic2-ts-sidemenu1/src/providers/rest-api-service.ts",
-              "RelativePath": "rest-api-service.ts",
-              "AlwaysOverwrite": true
-            }
-          ]
-        },
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "593a6196-803c-49d6-9732-b2ef074bdeb8",
       "Name": "XmlXsltTransform",
       "RelativePath": "/ionic2-ts-sidemenu1/src/providers",
@@ -950,66 +394,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-csharp-sql-data-manager",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-csharp-sql-data-manager -i ..\\..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "7ea85d1e-e080-4bfb-9b4a-e729a1f82dc5",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "12618fae-4b16-4f6c-bc17-8799e034a897",
       "Name": "OdxmlToCSharpSqlDataManager",
       "RelativePath": "/CoreLibrary/SqlDataAccessLayer",
@@ -1047,67 +432,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-postman-json",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-postman-json -i ..\\ODXML\\DataSchema.odxml -p api-uri=http://localhost:64110/api",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "b0417968-b3de-4dc1-a64d-09841e0c5b59",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "api-uri=http://localhost:64110/api",
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "fc24e1c5-23bf-437c-bb9c-99ad3250971f",
       "Name": "OdxmlToPostmanJson",
       "RelativePath": "/PostMan",
@@ -1143,66 +468,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "odxml-to-mvc-rest-api",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "odxml42/odxml-to-mvc-rest-api -i ..\\..\\..\\ODXML\\DataSchema.odxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "7454641f-96ed-414b-ae64-7e99ae249d54",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "DataSchema.odxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\..\\ODXML\\DataSchema.odxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "odxml42",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "29d86f86-3119-4fd7-8893-5514bdc33250",
       "Name": "OdxmlToMVCRESTAPI",
       "RelativePath": "/MVCRestApi/Controllers/api",
@@ -1242,67 +508,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "xlsx-to-csvs",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "xlsx-to-csvs -i ..\\..\\SSoT\\ProjectLexicon.xlsx -p overwrite=true",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "3acb7395-a361-4056-a7b4-8f7e487b260b",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": "/SSoT/ProjectLexicon.xlsx",
-              "RelativePath": "ProjectLexicon.xlsx"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\SSoT\\ProjectLexicon.xlsx"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "overwrite=true",
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "f2ae4577-9e04-4f10-b80d-7d61b4f33739",
       "Name": "XlsxToCSVs",
       "RelativePath": "/SassyMQ/LexiconCSVs",
@@ -1339,66 +545,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "csv-to-smql",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "sassymq/csv-to-smql -i .\\LexiconCSVs\\SassyMQLexicon.csv",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "afbe9f6a-f996-4802-a0c7-585b9c4f792c",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.csv"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          ".\\LexiconCSVs\\SassyMQLexicon.csv"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "sassymq",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "817c7574-d643-44d5-8fa1-9f6a786631b7",
       "Name": "CsvToSmql",
       "RelativePath": "/SassyMQ",
@@ -1436,66 +583,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "smql-to-docs",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "sassymq/smql-to-docs -i ..\\SassyMQLexicon.smql",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "5dd12143-8c79-4cf0-84d3-24c67f48409b",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.smql"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\SassyMQLexicon.smql"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "sassymq",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "3249face-0994-46fd-a189-6ea68850fd00",
       "Name": "SmqlToDocs",
       "RelativePath": "/SassyMQ/Docs",
@@ -1534,68 +622,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "smql-to-typescript",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "sassymq/smql-to-typescript -i ..\\..\\..\\..\\SassyMQ\\SassyMQLexicon.smql -p app-config-path=../../app/app.config  -p app-state-path=../../app/app.state",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "8b62c9a2-3417-40b9-bedc-c36eec04a481",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.smql"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\..\\..\\SassyMQ\\SassyMQLexicon.smql"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "sassymq",
-        "parameters": [
-          "app-config-path=../../app/app.config",
-          "app-state-path=../../app/app.state",
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "9d5a8dd9-2c83-493d-90f1-57c1d0d58ebe",
       "Name": "SmqlToTypeScriptRabbitMQ",
       "RelativePath": "/ionic2-ts-sidemenu1/src/providers/sassymq",
@@ -1603,59 +630,7 @@
     },
     {
       "MatchedTranspiler": null,
-      "CLIHandler": {
-        "inputFileContents": "",
-        "transpiler": "",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "-checkresults",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "1aa282c0-926a-4cbb-b85f-e0e92e6600e9",
-          "FileSetFiles": []
-        },
-        "HasRemainingArguments": false,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": true,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "1ef41254-d656-47f5-bf7d-688fa97fb8b1",
       "Name": "LocalCommand",
       "RelativePath": "/DSPXml",
@@ -1696,66 +671,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "spxml-to-detailed-spxml",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "spxml-to-detailed-spxml -i .\\SSoTmeProject.spxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "ccf484df-43c5-48bf-b05b-ff5018708d00",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": "/DSPXml/SSoTmeProject.spxml",
-              "RelativePath": "SSoTmeProject.spxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          ".\\SSoTmeProject.spxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "58dca1ce-dd8f-42d0-b041-6914df54e819",
       "Name": "SPXmlToDetailedSPXml",
       "RelativePath": "/DSPXml",
@@ -1793,66 +709,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "detailed-spxml-to-html",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "detailed-spxml-to-html -i .\\SSoTmeProject.dspxml",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "5d54c19c-ef2d-45fa-acd5-effdd52726d5",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SSoTmeProject.dspxml"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          ".\\SSoTmeProject.dspxml"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "27bd8288-d51f-42ca-b580-c3a71279805c",
       "Name": "DetailedSPXmlToHtmlDocs",
       "RelativePath": "/DSPXml",
@@ -1889,66 +746,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "smql-to-rabbitmq-config",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "smql-to-rabbitmq-config -i ..\\SassyMQLexicon.smql",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "d94e1b5d-bc6b-4ac7-98d2-8543b6cc96a5",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.smql"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\SassyMQLexicon.smql"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "9a6d919d-04f9-48d1-9ee8-c651becc4332",
       "Name": "SmqlToRabbitMQConfig",
       "RelativePath": "/SassyMQ/Config",
@@ -1989,59 +787,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": "",
-        "transpiler": "",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "-exec .\\UpdateSassyMQ.bat",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "12876ff7-128b-4985-af30-063188a379e2",
-          "FileSetFiles": []
-        },
-        "HasRemainingArguments": false,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": ".\\UpdateSassyMQ.bat",
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "ad5a7c2e-efea-4ee9-88c9-1469fcc390ec",
       "Name": "ToUpperCase",
       "RelativePath": "/SassyMQ/Config",
@@ -2080,66 +826,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "smql-to-csharp-rabbit",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "sassymq/smql-to-csharp-rabbit -i ..\\..\\SassyMQ\\SassyMQLexicon.smql",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "d89bb1aa-6da9-44be-998e-d871c8aba532",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": null,
-              "RelativePath": "SassyMQLexicon.smql"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          "..\\..\\SassyMQ\\SassyMQLexicon.smql"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "sassymq",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "2ca700b0-4016-4b0d-83f4-8c6d62897975",
       "Name": "SmqlToCSharpRabbitMQ",
       "RelativePath": "/CoreLibrary/SassyMQ",
@@ -2181,66 +868,7 @@
           }
         ]
       },
-      "CLIHandler": {
-        "inputFileContents": null,
-        "transpiler": "xml-xslt-transform",
-        "inputFileSetXml": "",
-        "args": null,
-        "commandLine": "xml-xslt-transform -i .\\CreateDefaultFiles.xslt",
-        "AccountHolder": null,
-        "CoordinatorProxy": null,
-        "FileSet": {
-          "FileSetId": "d1ebc0fc-8e4e-4640-b1fd-4db09f65a1d0",
-          "FileSetFiles": [
-            {
-              "OriginalRelativePath": "/CustomTools/CreateDefaultFiles.xslt",
-              "RelativePath": "CreateDefaultFiles.xslt"
-            }
-          ]
-        },
-        "HasRemainingArguments": true,
-        "ZFSFileSetFile": null,
-        "SSoTmeProject": null,
-        "ParseResult": 0,
-        "OutputFileSet": null,
-        "SuppressTranspile": false,
-        "help": false,
-        "init": false,
-        "install": false,
-        "uninstall": false,
-        "build": false,
-        "buildAll": false,
-        "describe": false,
-        "descibeAll": false,
-        "input": [
-          ".\\CreateDefaultFiles.xslt"
-        ],
-        "output": null,
-        "clean": false,
-        "cleanAll": false,
-        "skipClean": false,
-        "account": "",
-        "parameters": [
-          "project-name=MSSassyMQAirtableSeed"
-        ],
-        "listSettings": false,
-        "addSetting": [],
-        "removeSetting": [],
-        "keyFile": null,
-        "emailAddress": null,
-        "secret": null,
-        "addTranspiler": null,
-        "deleteTranspiler": null,
-        "waitTimeout": 30000,
-        "runAs": null,
-        "preserveZFS": false,
-        "checkResults": false,
-        "createDocs": false,
-        "execute": null,
-        "includeDisabled": false,
-        "projectName": null,
-        "transpilerGroup": null
-      },
+      "CLIHandler": null,
       "ProjectTranspilerId": "1a2b18ff-c654-4752-9a20-4d05cebb4687",
       "Name": "XmlXsltTransform",
       "RelativePath": "/CustomTools",
