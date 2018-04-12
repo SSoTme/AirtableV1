@@ -1,5 +1,5 @@
 {
-    "id": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
+    "id": "243b7b73-6137-4888-af51-c7aeef5d45aa",
     "name": "HomeworkPlus",
     "order" : [],
     "folders": [
@@ -8,34 +8,51 @@
                     
                     
         {
-			"id": "0fb39b9d-1789-4b01-a274-3cf3da487782",
-			"name": "Assignments",
+			"id": "741a4291-b283-4ab2-bc6f-5a06434fd252",
+			"name": "LetterGrades",
 			"folders_order": [],
 			"owner": "1060189",
             "order" : [
-                "dff8374b-a80d-4894-8e1a-b7404dbabaf2",
-                "9b86a846-3269-4407-9014-b8a7d978dad6",
-                "c074f42a-4a4e-43c5-9614-7d0f1ac93186",
-                "2ed15522-9c03-4ed3-bcde-71408518e33d"
+                "7eeeb1e6-9a08-4b9d-a331-60e290350514",
+                "83a6a9cd-73ac-4d8b-b0de-666c22c3a975",
+                "28bf66dc-5a26-4f5a-bd07-240a83bf5d5e",
+                "808fdf4a-75c3-4346-8a5f-91e09aa07006"
             ],
-			"collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035"
+			"collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa"
 		},
         
                     
                     
                     
         {
-			"id": "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+			"id": "eb26d4e0-c013-489d-a61a-0c051c0b6146",
+			"name": "Assignments",
+			"folders_order": [],
+			"owner": "1060189",
+            "order" : [
+                "1d8fd8b1-d31c-40c4-82e8-ebac0075a391",
+                "a2df8893-6636-480d-8ae7-32c201d9aad5",
+                "32d21157-d4f3-4719-942e-1c697f3ac1f6",
+                "36be1211-668f-4df0-bf68-7899f0802a45"
+            ],
+			"collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa"
+		},
+        
+                    
+                    
+                    
+        {
+			"id": "a9890524-6860-4ccb-833c-5fea76d78121",
 			"name": "Courses",
 			"folders_order": [],
 			"owner": "1060189",
             "order" : [
-                "422263d3-744e-439f-bc90-ffe9993ecb3a",
-                "d01f4e64-965b-44cb-9da2-3c9536d4f668",
-                "9b1ef78b-5df3-4522-b41d-09a8d58022f2",
-                "e526fd7a-8b50-483c-98c3-5bc28109e8f2"
+                "e7dfce26-be79-4472-934e-31cf60a58573",
+                "7a30aa45-665f-439d-b372-ec7ce8a68929",
+                "001cebef-16f0-486d-bad7-439522db1f45",
+                "ff31f58c-b5ab-4176-949b-b3e79f7af9e6"
             ],
-			"collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035"
+			"collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa"
 		}
         
 
@@ -46,62 +63,62 @@
                     
                     
         {
-            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
-            "id": "dff8374b-a80d-4894-8e1a-b7404dbabaf2",
-            "name": "Get Assignments",
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "7eeeb1e6-9a08-4b9d-a331-60e290350514",
+            "name": "Get LetterGrades",
             "description": "",
-            "url": "http://localhost:64110/api/Assignments?expand=all",
+            "url": "http://localhost:64110/api/LetterGrades?expand=all",
             "method": "GET",
             "headers": "Content-Type: application/json\n",
             "data": "",
             "dataMode": "raw",
             "timestamp": 0,
-            "folder" : "0fb39b9d-1789-4b01-a274-3cf3da487782",
+            "folder" : "741a4291-b283-4ab2-bc6f-5a06434fd252",
             "responses": [],
             "version": 2
         },
         {
-            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
-            "id": "9b86a846-3269-4407-9014-b8a7d978dad6",
-            "name": "Add Assignment",
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "83a6a9cd-73ac-4d8b-b0de-666c22c3a975",
+            "name": "Add LetterGrade",
             "description": "",
-            "url": "http://localhost:64110/api/Assignments",
+            "url": "http://localhost:64110/api/LetterGrades",
             "method": "POST",
             "headers": "Content-Type: application/json\n",
-            "data": "  {\n        \"Name\": \"New Assignment\",\n        \"Description\": \"\"\n    }",
+            "data": "  {\n        \"Name\": \"New LetterGrade\",\n        \"Description\": \"\"\n    }",
             "dataMode": "raw",
             "timestamp": 0,
-            "folder" : "0fb39b9d-1789-4b01-a274-3cf3da487782",
+            "folder" : "741a4291-b283-4ab2-bc6f-5a06434fd252",
             "version": 2,
             "time": 1511746503557
         },
         {
-            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
-            "id": "c074f42a-4a4e-43c5-9614-7d0f1ac93186",
-            "name": "Update Assignment",
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "28bf66dc-5a26-4f5a-bd07-240a83bf5d5e",
+            "name": "Update LetterGrade",
             "description": "",
-            "url": "http://localhost:64110/api/Assignments",
+            "url": "http://localhost:64110/api/LetterGrades",
             "method": "PUT",
             "headers": "Content-Type: application/json\n",
-            "data": "{\n    \"AssignmentId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed Assignment\",\n    \"Description\": \"changed description\"\n}",
+            "data": "{\n    \"LetterGradeId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed LetterGrade\",\n    \"Description\": \"changed description\"\n}",
             "dataMode": "raw",
             "timestamp": 0,
-            "folder" : "0fb39b9d-1789-4b01-a274-3cf3da487782",
+            "folder" : "741a4291-b283-4ab2-bc6f-5a06434fd252",
             "version": 2,
             "time": 1511747864924
         },
         {
-            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
-            "id": "2ed15522-9c03-4ed3-bcde-71408518e33d",
-            "name": "Delete Assignment",
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "808fdf4a-75c3-4346-8a5f-91e09aa07006",
+            "name": "Delete LetterGrade",
             "description": "",
-            "url": "http://localhost:64110/api/Assignments?assignmentId=00000000-0000-0000-0000-000000000000",
+            "url": "http://localhost:64110/api/LetterGrades?lettergradeId=00000000-0000-0000-0000-000000000000",
             "method": "DELETE",
             "headers": "",
             "data": [], 
             "dataMode": "params",
             "timestamp": 0,
-            "folder" : "0fb39b9d-1789-4b01-a274-3cf3da487782",
+            "folder" : "741a4291-b283-4ab2-bc6f-5a06434fd252",
             "version": 2,
             "time": 1511747257887
         },
@@ -110,8 +127,72 @@
                     
                     
         {
-            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
-            "id": "422263d3-744e-439f-bc90-ffe9993ecb3a",
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "1d8fd8b1-d31c-40c4-82e8-ebac0075a391",
+            "name": "Get Assignments",
+            "description": "",
+            "url": "http://localhost:64110/api/Assignments?expand=all",
+            "method": "GET",
+            "headers": "Content-Type: application/json\n",
+            "data": "",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "eb26d4e0-c013-489d-a61a-0c051c0b6146",
+            "responses": [],
+            "version": 2
+        },
+        {
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "a2df8893-6636-480d-8ae7-32c201d9aad5",
+            "name": "Add Assignment",
+            "description": "",
+            "url": "http://localhost:64110/api/Assignments",
+            "method": "POST",
+            "headers": "Content-Type: application/json\n",
+            "data": "  {\n        \"Name\": \"New Assignment\",\n        \"Description\": \"\"\n    }",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "eb26d4e0-c013-489d-a61a-0c051c0b6146",
+            "version": 2,
+            "time": 1511746503557
+        },
+        {
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "32d21157-d4f3-4719-942e-1c697f3ac1f6",
+            "name": "Update Assignment",
+            "description": "",
+            "url": "http://localhost:64110/api/Assignments",
+            "method": "PUT",
+            "headers": "Content-Type: application/json\n",
+            "data": "{\n    \"AssignmentId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed Assignment\",\n    \"Description\": \"changed description\"\n}",
+            "dataMode": "raw",
+            "timestamp": 0,
+            "folder" : "eb26d4e0-c013-489d-a61a-0c051c0b6146",
+            "version": 2,
+            "time": 1511747864924
+        },
+        {
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "36be1211-668f-4df0-bf68-7899f0802a45",
+            "name": "Delete Assignment",
+            "description": "",
+            "url": "http://localhost:64110/api/Assignments?assignmentId=00000000-0000-0000-0000-000000000000",
+            "method": "DELETE",
+            "headers": "",
+            "data": [], 
+            "dataMode": "params",
+            "timestamp": 0,
+            "folder" : "eb26d4e0-c013-489d-a61a-0c051c0b6146",
+            "version": 2,
+            "time": 1511747257887
+        },
+        
+                    
+                    
+                    
+        {
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "e7dfce26-be79-4472-934e-31cf60a58573",
             "name": "Get Courses",
             "description": "",
             "url": "http://localhost:64110/api/Courses?expand=all",
@@ -120,13 +201,13 @@
             "data": "",
             "dataMode": "raw",
             "timestamp": 0,
-            "folder" : "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+            "folder" : "a9890524-6860-4ccb-833c-5fea76d78121",
             "responses": [],
             "version": 2
         },
         {
-            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
-            "id": "d01f4e64-965b-44cb-9da2-3c9536d4f668",
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "7a30aa45-665f-439d-b372-ec7ce8a68929",
             "name": "Add Course",
             "description": "",
             "url": "http://localhost:64110/api/Courses",
@@ -135,13 +216,13 @@
             "data": "  {\n        \"Name\": \"New Course\",\n        \"Description\": \"\"\n    }",
             "dataMode": "raw",
             "timestamp": 0,
-            "folder" : "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+            "folder" : "a9890524-6860-4ccb-833c-5fea76d78121",
             "version": 2,
             "time": 1511746503557
         },
         {
-            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
-            "id": "9b1ef78b-5df3-4522-b41d-09a8d58022f2",
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "001cebef-16f0-486d-bad7-439522db1f45",
             "name": "Update Course",
             "description": "",
             "url": "http://localhost:64110/api/Courses",
@@ -150,13 +231,13 @@
             "data": "{\n    \"CourseId\": \"00000000-0000-0000-0000-000000000000\",\n    \"Name\": \"Changed Course\",\n    \"Description\": \"changed description\"\n}",
             "dataMode": "raw",
             "timestamp": 0,
-            "folder" : "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+            "folder" : "a9890524-6860-4ccb-833c-5fea76d78121",
             "version": 2,
             "time": 1511747864924
         },
         {
-            "collectionId": "d32f8f17-2c9f-4108-8bb7-99c579dd2035",
-            "id": "e526fd7a-8b50-483c-98c3-5bc28109e8f2",
+            "collectionId": "243b7b73-6137-4888-af51-c7aeef5d45aa",
+            "id": "ff31f58c-b5ab-4176-949b-b3e79f7af9e6",
             "name": "Delete Course",
             "description": "",
             "url": "http://localhost:64110/api/Courses?courseId=00000000-0000-0000-0000-000000000000",
@@ -165,7 +246,7 @@
             "data": [], 
             "dataMode": "params",
             "timestamp": 0,
-            "folder" : "4c4e4410-c4b3-4294-ad2d-4cad28c867fc",
+            "folder" : "a9890524-6860-4ccb-833c-5fea76d78121",
             "version": 2,
             "time": 1511747257887
         }

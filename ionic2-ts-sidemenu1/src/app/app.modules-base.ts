@@ -7,6 +7,14 @@
     
 
     
+        import { LetterGrades } from '../pages/lettergrades/lettergrades';
+    
+
+    
+        import { LetterGrade } from '../pages/lettergrades/lettergrade/lettergrade';
+    
+
+    
         import { Courses } from '../pages/courses/courses';
     
 
@@ -43,11 +51,15 @@
     
 
 
-export const components : any[] = [Home, Courses, Course, Assignments, Assignment, About, Contact, Chat, Email, Call];
+export const components : any[] = [Home, LetterGrades, LetterGrade, Courses, Course, Assignments, Assignment, About, Contact, Chat, Email, Call];
 
 export const siteMap: { [name: string]: { name: string, title: string, component: any, parentComponent: any, subComponents: any[]; } } = {};
 
                             siteMap['Home'] = { name: 'Home', title: 'Home', component: Home, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['LetterGrades'] = { name: 'LetterGrades', title: 'LetterGrades', component: LetterGrades, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['LetterGrade'] = { name: 'LetterGrade', title: 'LetterGrade', component: LetterGrade, parentComponent: null, subComponents: [] };
                         
                             siteMap['Courses'] = { name: 'Courses', title: 'Courses', component: Courses, parentComponent: null, subComponents: [] };
                         
@@ -69,6 +81,10 @@ export const siteMap: { [name: string]: { name: string, title: string, component
                         
 
 
+                                siteMap['LetterGrades'].subComponents.push(siteMap['LetterGrade']);
+                            
+                                siteMap['LetterGrade'].parentComponent = siteMap['LetterGrades'];
+                            
                                 siteMap['Courses'].subComponents.push(siteMap['Course']);
                             
                                 siteMap['Course'].parentComponent = siteMap['Courses'];
@@ -97,6 +113,8 @@ export const siteMap: { [name: string]: { name: string, title: string, component
 export const pages : any[] = [
 
         siteMap['Home']
+    , 
+        siteMap['LetterGrades']
     , 
         siteMap['Courses']
     , 

@@ -7,6 +7,78 @@
         "ObjectDefs": {
           "ObjectDef": [
             {
+              "EntityId": "recAa94D0BSycpbfa",
+              "IsStatic": "true",
+              "Name": "LetterGrade",
+              "AirtableName": "Letter Grades",
+              "DisplayName": "LetterGrade",
+              "createdTime": "2018-04-12T19:32:13Z",
+              "PropertyDefs": {
+                "PropertyDef": [
+                  {
+                    "IsPrimaryKey": "1",
+                    "Name": "LetterGradeId",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsAttribute": "0",
+                    "IsCollection": "0",
+                    "IsNullable": "0"
+                  },
+                  {
+                    "Name": "Name",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "PointMin",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "INT32",
+                    "Length": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "PointMincopy",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "INT32",
+                    "Length": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "createdTime",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "DATETIME",
+                    "Length": "",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
+                    "Name": "Notes",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  }
+                ]
+              }
+            },
+            {
               "EntityId": "recQ919faQWlfXw7j",
               "Name": "Assignment",
               "AirtableName": "Assignments",
@@ -113,6 +185,16 @@
                     "IsNullable": "0"
                   },
                   {
+                    "Name": "When",
+                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
+                    "DataType": "TEXT",
+                    "Length": "100",
+                    "IsNullable": "1",
+                    "IsPrimaryKey": "0",
+                    "IsAttribute": "0",
+                    "IsCollection": "0"
+                  },
+                  {
                     "Name": "Name",
                     "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
                     "DataType": "TEXT",
@@ -124,16 +206,6 @@
                   },
                   {
                     "Name": "Notes",
-                    "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
-                    "DataType": "TEXT",
-                    "Length": "100",
-                    "IsNullable": "1",
-                    "IsPrimaryKey": "0",
-                    "IsAttribute": "0",
-                    "IsCollection": "0"
-                  },
-                  {
-                    "Name": "When",
                     "Namespace": "com.anabstractlevel.Schemas.ODXMLSchema.",
                     "DataType": "TEXT",
                     "Length": "100",

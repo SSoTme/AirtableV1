@@ -68,6 +68,274 @@ namespace HomeworkPlus.Lib.SqlDataManagement
   
   
   
+        public int Insert(LetterGrade letterGrade)
+        {
+            SqlConnection conn = this.CreateSqlConnection();
+            try
+            {
+                this.InitializeConnection(conn);
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = String.Format(@"INSERT INTO [{0}].[LetterGrade] (LetterGradeId, Name, PointMin, PointMincopy, createdTime, Notes)
+                                    VALUES (@LetterGradeId, @Name, @PointMin, @PointMincopy, @createdTime, @Notes)", this.Schema);
+
+                
+                  
+                if (ReferenceEquals(letterGrade.LetterGradeId, null)) cmd.Parameters.AddWithValue("@LetterGradeId", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@LetterGradeId", letterGrade.LetterGradeId);
+                
+                  
+                if (ReferenceEquals(letterGrade.Name, null)) cmd.Parameters.AddWithValue("@Name", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@Name", letterGrade.Name);
+                
+                  
+                if (ReferenceEquals(letterGrade.PointMin, null)) cmd.Parameters.AddWithValue("@PointMin", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@PointMin", letterGrade.PointMin);
+                
+                  
+                if (ReferenceEquals(letterGrade.PointMincopy, null)) cmd.Parameters.AddWithValue("@PointMincopy", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@PointMincopy", letterGrade.PointMincopy);
+                
+                  
+                if (ReferenceEquals(letterGrade.createdTime, null) ||
+                    (letterGrade.createdTime == DateTime.MinValue)) cmd.Parameters.AddWithValue("@createdTime", DBNull.Value);
+                  
+                else cmd.Parameters.AddWithValue("@createdTime", letterGrade.createdTime);
+                
+                  
+                if (ReferenceEquals(letterGrade.Notes, null)) cmd.Parameters.AddWithValue("@Notes", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@Notes", letterGrade.Notes);
+                
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        
+          /// <summary>
+        /// Returns a count of the numbers of rows affected by the Upsert.
+        /// </summary>
+        /// <param name="person"></param>
+        /// <param name="dataSource"></param>
+        /// <param name="dbName"></param>
+        /// <returns></returns>
+        public int Upsert(LetterGrade letterGrade)
+        {
+            SqlConnection conn = this.CreateSqlConnection();
+            try
+            {
+                this.InitializeConnection(conn);
+                SqlCommand cmd = conn.CreateCommand();
+                
+                // Check if this method exists, and call insert or udpate as appropriate
+                
+                
+                var id = letterGrade.LetterGradeId;
+                cmd.CommandText = String.Format(@"SELECT CASE WHEN EXISTS (SELECT * FROM [LetterGrade] WHERE LetterGradeId = '{0}') THEN 1 else 0 END", id);
+                
+                var rowExists = cmd.ExecuteScalar();
+
+                if (rowExists.SafeToString() == "1") return this.Update(letterGrade);
+                else return this.Insert(letterGrade);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        
+        public List<T> GetAllLetterGrades<T>()
+            where T : LetterGrade, new()
+        {
+            return this.GetAllLetterGrades<T>(String.Empty);
+        }
+
+        
+        public List<T> GetAllLetterGrades<T>(String whereClause)
+            where T : LetterGrade, new()
+        {
+            List<T> results = new List<T>();
+            SqlConnection conn = this.CreateSqlConnection();
+            try
+            {
+                this.InitializeConnection(conn);
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = String.Format(@"SELECT * FROM [{0}].[LetterGrade]", this.Schema);
+                if (!String.IsNullOrEmpty(whereClause)) 
+                {
+                    cmd.CommandText = String.Format("{0} WHERE {1}", cmd.CommandText, whereClause);
+                }
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                
+                int propertyIndex = -1;
+                while (reader.Read())
+                {
+                    T letterGrade = new T();
+                    
+                    
+                      propertyIndex = reader.GetOrdinal("LetterGradeId");
+                      if (!reader.IsDBNull(propertyIndex)) //TEXT
+                      {
+                          
+                          letterGrade.LetterGradeId = reader.GetString(propertyIndex);
+                      }
+                   
+                      propertyIndex = reader.GetOrdinal("Name");
+                      if (!reader.IsDBNull(propertyIndex)) //TEXT
+                      {
+                          
+                          letterGrade.Name = reader.GetString(propertyIndex);
+                      }
+                   
+                      propertyIndex = reader.GetOrdinal("PointMin");
+                      if (!reader.IsDBNull(propertyIndex)) //INT32
+                      {
+                          
+                          letterGrade.PointMin = reader.GetInt32(propertyIndex);
+                      }
+                   
+                      propertyIndex = reader.GetOrdinal("PointMincopy");
+                      if (!reader.IsDBNull(propertyIndex)) //INT32
+                      {
+                          
+                          letterGrade.PointMincopy = reader.GetInt32(propertyIndex);
+                      }
+                   
+                      propertyIndex = reader.GetOrdinal("createdTime");
+                      if (!reader.IsDBNull(propertyIndex)) //DATETIME
+                      {
+                          
+                          letterGrade.createdTime = reader.GetDateTime(propertyIndex);
+                      }
+                   
+                      propertyIndex = reader.GetOrdinal("Notes");
+                      if (!reader.IsDBNull(propertyIndex)) //TEXT
+                      {
+                          
+                          letterGrade.Notes = reader.GetString(propertyIndex);
+                      }
+                   
+                    results.Add(letterGrade);
+                }
+
+                return results;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        
+        /// <summary>
+        /// Updates the specified LetterGrade
+        /// </summary>
+        /// <returns></returns>
+        public int Update(LetterGrade letterGrade)
+        {
+            SqlConnection conn = this.CreateSqlConnection();
+            try
+            {
+                this.InitializeConnection(conn);
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = String.Format(@"UPDATE [{0}].[LetterGrade] SET 
+                                    [Name] = @Name, [PointMin] = @PointMin, [PointMincopy] = @PointMincopy, [createdTime] = @createdTime, [Notes] = @Notes
+                                    WHERE  [LetterGradeId] = @LetterGradeId", this.Schema);
+
+                 //TEXT
+                
+                if (ReferenceEquals(letterGrade.LetterGradeId, null)) cmd.Parameters.AddWithValue("@LetterGradeId", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@LetterGradeId", letterGrade.LetterGradeId);
+                 //TEXT
+                
+                if (ReferenceEquals(letterGrade.Name, null)) cmd.Parameters.AddWithValue("@Name", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@Name", letterGrade.Name);
+                 //INT32
+                
+                if (ReferenceEquals(letterGrade.PointMin, null)) cmd.Parameters.AddWithValue("@PointMin", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@PointMin", letterGrade.PointMin);
+                 //INT32
+                
+                if (ReferenceEquals(letterGrade.PointMincopy, null)) cmd.Parameters.AddWithValue("@PointMincopy", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@PointMincopy", letterGrade.PointMincopy);
+                 //DATETIME
+                
+                if (ReferenceEquals(letterGrade.createdTime, null) ||
+                    (letterGrade.createdTime == DateTime.MinValue)) cmd.Parameters.AddWithValue("@createdTime", DBNull.Value);
+                  
+                else cmd.Parameters.AddWithValue("@createdTime", letterGrade.createdTime);
+                 //TEXT
+                
+                if (ReferenceEquals(letterGrade.Notes, null)) cmd.Parameters.AddWithValue("@Notes", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@Notes", letterGrade.Notes);
+                
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        
+                
+        /// <summary>
+        /// Deletes the specified LetterGrade
+        /// </summary>
+        /// <returns></returns>
+        public int Delete(LetterGrade letterGrade)
+        {
+            SqlConnection conn = this.CreateSqlConnection();
+            try
+            {
+                this.InitializeConnection(conn);
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = String.Format(@"DELETE FROM [{0}].[LetterGrade] 
+                                    WHERE  [LetterGradeId] = @LetterGradeId", this.Schema);
+                                    
+                
+                if (ReferenceEquals(letterGrade.LetterGradeId, null)) cmd.Parameters.AddWithValue("@LetterGradeId", DBNull.Value);
+                else cmd.Parameters.AddWithValue("@LetterGradeId", letterGrade.LetterGradeId);
+                
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+          
+  
+        /// <summary>
+        /// Returns a count of the numbers of rows affected by the insert
+        /// </summary>
+        /// <param name="person"></param>
+        /// <param name="dataSource"></param>
+        /// <param name="dbName"></param>
+        /// <returns></returns>
+  
+  
+  
         public int Insert(Assignment assignment)
         {
             SqlConnection conn = this.CreateSqlConnection();
@@ -360,14 +628,19 @@ namespace HomeworkPlus.Lib.SqlDataManagement
             {
                 this.InitializeConnection(conn);
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = String.Format(@"INSERT INTO [{0}].[Course] (CourseId, Name, Notes, When, createdTime)
-                                    VALUES (@CourseId, @Name, @Notes, @When, @createdTime)", this.Schema);
+                cmd.CommandText = String.Format(@"INSERT INTO [{0}].[Course] (CourseId, When, Name, Notes, createdTime)
+                                    VALUES (@CourseId, @When, @Name, @Notes, @createdTime)", this.Schema);
 
                 
                   
                 if (ReferenceEquals(course.CourseId, null)) cmd.Parameters.AddWithValue("@CourseId", DBNull.Value);
                     
                 else cmd.Parameters.AddWithValue("@CourseId", course.CourseId);
+                
+                  
+                if (ReferenceEquals(course.When, null)) cmd.Parameters.AddWithValue("@When", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@When", course.When);
                 
                   
                 if (ReferenceEquals(course.Name, null)) cmd.Parameters.AddWithValue("@Name", DBNull.Value);
@@ -378,11 +651,6 @@ namespace HomeworkPlus.Lib.SqlDataManagement
                 if (ReferenceEquals(course.Notes, null)) cmd.Parameters.AddWithValue("@Notes", DBNull.Value);
                     
                 else cmd.Parameters.AddWithValue("@Notes", course.Notes);
-                
-                  
-                if (ReferenceEquals(course.When, null)) cmd.Parameters.AddWithValue("@When", DBNull.Value);
-                    
-                else cmd.Parameters.AddWithValue("@When", course.When);
                 
                   
                 if (ReferenceEquals(course.createdTime, null) ||
@@ -470,6 +738,13 @@ namespace HomeworkPlus.Lib.SqlDataManagement
                           course.CourseId = reader.GetString(propertyIndex);
                       }
                    
+                      propertyIndex = reader.GetOrdinal("When");
+                      if (!reader.IsDBNull(propertyIndex)) //TEXT
+                      {
+                          
+                          course.When = reader.GetString(propertyIndex);
+                      }
+                   
                       propertyIndex = reader.GetOrdinal("Name");
                       if (!reader.IsDBNull(propertyIndex)) //TEXT
                       {
@@ -482,13 +757,6 @@ namespace HomeworkPlus.Lib.SqlDataManagement
                       {
                           
                           course.Notes = reader.GetString(propertyIndex);
-                      }
-                   
-                      propertyIndex = reader.GetOrdinal("When");
-                      if (!reader.IsDBNull(propertyIndex)) //TEXT
-                      {
-                          
-                          course.When = reader.GetString(propertyIndex);
                       }
                    
                       propertyIndex = reader.GetOrdinal("createdTime");
@@ -521,7 +789,7 @@ namespace HomeworkPlus.Lib.SqlDataManagement
                 this.InitializeConnection(conn);
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandText = String.Format(@"UPDATE [{0}].[Course] SET 
-                                    [Name] = @Name, [Notes] = @Notes, [When] = @When, [createdTime] = @createdTime
+                                    [When] = @When, [Name] = @Name, [Notes] = @Notes, [createdTime] = @createdTime
                                     WHERE  [CourseId] = @CourseId", this.Schema);
 
                  //TEXT
@@ -529,6 +797,11 @@ namespace HomeworkPlus.Lib.SqlDataManagement
                 if (ReferenceEquals(course.CourseId, null)) cmd.Parameters.AddWithValue("@CourseId", DBNull.Value);
                     
                 else cmd.Parameters.AddWithValue("@CourseId", course.CourseId);
+                 //TEXT
+                
+                if (ReferenceEquals(course.When, null)) cmd.Parameters.AddWithValue("@When", DBNull.Value);
+                    
+                else cmd.Parameters.AddWithValue("@When", course.When);
                  //TEXT
                 
                 if (ReferenceEquals(course.Name, null)) cmd.Parameters.AddWithValue("@Name", DBNull.Value);
@@ -539,11 +812,6 @@ namespace HomeworkPlus.Lib.SqlDataManagement
                 if (ReferenceEquals(course.Notes, null)) cmd.Parameters.AddWithValue("@Notes", DBNull.Value);
                     
                 else cmd.Parameters.AddWithValue("@Notes", course.Notes);
-                 //TEXT
-                
-                if (ReferenceEquals(course.When, null)) cmd.Parameters.AddWithValue("@When", DBNull.Value);
-                    
-                else cmd.Parameters.AddWithValue("@When", course.When);
                  //DATETIME
                 
                 if (ReferenceEquals(course.createdTime, null) ||

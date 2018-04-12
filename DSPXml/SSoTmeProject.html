@@ -58,13 +58,18 @@ body {
             <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">smql-to-rabbitmq-config -i ..\SassyMQLexicon.smql</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SassyMQ/Config/>
             <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">-exec .\UpdateSassyMQ.bat</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/CoreLibrary/SassyMQ/>
             <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">sassymq/smql-to-csharp-rabbit -i ..\..\SassyMQ\SassyMQLexicon.smql</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/CustomTools/>
-            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">xml-xslt-transform -i .\CreateDefaultFiles.xslt</div></div><h2>Input Files</h2><div><h3>Airtable.xml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;"></div><div class="pull-left" style="height: 3em; width: 3em;">
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">xml-xslt-transform -i .\CreateDefaultFiles.xslt</div></div><div style="margin-top: 0.75em;"><b>[SSoTme-root] </b>/SqlServer/>
+            <div class="pre" style="padding-left: 15em; text-indent:-15em; font-size: 0.8em;">airtable/airtable-xml-to-sqlserver-upsert -i ..\SSoT\Airtable.xml -i ..\ODXML\DataSchema.odxml -p only-static-data=true</div></div><h2>Input Files</h2><div><h3>Airtable.xml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;"></div><div class="pull-left" style="height: 3em; width: 3em;">
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
             </div></div><h3>Airtable Xml To Odxml</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/ODXML</span><br />/> <b>ssotme </b> <a href="#ae41d6af-9829-4ff5-9109-6bfd0551a051" >airtable-xml-to-odxml</a> -i " /SSoT/Airtable.xml, ..."
                 </div><div style="padding-left: 2em;"><div>
                                 /Xsd.odxml</div><div>
                                 /DataSchema.odxml</div><div>
-                                /AirtableSummary.txt</div></div></div></div></div></div></div><div><h3>DataSchema.odxml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
+                                /AirtableSummary.txt</div></div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;"></div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/sql.png"  />
+            </div></div><h3>Airtable Xml To Sql Server Upsert</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SqlServer</span><br />/> <b>ssotme </b> <a href="#c5ceb9e6-e1aa-45d5-9a81-983ecc60aa72" >airtable-xml-to-sql-server-upsert</a> -i " /SSoT/Airtable.xml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /UpsertStaticData.sql</div></div></div></div></div></div></div><div><h3>DataSchema.odxml</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
             </div><div class="pull-left" style="height: 3em; width: 3em;">
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/html.png"  />
@@ -86,10 +91,10 @@ body {
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
             </div></div><h3>Odxml To C Sharp P O C Os</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CoreLibrary/DataClasses</span><br />/> <b>ssotme </b> <a href="#6a143376-da3b-4283-9295-43cb4c0c49f1" >odxml-to-c-sharp-p-o-c-os</a> -i " /ODXML/DataSchema.odxml, ..."
                 </div><div style="padding-left: 2em;"><div>
-                                /Assignment.designer.cs</div><div>
-                                /Assignment.cs</div><div>
-                                /Course.designer.cs</div>
-                        .../ (+1 more)
+                                /LetterGrade.designer.cs</div><div>
+                                /LetterGrade.cs</div><div>
+                                /Assignment.designer.cs</div>
+                        .../ (+3 more)
                     </div></div></div></div><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/odxml.png"  />
             </div><div class="pull-left" style="height: 3em; width: 3em;">
@@ -114,10 +119,10 @@ body {
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
             </div></div><h3>Odxml To M V C R E S T A P I</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/MVCRestApi/Controllers/api</span><br />/> <b>ssotme </b> <a href="#29d86f86-3119-4fd7-8893-5514bdc33250" >odxml-to-m-v-c-r-e-s-t-a-p-i</a> -i " /ODXML/DataSchema.odxml, ..."
                 </div><div style="padding-left: 2em;"><div>
-                                /AssignmentsController.cs</div><div>
-                                /AssignmentsController.designer.cs</div><div>
-                                /CoursesController.cs</div>
-                        .../ (+1 more)
+                                /LetterGradesController.cs</div><div>
+                                /LetterGradesController.designer.cs</div><div>
+                                /AssignmentsController.cs</div>
+                        .../ (+3 more)
                     </div></div></div></div></div></div><div><h3>AppStates.csv</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csv.png"  />
             </div><div class="pull-left" style="height: 3em; width: 3em;">
@@ -140,7 +145,7 @@ body {
                                 /AppStateSummary.txt</div><div>
                                 /app/app.modules-base.ts</div><div>
                                 /pages/home/home.html</div>
-                        .../ (+49 more)
+                        .../ (+59 more)
                     </div></div></div></div></div></div><div><h3>ProjectLexicon.xlsx</h3><div style="background-color: #EEEEEE; margin: 0.25em; border: solid #CCCCCC 1px;"><div style="margin-left: 1em;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;">
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/xlsx.png"  />
             </div><div class="pull-left" style="height: 3em; width: 3em;">
@@ -276,13 +281,15 @@ body {
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
             </div></div><h3>Odxml To C Sharp P O C Os</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/CoreLibrary/DataClasses</span><br />/> <b>ssotme </b> <a href="#6a143376-da3b-4283-9295-43cb4c0c49f1" >odxml-to-c-sharp-p-o-c-os</a> -i " /ODXML/DataSchema.odxml, ..."
                 </div><div style="padding-left: 2em;"><div>
-                                /Assignment.designer.cs</div><div>
-                                /Assignment.cs</div><div>
-                                /Course.designer.cs</div>
-                        .../ (+1 more)
+                                /LetterGrade.designer.cs</div><div>
+                                /LetterGrade.cs</div><div>
+                                /Assignment.designer.cs</div>
+                        .../ (+3 more)
                     </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Odxml To CSharp POCOs</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-csharp-pocos -i ..\..\ODXML\DataSchema.odxml -i ..\CoreLibrary.csproj -p output-csproj-filename=../CoreLibrary.csproj -p relative-path=DataClasses\\ -p include-sdm-expand=true -p specific-fk-field-name=true</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
                         </div><div>/CoreLibrary/CoreLibrary.csproj ----->
                         </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> CoreLibrary/DataClasses/LetterGrade.designer.cs</div><div>
+                    -> CoreLibrary/DataClasses/LetterGrade.cs</div><div>
                     -> CoreLibrary/DataClasses/Assignment.designer.cs</div><div>
                     -> CoreLibrary/DataClasses/Assignment.cs</div><div>
                     -> CoreLibrary/DataClasses/Course.designer.cs</div><div>
@@ -323,7 +330,7 @@ body {
                                 /AppStateSummary.txt</div><div>
                                 /app/app.modules-base.ts</div><div>
                                 /pages/home/home.html</div>
-                        .../ (+49 more)
+                        .../ (+59 more)
                     </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Create Ionic 2 states from App States xml file.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">ionic-states-from-app-states-xml -i ..\..\SSoT\AppStates.xml -p starting-dots=../../ -p "include-api-ref=true" -i ..\..\ODXML\DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SSoT/AppStates.xml ----->
                         </div><div>/ODXML/DataSchema.odxml ----->
                         </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
@@ -334,6 +341,16 @@ body {
                     -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
                     -> ionic2-ts-sidemenu1/src/pages/home/home.base.ts</div><div>
                     -> ionic2-ts-sidemenu1/src/pages/home/home.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/lettergrades/lettergrades.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/lettergrades/lettergrades.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/lettergrades/lettergrades.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/lettergrades/lettergrades.scss</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/lettergrades/lettergrade/lettergrade.html</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/lettergrades/lettergrade/lettergrade.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/lettergrades/lettergrade/lettergrade.base.ts</div><div>
+                    -> ionic2-ts-sidemenu1/src/pages/lettergrades/lettergrade/lettergrade.scss</div><div>
                     -> ionic2-ts-sidemenu1/src/pages/courses/courses.html</div><div>
                     -> ionic2-ts-sidemenu1/src/pages/courses/courses.ts</div><div>
                     -> ionic2-ts-sidemenu1/src/app/ionic-base.ts</div><div>
@@ -420,12 +437,14 @@ body {
                 <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/csharp.png"  />
             </div></div><h3>Odxml To M V C R E S T A P I</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/MVCRestApi/Controllers/api</span><br />/> <b>ssotme </b> <a href="#29d86f86-3119-4fd7-8893-5514bdc33250" >odxml-to-m-v-c-r-e-s-t-a-p-i</a> -i " /ODXML/DataSchema.odxml, ..."
                 </div><div style="padding-left: 2em;"><div>
-                                /AssignmentsController.cs</div><div>
-                                /AssignmentsController.designer.cs</div><div>
-                                /CoursesController.cs</div>
-                        .../ (+1 more)
+                                /LetterGradesController.cs</div><div>
+                                /LetterGradesController.designer.cs</div><div>
+                                /AssignmentsController.cs</div>
+                        .../ (+3 more)
                     </div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Odxml To MVC REST API</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">odxml42/odxml-to-mvc-rest-api -i ..\..\..\ODXML\DataSchema.odxml</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/ODXML/DataSchema.odxml ----->
                         </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> MVCRestApi/Controllers/api/LetterGradesController.cs</div><div>
+                    -> MVCRestApi/Controllers/api/LetterGradesController.designer.cs</div><div>
                     -> MVCRestApi/Controllers/api/AssignmentsController.cs</div><div>
                     -> MVCRestApi/Controllers/api/AssignmentsController.designer.cs</div><div>
                     -> MVCRestApi/Controllers/api/CoursesController.cs</div><div>
@@ -671,4 +690,14 @@ body {
                                 /../HomeworkPlus.sln</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Given an Xml and Xslt file, will process and "split" a resulting fileset.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">xml-xslt-transform -i .\CreateDefaultFiles.xslt</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/CustomTools/CreateDefaultFiles.xslt ----->
                         </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
                     -> CustomTools/../MVCRestApi/Web.config</div><div>
-                    -> CustomTools/../HomeworkPlus.sln</div></div></body></html>
+                    -> CustomTools/../HomeworkPlus.sln</div></div>
+        <hr id="c5ceb9e6-e1aa-45d5-9a81-983ecc60aa72 6/>
+
+        <div style="clear: both;"><div class="project-transpiler-link-box"><div class="pull-left"><div class="pull-left" style="height: 3em; width: 3em;"></div><div class="pull-left" style="height: 3em; width: 3em;">
+                <img  style="width: 2.5em; height: 2.5em;" src="FileTypeImages/sql.png"  />
+            </div></div><h3>Airtable Xml To Sql Server Upsert</h3><div style="font-weight: bold; padding-after: 1em;"><div style="padding: 0.2em; white-space: pre-wrap; font-family: monospace"><span class="ssotme-root">[SSoTme-root]</span><span class="relative-path">/SqlServer</span><br />/> <b>ssotme </b> <a href="#c5ceb9e6-e1aa-45d5-9a81-983ecc60aa72" >airtable-xml-to-sql-server-upsert</a> -i " /SSoT/Airtable.xml, ..."
+                </div><div style="padding-left: 2em;"><div>
+                                /UpsertStaticData.sql</div></div></div></div></div><div style="clear: both;"><div style="white-space: pre-wrap; font-size: 0.8em; margin-top: -1.2em; padding: 0.2em;">Creates a SQL Server script to update/insert data (or static data) from the airtable db.</div></div><div style="white-space: pre-wrap; clear: both"><span class="command-line">airtable/airtable-xml-to-sqlserver-upsert -i ..\SSoT\Airtable.xml -i ..\ODXML\DataSchema.odxml -p only-static-data=true</span></div><div style="margin-left: 1em; padding: 0.5em;"><div>/SSoT/Airtable.xml ----->
+                        </div><div>/ODXML/DataSchema.odxml ----->
+                        </div></div><div style="margin-left: 2em; padding: 0.5em;"><div>
+                    -> SqlServer/UpsertStaticData.sql</div></div></body></html>

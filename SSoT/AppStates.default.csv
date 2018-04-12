@@ -1,6 +1,8 @@
 Name,Description,ParentState,IsAbstract,DisplayName,IsCollection,EntityName
 APP_ROOT,A root state all other states derive from,,TRUE,Root
 Home,Home page for the app,APP_ROOT,FALSE,Home
+LetterGrades,Top Level Collection: LetterGrades,APP_ROOT,FALSE,LetterGrades,TRUE,LetterGrade
+LetterGrade, ITEM: LetterGrade,LetterGrades,FALSE,LetterGrade,FALSE,LetterGrade
 Courses,Top Level Collection: Courses,APP_ROOT,FALSE,Courses,TRUE,Course
 Course, ITEM: Course,Courses,FALSE,Course,FALSE,Course
 Assignments,  - : Assignments,Course,FALSE,Assignments,TRUE,Assignment

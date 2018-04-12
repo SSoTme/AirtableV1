@@ -1,6 +1,7 @@
 
 Entities for HomeworkPlus:
 
+ - LetterGrade 
  - Assignment 
  - Course 
 
@@ -17,6 +18,24 @@ Entities for HomeworkPlus:
 -recQ919faQWlfXw7j/Entities
 
 -recbU48mkyos0TSJP/Entities
+
+-rec2FgkGG8ml8KXoc/LetterGrades
+
+-recGJADpClvSLjg72/LetterGrades
+
+-recGtQgLIppuI0Auk/LetterGrades
+
+-recM5pmWZUJexsggR/LetterGrades
+
+-recPSeuNAMRg7ISJ2/LetterGrades
+
+-recSSQYDz2EZjetSf/LetterGrades
+
+-recdMTKd2GCapPWMe/LetterGrades
+
+-recfRXc8fchQUwmGw/LetterGrades
+
+-recrOPP0ptXl7tpQh/LetterGrades
 
 -rec0lIzmdEvmDwdDi/Assignments
 

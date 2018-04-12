@@ -24,6 +24,66 @@ export class RestAPIService {
       
       
       
+    public letterGrades: any[];
+    getLetterGrades() {
+
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/LetterGrades?expand=all')
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.letterGrades = data;
+                    resolve(this.letterGrades);
+                });
+        });
+    }
+
+    public letterGrade: any[];
+    getLetterGrade(letterGrade: any) {
+        return new Promise(resolve => {
+            this.http.get(this.apiUrl + '/LetterGrades?expand=all&letterGradeId=' + letterGrade.LetterGradeId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    this.letterGrade = data;
+                    resolve(this.letterGrade);
+                });
+        });
+    }
+
+    
+    updateLetterGrade(letterGrade: any) {
+         return new Promise(resolve => {
+            this.http.put(this.apiUrl + '/LetterGrades', letterGrade)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    addNewLetterGrade(letterGrade: any) {
+         return new Promise(resolve => {
+            this.http.post(this.apiUrl + '/LetterGrades', letterGrade)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+
+    deleteLetterGrade(letterGrade: any) {
+         return new Promise(resolve => {
+            this.http.delete(this.apiUrl + '/LetterGrades?letterGradeId=' + letterGrade.LetterGradeId)
+                .map(res => res.json())
+                .subscribe(data => {
+                    resolve(data);
+                });
+        });
+    }
+    
+      
+      
+      
+      
+      
     public assignments: any[];
     getAssignments() {
 

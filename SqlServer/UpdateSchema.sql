@@ -6,6 +6,7 @@
     GO
     
     
+      -- TABLE: LetterGrade
       -- TABLE: Assignment
       -- TABLE: Course
 
@@ -19,6 +20,39 @@
      USE [HomeworkPlus];
 GO
       
+        -- TABLE: LetterGrade
+        -- ****** Object:  Table [dbo].[LetterGrade]   Script Date:  ******
+        IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LetterGrade]') AND type in (N'U')) 
+        BEGIN
+        CREATE TABLE [dbo].[LetterGrade] (
+          [LetterGradeId] NVARCHAR(100) NOT NULL
+          -- TEXT.
+        ,
+          [Name] NVARCHAR(100) NULL
+          -- TEXT.
+        ,
+          [PointMin] INT NULL
+          -- INT32.
+        ,
+          [PointMincopy] INT NULL
+          -- INT32.
+        ,
+          [createdTime] DATETIME NULL
+          -- DATETIME.
+        ,
+          [Notes] NVARCHAR(100) NULL
+          -- TEXT.
+        ,
+        
+        CONSTRAINT [PK_LetterGrade] PRIMARY KEY CLUSTERED
+          (
+            [LetterGradeId] ASC
+          )
+        
+        ) ON [PRIMARY]
+        END
+        GO
+
         -- TABLE: Assignment
         -- ****** Object:  Table [dbo].[Assignment]   Script Date:  ******
         IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Assignment]') AND type in (N'U')) 
@@ -63,13 +97,13 @@ GO
           [CourseId] NVARCHAR(100) NOT NULL
           -- TEXT.
         ,
+          [When] NVARCHAR(100) NULL
+          -- TEXT.
+        ,
           [Name] NVARCHAR(100) NULL
           -- TEXT.
         ,
           [Notes] NVARCHAR(100) NULL
-          -- TEXT.
-        ,
-          [When] NVARCHAR(100) NULL
           -- TEXT.
         ,
           [createdTime] DATETIME NULL
@@ -88,6 +122,103 @@ GO
 
       
 DECLARE @ObjectName NVARCHAR(100)
+
+    
+    -- COUNT: 6
+    IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'LetterGradeId' AND Object_ID = Object_ID(N'LetterGrade'))
+    BEGIN
+            ALTER TABLE [dbo].[LetterGrade] ADD [LetterGradeId] NVARCHAR(100) NULL;
+    END
+
+    
+    -- COUNT: 6
+    IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'Name' AND Object_ID = Object_ID(N'LetterGrade'))
+    BEGIN
+            ALTER TABLE [dbo].[LetterGrade] ADD [Name] NVARCHAR(100) NULL;
+    END
+
+    
+    ELSE
+    BEGIN 
+
+
+        ALTER TABLE [dbo].[LetterGrade] ALTER COLUMN [Name] NVARCHAR(100) NULL;
+
+    
+
+	END
+
+    
+    -- COUNT: 6
+    IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'PointMin' AND Object_ID = Object_ID(N'LetterGrade'))
+    BEGIN
+            ALTER TABLE [dbo].[LetterGrade] ADD [PointMin] INT NULL;
+    END
+
+    
+    ELSE
+    BEGIN 
+
+
+        ALTER TABLE [dbo].[LetterGrade] ALTER COLUMN [PointMin] INT NULL;
+
+    
+
+	END
+
+    
+    -- COUNT: 6
+    IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'PointMincopy' AND Object_ID = Object_ID(N'LetterGrade'))
+    BEGIN
+            ALTER TABLE [dbo].[LetterGrade] ADD [PointMincopy] INT NULL;
+    END
+
+    
+    ELSE
+    BEGIN 
+
+
+        ALTER TABLE [dbo].[LetterGrade] ALTER COLUMN [PointMincopy] INT NULL;
+
+    
+
+	END
+
+    
+    -- COUNT: 6
+    IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'createdTime' AND Object_ID = Object_ID(N'LetterGrade'))
+    BEGIN
+            ALTER TABLE [dbo].[LetterGrade] ADD [createdTime] DATETIME NULL;
+    END
+
+    
+    ELSE
+    BEGIN 
+
+
+        ALTER TABLE [dbo].[LetterGrade] ALTER COLUMN [createdTime] DATETIME NULL;
+
+    
+
+	END
+
+    
+    -- COUNT: 6
+    IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'Notes' AND Object_ID = Object_ID(N'LetterGrade'))
+    BEGIN
+            ALTER TABLE [dbo].[LetterGrade] ADD [Notes] NVARCHAR(100) NULL;
+    END
+
+    
+    ELSE
+    BEGIN 
+
+
+        ALTER TABLE [dbo].[LetterGrade] ALTER COLUMN [Notes] NVARCHAR(100) NULL;
+
+    
+
+	END
 
     
     -- COUNT: 7
@@ -213,6 +344,24 @@ DECLARE @ObjectName NVARCHAR(100)
 
     
     -- COUNT: 6
+    IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'When' AND Object_ID = Object_ID(N'Course'))
+    BEGIN
+            ALTER TABLE [dbo].[Course] ADD [When] NVARCHAR(100) NULL;
+    END
+
+    
+    ELSE
+    BEGIN 
+
+
+        ALTER TABLE [dbo].[Course] ALTER COLUMN [When] NVARCHAR(100) NULL;
+
+    
+
+	END
+
+    
+    -- COUNT: 6
     IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'Name' AND Object_ID = Object_ID(N'Course'))
     BEGIN
             ALTER TABLE [dbo].[Course] ADD [Name] NVARCHAR(100) NULL;
@@ -249,24 +398,6 @@ DECLARE @ObjectName NVARCHAR(100)
 
     
     -- COUNT: 6
-    IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'When' AND Object_ID = Object_ID(N'Course'))
-    BEGIN
-            ALTER TABLE [dbo].[Course] ADD [When] NVARCHAR(100) NULL;
-    END
-
-    
-    ELSE
-    BEGIN 
-
-
-        ALTER TABLE [dbo].[Course] ALTER COLUMN [When] NVARCHAR(100) NULL;
-
-    
-
-	END
-
-    
-    -- COUNT: 6
     IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = N'createdTime' AND Object_ID = Object_ID(N'Course'))
     BEGIN
             ALTER TABLE [dbo].[Course] ADD [createdTime] DATETIME NULL;
@@ -284,6 +415,8 @@ DECLARE @ObjectName NVARCHAR(100)
 	END
 
     
+
+              -- ****** KEYS FOR Table [dbo].[LetterGrade]
 
               -- ****** KEYS FOR Table [dbo].[Assignment]
           -- FK for Course :: 0 :: Assignment :: Course

@@ -1,0 +1,47 @@
+<ion-header xml:space="preserve">
+  <ion-navbar>
+    <button ion-button="" menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+          <ion-row>
+                LetterGrades
+          </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header><ion-content padding="" xml:space="preserve">
+     <div class="center">
+        <p class="ionic-logo"></p>
+    </div>
+
+    <ion-card>
+        
+                <ion-card-header>
+                     LetterGrades
+                </ion-card-header>
+                <ion-list>
+                    
+                    <div *ngIf="!letterGrades || letterGrades.length === 0">
+                        <p style="padding: 1em; font-weight: bold;">
+                            No LetterGrades yet.
+                        </p>
+                    </div>
+                    
+                    <div *ngIf="letterGrades && letterGrades.length > 0">
+                        <button ion-item="" (click)="goToState(LetterGradeState, letterGrade)" *ngFor="let letterGrade of letterGrades">
+                            <ion-icon name="document" item-left=""></ion-icon>
+                            {{ letterGrade.Name }}
+                        </button>
+                    </div>
+                    
+
+                    <hr />
+
+                    <button ion-item="" (click)="addNewLetterGrade()">
+                        <ion-icon name="add" item-left=""></ion-icon> New LetterGrade
+                    </button>
+                </ion-list>
+            
+    </ion-card>
+
+</ion-content>

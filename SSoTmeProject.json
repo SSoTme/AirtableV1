@@ -873,6 +873,43 @@
       "Name": "XmlXsltTransform",
       "RelativePath": "/CustomTools",
       "CommandLine": "xml-xslt-transform -i .\\CreateDefaultFiles.xslt"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
+        "AccountHolderId": "c2bb89f9-26da-4ebf-9d35-0c4547eb89e2",
+        "Name": "AirtableXmlToSqlServerUpsert",
+        "DisplayName": "Airtable Xml To Sql Server Upsert",
+        "Description": "Creates a SQL Server script to update/insert data (or static data) from the airtable db.",
+        "CreatedOn": "2018-04-12T21:36:05.25",
+        "IsActive": true,
+        "CurrentRoutingKey": "",
+        "LowerName": "airtablexmltosqlserverupsert",
+        "UpperName": "AIRTABLEXMLTOSQLSERVERUPSERT",
+        "LowerHyphenName": "airtable-xml-to-sql-server-upsert",
+        "InputDescriptionMD": "-p only-static-table=true\r\n   to only include entities marked as IsStaticData",
+        "InputFileTypeId": "8c1bfcc6-a4de-4604-b785-9aa677c5302a",
+        "OutputFileTypeId": "1136a8fc-7ced-47c2-b08d-1ff447a82b01",
+        "TranspileRequests": [],
+        "TranspilerInstances": [],
+        "TranspilerVersions": [
+          {
+            "TranspilerVersionId": "928d5e06-9cc1-4ad4-ab67-5998a63bf68e",
+            "TranspilerId": "1cbd15d4-18df-47a8-8a08-83d9544baa11",
+            "Name": "v1",
+            "CreatedOn": "2018-04-12T21:36:07.233",
+            "IsActive": true,
+            "TranspilerFileTypeId_TranspilerInputHints": [],
+            "TranspilerInstances": [],
+            "ReplacedByTranspilerVersionId_TranspilerVersions": []
+          }
+        ]
+      },
+      "CLIHandler": null,
+      "ProjectTranspilerId": "c5ceb9e6-e1aa-45d5-9a81-983ecc60aa72",
+      "Name": "AirtableXmlToSqlServerUpsert",
+      "RelativePath": "/SqlServer",
+      "CommandLine": "airtable/airtable-xml-to-sqlserver-upsert -i ..\\SSoT\\Airtable.xml -i ..\\ODXML\\DataSchema.odxml -p only-static-data=true"
     }
   ]
 }

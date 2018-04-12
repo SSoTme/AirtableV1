@@ -1,0 +1,3036 @@
+<?xml version="1.0"?>
+<FileSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileSetId>825a2488-59ff-467e-8935-e124f3f7cd06</FileSetId>
+  <CreatedOn xsi:nil="true" />
+  <FileSetFiles>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>AppStateSummary.txt</RelativePath>
+      <FileContents>Default file contents
+                    IonIcons: 730
+                    Root States:  
+                    
+                     - Root :: 
+                    
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/app.modules-base.ts</RelativePath>
+      <FileContents>//
+// ===== File globals.ts    
+//
+
+    
+        import { Home } from '../pages/home/home';
+    
+
+    
+        import { Courses } from '../pages/courses/courses';
+    
+
+    
+        import { Course } from '../pages/courses/course/course';
+    
+
+    
+        import { Assignments } from '../pages/courses/course/assignments/assignments';
+    
+
+    
+        import { Assignment } from '../pages/courses/course/assignments/assignment/assignment';
+    
+
+    
+        import { About } from '../pages/about/about';
+    
+
+    
+        import { Contact } from '../pages/contact/contact';
+    
+
+    
+        import { Chat } from '../pages/contact/chat/chat';
+    
+
+    
+        import { Email } from '../pages/contact/email/email';
+    
+
+    
+        import { Call } from '../pages/contact/call/call';
+    
+
+
+export const components : any[] = [Home, Courses, Course, Assignments, Assignment, About, Contact, Chat, Email, Call];
+
+export const siteMap: { [name: string]: { name: string, title: string, component: any, parentComponent: any, subComponents: any[]; } } = {};
+
+                            siteMap['Home'] = { name: 'Home', title: 'Home', component: Home, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['Courses'] = { name: 'Courses', title: 'Courses', component: Courses, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['Course'] = { name: 'Course', title: 'Course', component: Course, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['Assignments'] = { name: 'Assignments', title: 'Assignments', component: Assignments, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['Assignment'] = { name: 'Assignment', title: 'Assignment', component: Assignment, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['About'] = { name: 'About', title: 'About', component: About, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['Contact'] = { name: 'Contact', title: 'Contact', component: Contact, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['Chat'] = { name: 'Chat', title: 'Chat', component: Chat, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['Email'] = { name: 'Email', title: 'Email', component: Email, parentComponent: null, subComponents: [] };
+                        
+                            siteMap['Call'] = { name: 'Call', title: 'Call', component: Call, parentComponent: null, subComponents: [] };
+                        
+
+
+                                siteMap['Courses'].subComponents.push(siteMap['Course']);
+                            
+                                siteMap['Course'].parentComponent = siteMap['Courses'];
+                            
+                                siteMap['Course'].subComponents.push(siteMap['Assignments']);
+                            
+                                siteMap['Assignments'].parentComponent = siteMap['Course'];
+                            
+                                siteMap['Assignments'].subComponents.push(siteMap['Assignment']);
+                            
+                                siteMap['Assignment'].parentComponent = siteMap['Assignments'];
+                            
+                                siteMap['Contact'].subComponents.push(siteMap['Chat']);
+                            
+                                siteMap['Contact'].subComponents.push(siteMap['Email']);
+                            
+                                siteMap['Contact'].subComponents.push(siteMap['Call']);
+                            
+                                siteMap['Chat'].parentComponent = siteMap['Contact'];
+                            
+                                siteMap['Email'].parentComponent = siteMap['Contact'];
+                            
+                                siteMap['Call'].parentComponent = siteMap['Contact'];
+                            
+
+export const pages : any[] = [
+
+        siteMap['Home']
+    , 
+        siteMap['Courses']
+    , 
+        siteMap['About']
+    , 
+        siteMap['Contact']
+    
+];
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/home/home.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                Home
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header *ngIf="!editMode"&gt;
+                                        
+                &lt;/ion-card-header&gt;
+                    
+
+                &lt;p&gt;
+                
+
+                
+                Your content for the Home page goes here.
+                
+                &lt;/p&gt;
+
+                
+
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/home/home.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../app/app.modules-base';
+import { RestAPIService } from '../../providers/rest-api-service';
+import { HomeBase } from './home.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-home',
+    templateUrl: 'home.html'
+})
+export class Home extends HomeBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/home/home.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../app/app.modules-base';
+import { IonicBase } from '../../app/ionic-base';
+import { RestAPIService } from '../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class HomeBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        
+        
+    }
+    
+    public HomeState = siteMap['Home'];
+
+    public pages : any;
+
+    public parent : any;
+
+    
+
+    
+    goToRootState(state) : Promise&lt;any&gt; {
+        return this.goToState(state, true);
+    }
+    goToState(state, setRoot = false) : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { parent : this });
+        } else {
+            return this.navCtrl.push(state.component, { parent : this });
+        }
+    }    
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/home/home.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/courses.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                Courses
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header&gt;
+                     Courses
+                &lt;/ion-card-header&gt;
+                &lt;ion-list&gt;
+                    
+                    &lt;div *ngIf="!courses || courses.length === 0"&gt;
+                        &lt;p style="padding: 1em; font-weight: bold;"&gt;
+                            No Courses yet.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div *ngIf="courses &amp;&amp; courses.length &gt; 0"&gt;
+                        &lt;button ion-item="" (click)="goToState(CourseState, course)" *ngFor="let course of courses"&gt;
+                            &lt;ion-icon name="document" item-left=""&gt;&lt;/ion-icon&gt;
+                            {{ course.Name }}
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    
+
+                    &lt;hr /&gt;
+
+                    &lt;button ion-item="" (click)="addNewCourse()"&gt;
+                        &lt;ion-icon name="add" item-left=""&gt;&lt;/ion-icon&gt; New Course
+                    &lt;/button&gt;
+                &lt;/ion-list&gt;
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/courses.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../app/app.modules-base';
+import { RestAPIService } from '../../providers/rest-api-service';
+import { CoursesBase } from './courses.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-courses',
+    templateUrl: 'courses.html'
+})
+export class Courses extends CoursesBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/courses.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../app/app.modules-base';
+import { IonicBase } from '../../app/ionic-base';
+import { RestAPIService } from '../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class CoursesBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        this.getCourses();
+        
+    }
+    
+    public CoursesState = siteMap['Courses'];
+
+    public pages : any;
+
+    
+
+    public CourseState = siteMap['Course'];
+    public parent : any;
+    public courses: any = []; 
+
+    
+
+    pop2() { 
+        this.navCtrl.pop()
+            .then(data =&gt; {
+                this.navCtrl.pop();
+            });
+    }
+
+    getCourses() {
+        return new Promise(resolve =&gt; {
+            
+            this.apiSvc.getCourses()
+                .then(result =&gt; { 
+                    this.courses = result;
+                    resolve(result);
+                });
+        });
+    }
+
+    reload() { return this.getCourses(); }
+
+    addNewCourse() { // 
+        var newCourse = {
+            "Name" : "New Course " + (this.courses ? this.courses.length + 1 : 1),
+            "Description" : ""
+        }
+        
+        this.apiSvc.addNewCourse(newCourse)
+            .then(data =&gt; {
+                
+                this.getCourses();
+                this.goToState(this.CourseState, data, true);
+            });
+            
+    }
+    
+
+    
+
+    
+    goToRootState(state, course = {}, editMode = false) : Promise&lt;any&gt; {
+        return this.goToState(state, course, editMode, true);
+    }
+
+    goToState(state, course = {}, editMode = false, setRoot = false)  : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { course : course, parent: this, editMode: editMode });
+        } else {
+            return this.navCtrl.push(state.component, { course : course, parent: this, editMode: editMode });
+        }
+    }
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/courses.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/course.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                &lt;ion-col text-left=""&gt;
+                                                    {{ course.Name }}
+                                                &lt;/ion-col&gt;&lt;ion-col text-right="" style="font-size: 0.6em;color: gray;"&gt;
+                                                    - Course&lt;/ion-col&gt;
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header *ngIf="!editMode"&gt;
+                    
+                        &lt;ion-item&gt;
+                                &lt;ion-label&gt;Name&lt;/ion-label&gt;
+                                &lt;ion-input [readonly]="true" type="text" name="courseName" [(ngModel)]="course.Name"&gt;&lt;/ion-input&gt;
+                                
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;When&lt;/ion-label&gt;
+                                &lt;ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="When" 
+                                                name="courseWhenName" 
+                                                [(ngModel)]="course.When"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;Notes&lt;/ion-label&gt;
+                                &lt;ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Notes" 
+                                                name="courseNotesName" 
+                                                [(ngModel)]="course.Notes"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;createdTime&lt;/ion-label&gt;
+                                &lt;ion-input type="datetime"
+                                                disabled="true" 
+                                                placeholder="createdTime" 
+                                                name="coursecreatedTimeName" 
+                                                [(ngModel)]="course.createdTime"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+
+                             &lt;ion-row right=""&gt;
+                                &lt;ion-col text-right=""&gt;   
+                                    &lt;button ion-button="" (click)="editMode = true"&gt;&lt;ion-icon name="create"&gt;&lt;/ion-icon&gt; Edit&lt;/button&gt;
+                                &lt;/ion-col&gt; 
+                            &lt;/ion-row&gt;
+                                            
+                &lt;/ion-card-header&gt;
+                    
+                        &lt;div *ngIf="editMode"&gt;
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;Name&lt;/ion-label&gt;
+                                &lt;ion-input type="text" name="courseName" [(ngModel)]="course.Name"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;When&lt;/ion-label&gt;
+                                &lt;ion-input type="text" 
+                                                placeholder="When" 
+                                                name="courseWhenName" 
+                                                [(ngModel)]="course.When"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;Notes&lt;/ion-label&gt;
+                                &lt;ion-input type="text" 
+                                                placeholder="Notes" 
+                                                name="courseNotesName" 
+                                                [(ngModel)]="course.Notes"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;createdTime&lt;/ion-label&gt;
+                                &lt;ion-input type="datetime"
+                                                placeholder="createdTime" 
+                                                name="coursecreatedTimeName" 
+                                                [(ngModel)]="course.createdTime"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-row&gt;
+                                &lt;ion-col text-left=""&gt;
+                                    &lt;button ion-button="" secondary="" (click)="updateCourse(course)"&gt;
+                                        &lt;ion-icon name="checkmark" item-left=""&gt;&lt;/ion-icon&gt; Ok
+                                    &lt;/button&gt;
+                                &lt;/ion-col&gt;
+                                &lt;ion-col text-right=""&gt;
+                                &lt;/ion-col&gt;
+                            &lt;/ion-row&gt;
+                            &lt;ion-row&gt;
+                                &lt;ion-col text-left=""&gt;
+                                    &lt;button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteCourse()"&gt;
+                                        &lt;ion-icon name="trash" item-left=""&gt;&lt;/ion-icon&gt; Delete
+                                    &lt;/button&gt;
+                                &lt;/ion-col&gt;
+                                &lt;ion-col text-right=""&gt;
+                                &lt;/ion-col&gt;
+                            &lt;/ion-row&gt;
+                        &lt;/div&gt;
+                    
+
+                &lt;p&gt;
+                
+                More about {{ course.Name }} can go here...
+                
+
+                
+                &lt;/p&gt;
+
+                
+                &lt;ion-card-header&gt;
+                    &lt;hr /&gt;
+                &lt;/ion-card-header&gt;
+                &lt;ion-list&gt;
+                    
+                        
+                        
+                        &lt;button ion-item="" (click)="goToState(AssignmentsState, course)"&gt;
+                            &lt;ion-icon name="list" item-left=""&gt;&lt;/ion-icon&gt;
+                            Assignments   
+                            
+                            &lt;small style="font-size: 0.8em; color: gray;"&gt;({{ course.Assignments ? course.Assignments.length : 0 }})&lt;/small&gt;
+                        &lt;/button&gt;
+                    
+                &lt;/ion-list&gt;
+        
+
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/course.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../app/app.modules-base';
+import { RestAPIService } from '../../../providers/rest-api-service';
+import { CourseBase } from './course.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-course',
+    templateUrl: 'course.html'
+})
+export class Course extends CourseBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/course.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../app/app.modules-base';
+import { IonicBase } from '../../../app/ionic-base';
+import { RestAPIService } from '../../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class CourseBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        
+        this.course = this.navParams.get('course') || this.course;
+        this.getCourse();
+        this.editMode = this.navParams.get("editMode");
+    }
+    
+    public CourseState = siteMap['Course'];
+
+    public pages : any;
+
+    
+
+    public AssignmentsState = siteMap['Assignments'];
+    public parent : any;
+
+    
+    public course: any = {};
+    ;
+    public canDelete: any = true;
+    public editMode = false;
+
+    pop() {
+        this.navCtrl.pop();
+    }
+
+    getCourse() {
+        return new Promise(resolve =&gt; {
+            let course = this.navParams.get("course");
+            if (!course) course = this.navParams.get("course");
+
+            
+            this.apiSvc.getCourse(course)
+                .then(data =&gt; {
+                    this.course = data;
+                    this.canDelete = true;
+
+                    // Check if they can actually delete
+                    
+                    
+                    if (this.course.Assignments &amp;&amp; this.course.Assignments.length &gt; 0) {
+                        this.canDelete = false;
+                    }
+                    
+
+                    resolve(data);
+                });
+            
+        });
+    }
+    
+    reload() { return this.getCourse(); }
+
+    updateCourse(theCourseToUpdate) {
+            
+
+        this.apiSvc.updateCourse(theCourseToUpdate)
+            .then(data =&gt; {
+                 
+                this.parent
+                    .reload()
+                    .then(parentResult =&gt; {
+                        this.getCourse();
+                        this.editMode = false;
+                    });
+            });
+            
+    }
+
+
+    deleteCourse() {
+        
+
+        this.apiSvc.deleteCourse(this.course)
+            .then(data =&gt; {
+                this.parent
+                    .reload()
+                    .then(parentResult =&gt; {
+                         this.navCtrl.pop();
+                    });
+            });
+            
+    }
+
+    
+    goToRootState(state, course = {}, editMode = false) : Promise&lt;any&gt; {
+        return this.goToState(state, course, editMode, true);
+    }
+
+    goToState(state, course = {}, editMode = false, setRoot = false)  : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { course : course, parent: this, editMode: editMode });
+        } else {
+            return this.navCtrl.push(state.component, { course : course, parent: this, editMode: editMode });
+        }
+    }
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/course.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/assignments/assignments.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                &lt;ion-col text-left=""&gt;
+                                                    {{ this.parent.course.Name }}
+                                                &lt;/ion-col&gt;&lt;ion-col text-right="" style="font-size: 0.6em;color: gray;"&gt;
+                                                    - Assignments&lt;/ion-col&gt;
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header&gt;
+                     Assignments
+                &lt;/ion-card-header&gt;
+                &lt;ion-list&gt;
+                    
+                    &lt;div *ngIf="!assignments || assignments.length === 0"&gt;
+                        &lt;p style="padding: 1em; font-weight: bold;"&gt;
+                            No Assignments yet.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div *ngIf="assignments &amp;&amp; assignments.length &gt; 0"&gt;
+                        &lt;button ion-item="" (click)="goToState(AssignmentState, assignment)" *ngFor="let assignment of assignments"&gt;
+                            &lt;ion-icon name="document" item-left=""&gt;&lt;/ion-icon&gt;
+                            {{ assignment.Name }}
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    
+
+                    &lt;hr /&gt;
+
+                    &lt;button ion-item="" (click)="addNewAssignment()"&gt;
+                        &lt;ion-icon name="add" item-left=""&gt;&lt;/ion-icon&gt; New Assignment
+                    &lt;/button&gt;
+                &lt;/ion-list&gt;
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/assignments/assignments.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../../app/app.modules-base';
+import { RestAPIService } from '../../../../providers/rest-api-service';
+import { AssignmentsBase } from './assignments.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-assignments',
+    templateUrl: 'assignments.html'
+})
+export class Assignments extends AssignmentsBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/assignments/assignments.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../../app/app.modules-base';
+import { IonicBase } from '../../../../app/ionic-base';
+import { RestAPIService } from '../../../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class AssignmentsBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        this.getAssignments();
+        
+    }
+    
+    public AssignmentsState = siteMap['Assignments'];
+
+    public pages : any;
+
+    
+
+    public AssignmentState = siteMap['Assignment'];
+    public parent : any;
+    public assignments: any = []; 
+
+    
+
+    pop2() { 
+        this.navCtrl.pop()
+            .then(data =&gt; {
+                this.navCtrl.pop();
+            });
+    }
+
+    getAssignments() {
+        return new Promise(resolve =&gt; {
+            
+            this.parent.reload()
+                .then(result =&gt; {
+                    this.assignments = result.Assignments;
+                    resolve(result);
+                })
+            
+        });
+    }
+
+    reload() { return this.getAssignments(); }
+
+    addNewAssignment() { // 
+        var newAssignment = {
+        
+            Course
+             : this.parent.course.CourseId,
+            "Name" : "New Assignment " + (this.assignments ? this.assignments.length + 1 : 1),
+            "Description" : ""
+        }
+        
+        this.apiSvc.addNewAssignment(newAssignment)
+            .then(data =&gt; {
+                
+                this.parent.reload();
+                this.getAssignments();
+                this.goToState(this.AssignmentState, data, true);
+            });
+            
+    }
+    
+
+    
+
+    
+    goToRootState(state, assignment = {}, editMode = false) : Promise&lt;any&gt; {
+        return this.goToState(state, assignment, editMode, true);
+    }
+
+    goToState(state, assignment = {}, editMode = false, setRoot = false)  : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { assignment : assignment, parent: this, editMode: editMode });
+        } else {
+            return this.navCtrl.push(state.component, { assignment : assignment, parent: this, editMode: editMode });
+        }
+    }
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/assignments/assignments.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/assignments/assignment/assignment.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                &lt;ion-col text-left=""&gt;
+                                                    {{ assignment.Name }}
+                                                &lt;/ion-col&gt;&lt;ion-col text-right="" style="font-size: 0.6em;color: gray;"&gt;
+                                                    - Assignment&lt;/ion-col&gt;
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header *ngIf="!editMode"&gt;
+                    
+                        &lt;ion-item&gt;
+                                &lt;ion-label&gt;Name&lt;/ion-label&gt;
+                                &lt;ion-input [readonly]="true" type="text" name="assignmentName" [(ngModel)]="assignment.Name"&gt;&lt;/ion-input&gt;
+                                
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;DueDate&lt;/ion-label&gt;
+                                &lt;ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="DueDate" 
+                                                name="assignmentDueDateName" 
+                                                [(ngModel)]="assignment.DueDate"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;IsComplete&lt;/ion-label&gt;
+                                &lt;ion-toggle
+                                                disabled="true" 
+                                                placeholder="IsComplete" 
+                                                name="assignmentIsCompleteName" 
+                                                [(ngModel)]="assignment.IsComplete"&gt;&lt;/ion-toggle&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;Notes&lt;/ion-label&gt;
+                                &lt;ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Notes" 
+                                                name="assignmentNotesName" 
+                                                [(ngModel)]="assignment.Notes"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;createdTime&lt;/ion-label&gt;
+                                &lt;ion-input type="datetime"
+                                                disabled="true" 
+                                                placeholder="createdTime" 
+                                                name="assignmentcreatedTimeName" 
+                                                [(ngModel)]="assignment.createdTime"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+
+                             &lt;ion-row right=""&gt;
+                                &lt;ion-col text-right=""&gt;   
+                                    &lt;button ion-button="" (click)="editMode = true"&gt;&lt;ion-icon name="create"&gt;&lt;/ion-icon&gt; Edit&lt;/button&gt;
+                                &lt;/ion-col&gt; 
+                            &lt;/ion-row&gt;
+                                            
+                &lt;/ion-card-header&gt;
+                    
+                        &lt;div *ngIf="editMode"&gt;
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;Name&lt;/ion-label&gt;
+                                &lt;ion-input type="text" name="assignmentName" [(ngModel)]="assignment.Name"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;DueDate&lt;/ion-label&gt;
+                                &lt;ion-input type="text" 
+                                                placeholder="DueDate" 
+                                                name="assignmentDueDateName" 
+                                                [(ngModel)]="assignment.DueDate"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;IsComplete&lt;/ion-label&gt;
+                                &lt;ion-toggle
+                                                placeholder="IsComplete" 
+                                                name="assignmentIsCompleteName" 
+                                                [(ngModel)]="assignment.IsComplete"&gt;&lt;/ion-toggle&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;Notes&lt;/ion-label&gt;
+                                &lt;ion-input type="text" 
+                                                placeholder="Notes" 
+                                                name="assignmentNotesName" 
+                                                [(ngModel)]="assignment.Notes"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-item&gt;
+                                &lt;ion-label&gt;createdTime&lt;/ion-label&gt;
+                                &lt;ion-input type="datetime"
+                                                placeholder="createdTime" 
+                                                name="assignmentcreatedTimeName" 
+                                                [(ngModel)]="assignment.createdTime"&gt;&lt;/ion-input&gt;
+                            &lt;/ion-item&gt;
+                            
+                            &lt;ion-row&gt;
+                                &lt;ion-col text-left=""&gt;
+                                    &lt;button ion-button="" secondary="" (click)="updateAssignment(assignment)"&gt;
+                                        &lt;ion-icon name="checkmark" item-left=""&gt;&lt;/ion-icon&gt; Ok
+                                    &lt;/button&gt;
+                                &lt;/ion-col&gt;
+                                &lt;ion-col text-right=""&gt;
+                                &lt;/ion-col&gt;
+                            &lt;/ion-row&gt;
+                            &lt;ion-row&gt;
+                                &lt;ion-col text-left=""&gt;
+                                    &lt;button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteAssignment()"&gt;
+                                        &lt;ion-icon name="trash" item-left=""&gt;&lt;/ion-icon&gt; Delete
+                                    &lt;/button&gt;
+                                &lt;/ion-col&gt;
+                                &lt;ion-col text-right=""&gt;
+                                &lt;/ion-col&gt;
+                            &lt;/ion-row&gt;
+                        &lt;/div&gt;
+                    
+
+                &lt;p&gt;
+                
+                More about {{ assignment.Name }} can go here...
+                
+
+                
+                &lt;/p&gt;
+
+                
+
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/assignments/assignment/assignment.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../../../app/app.modules-base';
+import { RestAPIService } from '../../../../../providers/rest-api-service';
+import { AssignmentBase } from './assignment.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-assignment',
+    templateUrl: 'assignment.html'
+})
+export class Assignment extends AssignmentBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/assignments/assignment/assignment.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../../../app/app.modules-base';
+import { IonicBase } from '../../../../../app/ionic-base';
+import { RestAPIService } from '../../../../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class AssignmentBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        
+        this.assignment = this.navParams.get('assignment') || this.assignment;
+        this.getAssignment();
+        this.editMode = this.navParams.get("editMode");
+    }
+    
+    public AssignmentState = siteMap['Assignment'];
+
+    public pages : any;
+
+    public parent : any;
+
+    
+    public assignment: any = {};
+    ;
+    public canDelete: any = true;
+    public editMode = false;
+
+    pop() {
+        this.navCtrl.pop();
+    }
+
+    getAssignment() {
+        return new Promise(resolve =&gt; {
+            let assignment = this.navParams.get("assignment");
+            if (!assignment) assignment = this.navParams.get("assignment");
+
+            
+            this.apiSvc.getAssignment(assignment)
+                .then(data =&gt; {
+                    this.assignment = data;
+                    this.canDelete = true;
+
+                    // Check if they can actually delete
+                    
+
+                    resolve(data);
+                });
+            
+        });
+    }
+    
+    reload() { return this.getAssignment(); }
+
+    updateAssignment(theAssignmentToUpdate) {
+            
+
+        this.apiSvc.updateAssignment(theAssignmentToUpdate)
+            .then(data =&gt; {
+                 
+                this.parent
+                    .reload()
+                    .then(parentResult =&gt; {
+                        this.getAssignment();
+                        this.editMode = false;
+                    });
+            });
+            
+    }
+
+
+    deleteAssignment() {
+        
+
+        this.apiSvc.deleteAssignment(this.assignment)
+            .then(data =&gt; {
+                this.parent
+                    .reload()
+                    .then(parentResult =&gt; {
+                         this.navCtrl.pop();
+                    });
+            });
+            
+    }
+
+    
+    goToRootState(state, assignment = {}, editMode = false) : Promise&lt;any&gt; {
+        return this.goToState(state, assignment, editMode, true);
+    }
+
+    goToState(state, assignment = {}, editMode = false, setRoot = false)  : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { assignment : assignment, parent: this, editMode: editMode });
+        } else {
+            return this.navCtrl.push(state.component, { assignment : assignment, parent: this, editMode: editMode });
+        }
+    }
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/courses/course/assignments/assignment/assignment.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/about/about.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                About
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header *ngIf="!editMode"&gt;
+                                        
+                &lt;/ion-card-header&gt;
+                    
+
+                &lt;p&gt;
+                
+
+                
+                Your content for the About page goes here.
+                
+                &lt;/p&gt;
+
+                
+
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/about/about.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../app/app.modules-base';
+import { RestAPIService } from '../../providers/rest-api-service';
+import { AboutBase } from './about.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-about',
+    templateUrl: 'about.html'
+})
+export class About extends AboutBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/about/about.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../app/app.modules-base';
+import { IonicBase } from '../../app/ionic-base';
+import { RestAPIService } from '../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class AboutBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        
+        
+    }
+    
+    public AboutState = siteMap['About'];
+
+    public pages : any;
+
+    public parent : any;
+
+    
+
+    
+    goToRootState(state) : Promise&lt;any&gt; {
+        return this.goToState(state, true);
+    }
+    goToState(state, setRoot = false) : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { parent : this });
+        } else {
+            return this.navCtrl.push(state.component, { parent : this });
+        }
+    }    
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/about/about.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/contact.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                Contact
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header *ngIf="!editMode"&gt;
+                                        
+                &lt;/ion-card-header&gt;
+                    
+
+                &lt;p&gt;
+                
+
+                
+                Your content for the Contact page goes here.
+                
+                &lt;/p&gt;
+
+                
+                &lt;ion-card-header&gt;
+                    &lt;hr /&gt;
+                &lt;/ion-card-header&gt;
+                &lt;ion-list&gt;
+                    
+                        
+                        
+                        &lt;button ion-item="" (click)="goToState(CallState, contact)"&gt;
+                            &lt;ion-icon name="list" item-left=""&gt;&lt;/ion-icon&gt;
+                            Call   
+                            
+                        &lt;/button&gt;
+                    
+                        
+                        
+                        &lt;button ion-item="" (click)="goToState(ChatState, contact)"&gt;
+                            &lt;ion-icon name="list" item-left=""&gt;&lt;/ion-icon&gt;
+                            Chat   
+                            
+                        &lt;/button&gt;
+                    
+                        
+                        
+                        &lt;button ion-item="" (click)="goToState(EmailState, contact)"&gt;
+                            &lt;ion-icon name="list" item-left=""&gt;&lt;/ion-icon&gt;
+                            Email   
+                            
+                        &lt;/button&gt;
+                    
+                &lt;/ion-list&gt;
+        
+
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/contact.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../app/app.modules-base';
+import { RestAPIService } from '../../providers/rest-api-service';
+import { ContactBase } from './contact.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-contact',
+    templateUrl: 'contact.html'
+})
+export class Contact extends ContactBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/contact.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../app/app.modules-base';
+import { IonicBase } from '../../app/ionic-base';
+import { RestAPIService } from '../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class ContactBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        
+        
+    }
+    
+    public ContactState = siteMap['Contact'];
+
+    public pages : any;
+
+    
+
+    public ChatState = siteMap['Chat'];
+    
+
+    public EmailState = siteMap['Email'];
+    
+
+    public CallState = siteMap['Call'];
+    public parent : any;
+
+    
+
+    
+    goToRootState(state) : Promise&lt;any&gt; {
+        return this.goToState(state, true);
+    }
+    goToState(state, setRoot = false) : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { parent : this });
+        } else {
+            return this.navCtrl.push(state.component, { parent : this });
+        }
+    }    
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/contact.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/chat/chat.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                Chat
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header *ngIf="!editMode"&gt;
+                                        
+                &lt;/ion-card-header&gt;
+                    
+
+                &lt;p&gt;
+                
+
+                
+                Your content for the Chat page goes here.
+                
+                &lt;/p&gt;
+
+                
+
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/chat/chat.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../app/app.modules-base';
+import { RestAPIService } from '../../../providers/rest-api-service';
+import { ChatBase } from './chat.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-chat',
+    templateUrl: 'chat.html'
+})
+export class Chat extends ChatBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/chat/chat.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../app/app.modules-base';
+import { IonicBase } from '../../../app/ionic-base';
+import { RestAPIService } from '../../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class ChatBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        
+        
+    }
+    
+    public ChatState = siteMap['Chat'];
+
+    public pages : any;
+
+    public parent : any;
+
+    
+
+    
+    goToRootState(state) : Promise&lt;any&gt; {
+        return this.goToState(state, true);
+    }
+    goToState(state, setRoot = false) : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { parent : this });
+        } else {
+            return this.navCtrl.push(state.component, { parent : this });
+        }
+    }    
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/chat/chat.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/email/email.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                Email
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header *ngIf="!editMode"&gt;
+                                        
+                &lt;/ion-card-header&gt;
+                    
+
+                &lt;p&gt;
+                
+
+                
+                Your content for the Email page goes here.
+                
+                &lt;/p&gt;
+
+                
+
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/email/email.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../app/app.modules-base';
+import { RestAPIService } from '../../../providers/rest-api-service';
+import { EmailBase } from './email.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-email',
+    templateUrl: 'email.html'
+})
+export class Email extends EmailBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/email/email.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../app/app.modules-base';
+import { IonicBase } from '../../../app/ionic-base';
+import { RestAPIService } from '../../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class EmailBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        
+        
+    }
+    
+    public EmailState = siteMap['Email'];
+
+    public pages : any;
+
+    public parent : any;
+
+    
+
+    
+    goToRootState(state) : Promise&lt;any&gt; {
+        return this.goToState(state, true);
+    }
+    goToState(state, setRoot = false) : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { parent : this });
+        } else {
+            return this.navCtrl.push(state.component, { parent : this });
+        }
+    }    
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/email/email.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/call/call.html</RelativePath>
+      <FileContents>&lt;ion-header xml:space="preserve"&gt;
+  &lt;ion-navbar&gt;
+    &lt;button ion-button="" menuToggle=""&gt;
+      &lt;ion-icon name="menu"&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;ion-title&gt;
+          &lt;ion-row&gt;
+                Call
+          &lt;/ion-row&gt;
+    &lt;/ion-title&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;&lt;ion-content padding="" xml:space="preserve"&gt;
+     &lt;div class="center"&gt;
+        &lt;p class="ionic-logo"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;ion-card&gt;
+        
+                &lt;ion-card-header *ngIf="!editMode"&gt;
+                                        
+                &lt;/ion-card-header&gt;
+                    
+
+                &lt;p&gt;
+                
+
+                
+                Your content for the Call page goes here.
+                
+                &lt;/p&gt;
+
+                
+
+            
+    &lt;/ion-card&gt;
+
+&lt;/ion-content&gt;</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/call/call.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../app/app.modules-base';
+import { RestAPIService } from '../../../providers/rest-api-service';
+import { CallBase } from './call.base';
+import { Storage } from '@ionic/storage';
+
+@Component({
+    selector: 'page-call',
+    templateUrl: 'call.html'
+})
+export class Call extends CallBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super(navCtrl, navParams, apiSvc); 
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>app/ionic-base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
+import { NavController } from "ionic-angular";
+
+export class IonicBase {
+    protected defaultAuthToken = {
+        Email: "",
+        UserName: "Guest",
+        IsAuthenticated: false
+    }
+
+    protected authtoken: any = this.defaultAuthToken;
+
+    protected onAuthtoken: Subject&lt;any&gt; = new Subject();
+
+    constructor() {
+        this.onAuthtoken.next(this.authtoken);
+
+    }
+
+    makeCurrentRoot(navCtrl: NavController) {
+        var currentIndex = navCtrl.getActive().index + 1;
+        if (currentIndex &gt; 0) {
+            navCtrl.remove(0, currentIndex);
+        }
+    }
+}</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/call/call.base.ts</RelativePath>
+      <FileContents>import { Component } from '@angular/core';
+
+import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
+import { siteMap } from '../../../app/app.modules-base';
+import { IonicBase } from '../../../app/ionic-base';
+import { RestAPIService } from '../../../providers/rest-api-service';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs/Subject";
+import { Storage } from '@ionic/storage';
+
+export class CallBase extends IonicBase {
+
+    constructor(public navCtrl: NavController, public navParams: NavParams, public apiSvc: RestAPIService) {
+        super()
+        this.parent = this.navParams.get("parent");
+        this.pages = siteMap;
+        
+        
+    }
+    
+    public CallState = siteMap['Call'];
+
+    public pages : any;
+
+    public parent : any;
+
+    
+
+    
+    goToRootState(state) : Promise&lt;any&gt; {
+        return this.goToState(state, true);
+    }
+    goToState(state, setRoot = false) : Promise&lt;any&gt; {
+        if (setRoot) {
+            return this.navCtrl.setRoot(state.component, { parent : this });
+        } else {
+            return this.navCtrl.push(state.component, { parent : this });
+        }
+    }    
+
+    goToUrl(url) {
+        console.log('SIMULATING OPEN OF URL: ' + url);
+    }
+
+    
+}
+
+</FileContents>
+      <AlwaysOverwrite>true</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+    <FileSetFile>
+      <FileSetFileId>00000000-0000-0000-0000-000000000000</FileSetFileId>
+      <FileSetId>00000000-0000-0000-0000-000000000000</FileSetId>
+      <RelativePath>pages/contact/call/call.scss</RelativePath>
+      <FileContents>page-page1 {
+    .center {
+        text-align: center;  
+    }
+    
+    .ionic-logo {
+      display: inline-flex;
+      position:relative;
+      width:87px;
+      height:87px;
+      border:3.5px solid #5E86C4;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+      -moz-animation: spin 2s infinite linear;
+      -webkit-animation: spin 2s infinite linear;
+    }
+
+    .ionic-logo:after {
+      content:'';
+      position:absolute;
+      width:38px;
+      height:38px;
+      background: #5E86C4;
+      top:50%;
+      left:50%;
+      margin-left:-19px;
+      margin-top:-19px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    .ionic-logo:before {
+      content:'';
+      background: #5E86C4;
+      width:14px;
+      height:14px;
+      position:absolute;
+      top:-8px;
+      left:50%;
+      margin-left:-7px;
+      border-radius:100%;
+      -moz-border-radius:100%;
+      -webkit-border-radius:100%;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+}
+
+</FileContents>
+      <AlwaysOverwrite>false</AlwaysOverwrite>
+      <SkipClean>false</SkipClean>
+    </FileSetFile>
+  </FileSetFiles>
+</FileSet>

@@ -6,9 +6,9 @@
     <ion-title>
           <ion-row>
                 <ion-col text-left="">
-                                                    {{ course.Name }}
+                                                    {{ lettergrade.Name }}
                                                 </ion-col><ion-col text-right="" style="font-size: 0.6em;color: gray;">
-                                                    - Course</ion-col>
+                                                    - LetterGrade</ion-col>
           </ion-row>
     </ion-title>
   </ion-navbar>
@@ -23,26 +23,26 @@
                     
                         <ion-item>
                                 <ion-label>Name</ion-label>
-                                <ion-input [readonly]="true" type="text" name="courseName" [(ngModel)]="course.Name"></ion-input>
+                                <ion-input [readonly]="true" type="text" name="lettergradeName" [(ngModel)]="lettergrade.Name"></ion-input>
                                 
                             </ion-item>
                             
                             <ion-item>
-                                <ion-label>When</ion-label>
-                                <ion-input type="text" 
+                                <ion-label>PointMin</ion-label>
+                                <ion-input type="number"
                                                 disabled="true" 
-                                                placeholder="When" 
-                                                name="courseWhenName" 
-                                                [(ngModel)]="course.When"></ion-input>
+                                                placeholder="PointMin" 
+                                                name="lettergradePointMinName" 
+                                                [(ngModel)]="lettergrade.PointMin"></ion-input>
                             </ion-item>
                             
                             <ion-item>
-                                <ion-label>Notes</ion-label>
-                                <ion-input type="text" 
+                                <ion-label>PointMincopy</ion-label>
+                                <ion-input type="number"
                                                 disabled="true" 
-                                                placeholder="Notes" 
-                                                name="courseNotesName" 
-                                                [(ngModel)]="course.Notes"></ion-input>
+                                                placeholder="PointMincopy" 
+                                                name="lettergradePointMincopyName" 
+                                                [(ngModel)]="lettergrade.PointMincopy"></ion-input>
                             </ion-item>
                             
                             <ion-item>
@@ -50,8 +50,17 @@
                                 <ion-input type="datetime"
                                                 disabled="true" 
                                                 placeholder="createdTime" 
-                                                name="coursecreatedTimeName" 
-                                                [(ngModel)]="course.createdTime"></ion-input>
+                                                name="lettergradecreatedTimeName" 
+                                                [(ngModel)]="lettergrade.createdTime"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Notes</ion-label>
+                                <ion-input type="text" 
+                                                disabled="true" 
+                                                placeholder="Notes" 
+                                                name="lettergradeNotesName" 
+                                                [(ngModel)]="lettergrade.Notes"></ion-input>
                             </ion-item>
                             
 
@@ -66,36 +75,44 @@
                         <div *ngIf="editMode">
                             <ion-item>
                                 <ion-label>Name</ion-label>
-                                <ion-input type="text" name="courseName" [(ngModel)]="course.Name"></ion-input>
+                                <ion-input type="text" name="lettergradeName" [(ngModel)]="lettergrade.Name"></ion-input>
                             </ion-item>
                             
                             <ion-item>
-                                <ion-label>When</ion-label>
-                                <ion-input type="text" 
-                                                placeholder="When" 
-                                                name="courseWhenName" 
-                                                [(ngModel)]="course.When"></ion-input>
+                                <ion-label>PointMin</ion-label>
+                                <ion-input type="number"
+                                                placeholder="PointMin" 
+                                                name="lettergradePointMinName" 
+                                                [(ngModel)]="lettergrade.PointMin"></ion-input>
                             </ion-item>
                             
                             <ion-item>
-                                <ion-label>Notes</ion-label>
-                                <ion-input type="text" 
-                                                placeholder="Notes" 
-                                                name="courseNotesName" 
-                                                [(ngModel)]="course.Notes"></ion-input>
+                                <ion-label>PointMincopy</ion-label>
+                                <ion-input type="number"
+                                                placeholder="PointMincopy" 
+                                                name="lettergradePointMincopyName" 
+                                                [(ngModel)]="lettergrade.PointMincopy"></ion-input>
                             </ion-item>
                             
                             <ion-item>
                                 <ion-label>createdTime</ion-label>
                                 <ion-input type="datetime"
                                                 placeholder="createdTime" 
-                                                name="coursecreatedTimeName" 
-                                                [(ngModel)]="course.createdTime"></ion-input>
+                                                name="lettergradecreatedTimeName" 
+                                                [(ngModel)]="lettergrade.createdTime"></ion-input>
+                            </ion-item>
+                            
+                            <ion-item>
+                                <ion-label>Notes</ion-label>
+                                <ion-input type="text" 
+                                                placeholder="Notes" 
+                                                name="lettergradeNotesName" 
+                                                [(ngModel)]="lettergrade.Notes"></ion-input>
                             </ion-item>
                             
                             <ion-row>
                                 <ion-col text-left="">
-                                    <button ion-button="" secondary="" (click)="updateCourse(course)">
+                                    <button ion-button="" secondary="" (click)="updateLetterGrade(lettergrade)">
                                         <ion-icon name="checkmark" item-left=""></ion-icon> Ok
                                     </button>
                                 </ion-col>
@@ -104,7 +121,7 @@
                             </ion-row>
                             <ion-row>
                                 <ion-col text-left="">
-                                    <button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteCourse()">
+                                    <button ion-button="" secondary="" *ngIf="canDelete"  (click)="deleteLetterGrade()">
                                         <ion-icon name="trash" item-left=""></ion-icon> Delete
                                     </button>
                                 </ion-col>
@@ -116,29 +133,13 @@
 
                 <p>
                 
-                More about {{ course.Name }} can go here...
+                More about {{ lettergrade.Name }} can go here...
                 
 
                 
                 </p>
 
                 
-                <ion-card-header>
-                    <hr />
-                </ion-card-header>
-                <ion-list>
-                    
-                        
-                        
-                        <button ion-item="" (click)="goToState(AssignmentsState, course)">
-                            <ion-icon name="list" item-left=""></ion-icon>
-                            Assignments   
-                            
-                            <small style="font-size: 0.8em; color: gray;">({{ course.Assignments ? course.Assignments.length : 0 }})</small>
-                        </button>
-                    
-                </ion-list>
-        
 
             
     </ion-card>

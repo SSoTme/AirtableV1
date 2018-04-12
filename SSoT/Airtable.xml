@@ -1,13 +1,49 @@
 <Airtable><Entities><Entity>
         <EntityId>rec30PSXYu9FSoaq0</EntityId>
-    <IsSystem>true</IsSystem><Name>Entity</Name><AirtableName>Entities</AirtableName><Notes>A "thing" defined in an Airtable.</Notes><DisplayName>Entity</DisplayName><createdTime>2018-04-12T05:00:58Z</createdTime></Entity><EXCLUDED>
+    <IsSystem>true</IsSystem><Name>Entity</Name><AirtableName>Entities</AirtableName><Notes>A "thing" defined in an Airtable.</Notes><DisplayName>Entity</DisplayName><createdTime>2018-04-12T05:00:58Z</createdTime></Entity><Entity>
         <EntityId>recAa94D0BSycpbfa</EntityId>
-    <createdTime>2018-04-12T19:32:13Z</createdTime>^
-                </EXCLUDED><Entity>
+    <IsStatic>true</IsStatic><Name>LetterGrade</Name><AirtableName>Letter Grades</AirtableName><DisplayName>LetterGrade</DisplayName><createdTime>2018-04-12T19:32:13Z</createdTime></Entity><Entity>
         <EntityId>recQ919faQWlfXw7j</EntityId>
     <Name>Assignment</Name><AirtableName>Assignments</AirtableName><DisplayName>Assignment</DisplayName><createdTime>2018-04-12T05:58:52Z</createdTime></Entity><Entity>
         <EntityId>recbU48mkyos0TSJP</EntityId>
-    <Name>Course</Name><AirtableName>Courses</AirtableName><Notes>An example of a "thing.  Just add a sheet and a row</Notes><DisplayName>Course</DisplayName><createdTime>2018-04-12T05:00:58Z</createdTime></Entity></Entities><Assignments><Assignment>
+    <Name>Course</Name><AirtableName>Courses</AirtableName><Notes>An example of a "thing.  Just add a sheet and a row</Notes><DisplayName>Course</DisplayName><createdTime>2018-04-12T05:00:58Z</createdTime></Entity></Entities><LetterGrades><LetterGrade>
+        <LetterGradeId>rec2FgkGG8ml8KXoc</LetterGradeId>
+    <Name>A-</Name><PointMin>90</PointMin>
+        <PointMincopy>94</PointMincopy>
+    <createdTime>2018-04-12T21:55:53Z</createdTime></LetterGrade><LetterGrade>
+        <LetterGradeId>recGJADpClvSLjg72</LetterGradeId>
+    <Name>C</Name><PointMin>70</PointMin>
+        <PointMincopy>74</PointMincopy>
+    <createdTime>2018-04-12T21:56:48Z</createdTime></LetterGrade><LetterGrade>
+        <LetterGradeId>recGtQgLIppuI0Auk</LetterGradeId>
+    <Name>B-</Name><PointMin>75</PointMin>
+        <PointMincopy>79</PointMincopy>
+    <createdTime>2018-04-12T21:56:43Z</createdTime></LetterGrade><LetterGrade>
+        <LetterGradeId>recM5pmWZUJexsggR</LetterGradeId>
+    <Name>F</Name><PointMin>0</PointMin>
+        <PointMincopy>59</PointMincopy>
+    <createdTime>2018-04-12T21:56:55Z</createdTime></LetterGrade><LetterGrade>
+        <LetterGradeId>recPSeuNAMRg7ISJ2</LetterGradeId>
+    <Name>B</Name><PointMin>80</PointMin>
+        <PointMincopy>54</PointMincopy>
+    <createdTime>2018-04-12T21:56:42Z</createdTime></LetterGrade><LetterGrade>
+        <LetterGradeId>recSSQYDz2EZjetSf</LetterGradeId>
+    <Name>D</Name><PointMin>60</PointMin>
+        <PointMincopy>69</PointMincopy>
+    <createdTime>2018-04-12T21:56:54Z</createdTime></LetterGrade><LetterGrade>
+        <LetterGradeId>recdMTKd2GCapPWMe</LetterGradeId>
+    
+        <PointMincopy>97</PointMincopy>
+    <Name>A</Name><PointMin>95</PointMin><Notes>The second best grade.  most people are happy with an A.
+</Notes><createdTime>2018-04-12T21:55:53Z</createdTime></LetterGrade><LetterGrade>
+        <LetterGradeId>recfRXc8fchQUwmGw</LetterGradeId>
+    
+        <PointMincopy>100</PointMincopy>
+    <Name>A+</Name><PointMin>98</PointMin><Notes>The best grade you can get</Notes><createdTime>2018-04-12T21:55:53Z</createdTime></LetterGrade><LetterGrade>
+        <LetterGradeId>recrOPP0ptXl7tpQh</LetterGradeId>
+    <Name>B+</Name><PointMin>85</PointMin>
+        <PointMincopy>89</PointMincopy>
+    <createdTime>2018-04-12T21:56:42Z</createdTime></LetterGrade></LetterGrades><Assignments><Assignment>
         <AssignmentId>rec0lIzmdEvmDwdDi</AssignmentId>
     <Name> - </Name><createdTime>2018-04-12T19:09:18Z</createdTime></Assignment><Assignment>
         <AssignmentId>recA2GyICIyQjFWGw</AssignmentId>
@@ -18,8 +54,8 @@
         <AssignmentId>recIpR7aO40XjNE2u</AssignmentId>
     <Course>rec6qoAaEtwBKvYIP</Course><IsComplete>true</IsComplete><Name>English - </Name><createdTime>2018-04-12T19:07:42Z</createdTime></Assignment></Assignments><Courses><Course>
         <CourseId>rec6qoAaEtwBKvYIP</CourseId>
-    <Assignment>recBisX4IFH3jiYlQ</Assignment><Assignment>recIpR7aO40XjNE2u</Assignment><Name>English</Name><Notes>More information can go in these notes.  Or add columns to the right.</Notes><When>Mon-Wed-Fri @ 5PM</When><createdTime>2018-04-12T16:21:09Z</createdTime></Course><Course>
+    <Assignment>recBisX4IFH3jiYlQ</Assignment><Assignment>recIpR7aO40XjNE2u</Assignment><When>Mon-Wed-Fri @ 5PM</When><Name>English</Name><Notes>More information can go in these notes.  Or add columns to the right.</Notes><createdTime>2018-04-12T16:21:09Z</createdTime></Course><Course>
         <CourseId>recZnNuUXE7jxY3Wj</CourseId>
-    <Assignment>recA2GyICIyQjFWGw</Assignment><Name>Art</Name><When>Tue-Thu @ 11:30 AM</When><createdTime>2018-04-12T16:21:09Z</createdTime></Course><Course>
+    <Assignment>recA2GyICIyQjFWGw</Assignment><When>Tue-Thu @ 11:30 AM</When><Name>Art</Name><createdTime>2018-04-12T16:21:09Z</createdTime></Course><Course>
         <CourseId>recf08BdvR6gE63M8</CourseId>
-    <Name>Gym</Name><When>Fridays at 3:00 PM</When><createdTime>2018-04-12T16:21:09Z</createdTime></Course></Courses></Airtable>
+    <When>Fridays at 3:00 PM</When><Name>Gym</Name><createdTime>2018-04-12T16:21:09Z</createdTime></Course></Courses></Airtable>
